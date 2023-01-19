@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resume Building</title>
+    </head>
+
+    <body>
+
+        <section>
+            <h1>Resume Building</h1>
+            <table id="resume_build">
+                <tr>
+                    <td><label>CAREER OBJECTIVE</label></td>
+                    <td><textarea name="car_obj"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label>Upload photo</label></td>
+                    <td><input type="file" id="photo" name="photo"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Name of the Person</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="Name" value=""></td>
+                </tr>
+
+                <tr>
+                    <td><label>Date of Birth</label></td>
+                    <td><input type="date" id="dob" name="dob"  placeholder="dob"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Address</label></td>
+                    <td><textarea id="Address" name="Address" placeholder="Address"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label>Phone Number</label></td>
+                    <td><input type="number" id="phone_No" name="phone_No" value="" placeholder="Phone Number"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Email ID</label></td>
+                    <td><input type="email" id="email_id" name="email_id" value="" placeholder="Email ID"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td><input type="radio" name="gender" id="gender" value="Male">Male</input>
+                        <input type="radio" name="gender" id="gender" value="Female">Female</input>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Marital status</label></td>
+                    <td><input type="radio" name="marital_status" id="marital_status" value="Single">Single</input>
+                        <input type="radio" name="marital_status" id="marital_status" value="Married">Married</input>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><lebel>Skill Set</lebel></td>
+                    <td><input type="text" name="skill1" id="skill1" value=""><br>
+                        <input type="text" name="skill2" id="skill2" value=""><br>
+                        <input type="text" name="skill3" id="skill3" value=""><br>
+                        <input type="text" name="skill4" id="skill4" value=""><br>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Educational Qualification</h3>
+            <table id="edu_qualification">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Courses</th>
+                        <th>Institution</th>
+                        <th>Board/University</th>
+                        <th>Year of Passing</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead> 
+
+                <tbody>
+                    <tr>
+                        <td><label>1</label></td>
+                        <td><input type="text" id="course_name" name="course_name" value=""></td>
+                        <td><input type="text" id="institution_name" name="institution_name" value=""></td>
+                        <td><input type="text" id="board_Name" name="board_Name" value=""></td>
+                        <td><input type="number" id="passed_out_year" name="passed_out_year" value=""></td>
+                        <td><input type="number" id="percentage" name="percentage" value=""></td>
+                        <td><input type="text" id="grade" name="grade" value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>2</label></td>
+                        <td><input type="text" id="course_name" name="course_name" value=""></td>
+                        <td><input type="text" id="institution_name" name="institution_name" value=""></td>
+                        <td><input type="text" id="board_Name" name="board_Name" value=""></td>
+                        <td><input type="number" id="passed_out_year" name="passed_out_year" value=""></td>
+                        <td><input type="number" id="percentage" name="percentage" value=""></td>
+                        <td><input type="text" id="grade" name="grade" value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>3</label></td>
+                        <td><input type="text" id="course_name" name="course_name" value=""></td>
+                        <td><input type="text" id="institution_name" name="institution_name" value=""></td>
+                        <td><input type="text" id="board_Name" name="board_Name" value=""></td>
+                        <td><input type="number" id="passed_out_year" name="passed_out_year" value=""></td>
+                        <td><input type="number" id="percentage" name="percentage" value=""></td>
+                        <td><input type="text" id="grade" name="grade" value=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Project Details</h3>
+            <table id="project">
+                <thead id="pro">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Title</th>
+                        <th>Duration</th>
+                        <th>Technology Used</th>
+                        <th>Description</th>
+                        <th>Github Link</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><lebel>1</lebel></td>
+                        <td><input type="text" id="project_title" name="project_title"></td>
+                        <td><input type="text" id="duration" name="duration"></td>
+                        <td><input type="text" id="technology_used" name="technology_used"></td>
+                        <td><textarea id="project_description" name="project_description"></textarea></td>
+                        <td><input type="url" id="github_link" name="github_link"></td>
+                    </tr>
+
+                    <tr>
+                        <td><lebel>2</lebel></td>
+                        <td><input type="text" id="project_title" name="project_title"></td>
+                        <td><input type="text" id="duration" name="duration"></td>
+                        <td><input type="text" id="technology_used" name="technology_used"></td>
+                        <td><textarea id="project_description" name="project_description"></textarea></td>
+                        <td><input type="url" id="github_link" name="github_link"></td>
+                    </tr>
+
+                    <tr>
+                        <td><lebel>3</lebel></td>
+                        <td><input type="text" id="project_title" name="project_title"></td>
+                        <td><input type="text" id="duration" name="duration"></td>
+                        <td><input type="text" id="technology_used" name="technology_used"></td>
+                        <td><textarea id="project_description" name="project_description"></textarea></td>
+                        <td><input type="url" id="github_link" name="github_link"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>

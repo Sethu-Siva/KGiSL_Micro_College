@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bio Data</title>
+    </head>
+    <body>
+        <h1>Bio Data</h1>
+        <form>
+            <lable>First Name : </lable>
+            <input type="text" id="First_Name" name="First_Name" value="" placeholder="Enter First Name">
+            <lable>Middle Name : </lable>
+            <input type="text" id="Middle_Name" name="Middle_Name" value="" placeholder="Enter Middle Name">
+            <lable>Last Name : </lable>
+            <input type="text" id="Last_Name" name="Last_Name" value="" placeholder="Enter Last Name">
+            <br>
+            <lable>Father Name : </lable>
+            <input type="text" id="Father_Name" name="Father_Name" value="" placeholder="Enter Father's Name">
+            <lable>Mother Name : </lable>
+            <input type="text" id="Mother_Name" name="Mother_Name" value="" placeholder="Enter Mother's Name">
+            <br>
+            <label>Gender : </label>
+            <input type="radio" id="Gender" Name="Gender" value="Male">Male
+            <input type="radio" id="Gender" Name="Gender" value="Female">Female
+            <input type="radio" id="Gender" Name="Gender" value="Others">Others
+            <br>
+            <label>Date of Birth : </label>
+            <input type="date" id="DOB" name="DOB" value="">
+            <br>
+            <label>Mobile Numbers : </label>
+            <input type="text" id="First_Mob_Number" name="First_Mob_Number" value="" maxlength="10" placeholder="First Mobile Number">
+            <input type="text" id="Second_Mob_Number" name="Second_Mob_Number" value="" maxlength="10" placeholder="Secondary Mobile Number">
+            <br>
+            <lable>Email ID : </lable>
+            <input type="email" id="email_id" name="email_id" value="" placeholder="Enter Email ID">
+            <br>
+            <lable>Marital Status : </lable>
+            <input type="radio" id="Marital_Status" name="Marital_Status" value="Single">Single
+            <input type="radio" id="Marital_Status" name="Marital_Status" value="Married">Married
+            <input type="radio" id="Marital_Status" name="Marital_Status" value="Divorced">Divorced
+            <br>
+            <label>Address : </label>
+            <textarea id="Address" name="Address" rows="3" cols="20" placeholder="Address"></textarea>
+            <br>
+            <lable>Select Your Education : </lable>
+            <select multiple size="1">
+                <option>BCA</option>
+                <option>B.Sc</option>
+                <option>B.Com</option>
+                <option>MCA</option>
+                <option>M.Sc</option>
+                <option>M.Com</option>
+            </select>
+            <br>
+            <lebel>Intrests</lebel><br>
+            <input type="checkbox" id="interest" name="interest" value="Playing Games">Playing Games<br>
+            <input type="checkbox" id="interest" name="interest" value="Reading Books">Reading Books<br>
+            <input type="checkbox" id="interest" name="interest" value="Singing Songs">Singing Songs<br>
+            <input type="checkbox" id="interest" name="interest" value="Dancing">Dancing 
+            <br>
+            <label>Upload Resume : </label>
+            <input type="file" id="resume" name="resume" id="">
+            <br>
+            <input type="button" value="reset" onclick="alert('Form Reset Successful...!')">
+            <input type="button" value="submit" onclick="alert('Form Submitted Successfully...!')">
+        </form>
+    </body>
+</html>

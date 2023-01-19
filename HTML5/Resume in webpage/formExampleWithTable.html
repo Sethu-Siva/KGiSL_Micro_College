@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bio Data</title>
+    </head>
+    <body>
+        <form>
+            <table cellspacing="2" cellpadding="2">
+                <thead>
+                    <tr>
+                        <th><h1>Bio Data</h1></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><lable>First Name : </lable></td>
+                        <td><input type="text" id="First_Name" name="First_Name" value="" placeholder="Enter First Name"></td>
+                        <td><lable>Middle Name : </lable></td>
+                        <td><input type="text" id="Middle_Name" name="Middle_Name" value="" placeholder="Enter Middle Name"></td>
+                        <td><lable>Last Name : </lable></td>
+                        <td><input type="text" id="Last_Name" name="Last_Name" value="" placeholder="Enter Last Name"></td>
+                    </tr>
+                        
+                    <tr>
+                        <td><lable>Father Name : </lable></td>
+                        <td><input type="text" id="Father_Name" name="Father_Name" value="" placeholder="Enter Father's Name"></td>
+                        <td><lable>Mother Name : </lable></td>
+                        <td><input type="text" id="Mother_Name" name="Mother_Name" value="" placeholder="Enter Mother's Name"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Gender : </label></td>
+                        <td>
+                            <input type="radio" id="Gender" Name="Gender" value="Male">Male
+                            <input type="radio" id="Gender" Name="Gender" value="Female">Female
+                            <input type="radio" id="Gender" Name="Gender" value="Others">Others
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Date of Birth : </label></td>
+                        <td><input type="date" id="DOB" name="DOB" value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2"><label>Mobile Numbers : </label></td>
+                        <td><input type="text" id="First_Mob_Number" name="First_Mob_Number" value="" maxlength="10" placeholder="First Mobile Number"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" id="Second_Mob_Number" name="Second_Mob_Number" value="" maxlength="10" placeholder="Secondary Mobile Number"></td>
+                    </tr>
+
+                    <tr>
+                        <td><lable>Email ID : </lable></td>
+                        <td><input type="email" id="email_id" name="email_id" value="" placeholder="Enter Email ID"></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3"><lable>Marital Status : </lable></td>
+                        <td><input type="radio" id="Marital_Status" name="Marital_Status" value="Single">Single</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="radio" id="Marital_Status" name="Marital_Status" value="Married">Married</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="radio" id="Marital_Status" name="Marital_Status" value="Divorced">Divorced</td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label>Address : </label></td>
+                        <td><textarea id="Address" name="Address" rows="3" cols="20" placeholder="Address"></textarea></td>
+                    </tr>
+                            
+                    <tr>
+                        <td><lable>Education : </lable></td>
+                        <td>
+                            <select multiple size="2">
+                            <option>BCA</option>
+                            <option>B.Sc</option>
+                            <option>B.Com</option>
+                            <option>MCA</option>
+                            <option>M.Sc</option>
+                            <option>M.Com</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><lebel>Intrests</lebel><br></td>
+                        <td>
+                            <input type="checkbox" id="interest" name="interest" value="Playing Games">Playing Games<br>
+                            <input type="checkbox" id="interest" name="interest" value="Reading Books">Reading Books<br>
+                            <input type="checkbox" id="interest" name="interest" value="Singing Songs">Singing Songs<br>
+                            <input type="checkbox" id="interest" name="interest" value="Dancing">Dancing 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Upload Resume : </label></td>
+                        <td><input type="file" id="resume" name="resume" id=""></td>
+                    </tr>
+
+                    <tr>
+                        <td><center><input type="button" value="reset" onclick="alert('Form Reset Successful...!')"></center></td>
+                        <td><center><input type="button" value="submit" onclick="alert('Form Submitted Successfully...!')"></center></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
