@@ -1,0 +1,12 @@
+#heading_tag{
+    text-align: center;
+    color: black;
+    width: auto;
+    height: auto;
+    background-color: antiquewhite;
+}
+
+#pg1{
+    width: auto;
+    background-image: url('mat-bg-img.jpeg');
+}

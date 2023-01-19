@@ -1,0 +1,25 @@
+.class_h1{
+    color: yellow;
+}
+#page_title{
+    color: blue;
+}
+h3{
+    color:rgb(0,255,0);
+}
+.h1_blue{
+    color: blue;
+}
+#h2_title{
+    color:#574d61;
+}
+.inline_style{
+    font-style:italic;
+}
+.p_border{
+    border:solid brown 5px;
+}
+.container{
+    width:1080px;
+    
+}
