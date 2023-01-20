@@ -1,0 +1,26 @@
+.OlwithClass{
+    color:green;
+    list-style-type:armenian;
+}
+#OlwithID{
+    color: red;
+    list-style-type: decimal-leading-zero;
+}
+.UlwithClass{
+    color:blue;
+    list-style-type:georgian;
+}
+#UlwithID{
+    color: brown;
+    list-style-type:lower-greek;
+}
+#OlwithImg{
+    list-style-image:url("emoji.jpg");
+    background-size: 10px;
+    list-style-position: inside;
+}
+#UlwithImg{
+    list-style-image:url("emoji1.png");
+    background-size: 5px;
+    list-style-position: inside;
+}
