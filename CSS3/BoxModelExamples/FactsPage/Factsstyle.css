@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(40, 16, 177);
+    font-family: 'Lucida Sans';
+}
+h5,p{
+    color: rgb(173, 192, 226);
+}
+h1{
+    color: white;
+}
+div{
+    width: 700px;
+    height: max-content;
+    padding-left: 70px;
+    padding-top: 30px;
+}
+input{
+    display: block;
+    width: 700px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid rgb(131, 163, 218);
+    border-radius: 7px;
+    color: white;
+    padding-left: 20px;
+}
+#btn{
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 0;
+    padding:0;
+}
+input:hover{
+    border-color: orange;
+}
