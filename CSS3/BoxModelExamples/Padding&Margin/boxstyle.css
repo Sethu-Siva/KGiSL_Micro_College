@@ -1,0 +1,13 @@
+div{
+    width: 250px;
+    height: 300px;
+    background-image: url('matrix1.png');
+    padding: 50px;
+}
+p{
+    font-family: sans-serif;
+    color: white;
+    font-size: xx-large;
+    border: 3px solid #48ee59;
+    padding:20px;
+}

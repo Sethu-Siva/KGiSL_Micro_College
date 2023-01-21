@@ -1,0 +1,47 @@
+body{
+    background: url('ContactUsBackPic.jpg') fixed no-repeat;
+    background-size: cover;
+}
+div{
+    width: 200px;
+    height: 200px;
+    padding-top: 80px;
+    padding-bottom: auto;
+}
+form{
+    width: 400px;
+    height: max-content;
+    border: 10px solid rgb(0, 194, 253);
+    background-color: rgba(21, 6, 156, 0.568);
+    padding:50px;
+    display: block;
+    line-height: 1;
+    margin-left: 370px;
+    margin-right: auto;
+}
+h1,p{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+input{
+    display: block;
+    width: 375px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(0, 194, 253);
+    padding-left: 15px;
+}
+input::placeholder{
+    color: rgb(0, 194, 253);
+}
+#subbtn{
+    width: fit-content;
+    height: 35px;
+    margin: auto;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 0 20px;
+}
