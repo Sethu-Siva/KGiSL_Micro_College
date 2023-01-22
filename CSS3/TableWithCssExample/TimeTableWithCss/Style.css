@@ -1,0 +1,20 @@
+table{
+    width: 70%;
+    height: 350px;
+    border-collapse: collapse;
+    text-align: center;
+    border: 7px solid black;
+    box-shadow: 5px 5px rgb(128, 128, 128);
+    margin:100px auto;
+}
+th,td{
+    border: 1px solid black;   
+}
+caption{
+    padding-bottom: 20px;
+    font-size: x-large;
+    font-weight: 800;
+}
+.break{
+    font-weight: 600;
+}
