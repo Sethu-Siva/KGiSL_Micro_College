@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+body{
+    background-image: url('sunset-1373171.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
+div.form_reg{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+div.form_log{
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+.form_reg,.form_log{
+    width: 280px;
+    height: 400px;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    background: transparent;
+}
+form#reg{
+    display: block;
+}
+#name,#email,#psw,#cpsw{
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    padding: 0 10px 3px 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.span_cls{
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+}
+span#sign{
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
+::placeholder{
+    color: white;
+    font-weight: bold;
+}
+span#log{
+    padding-left: 40px;
+}
+#name:hover,#email:hover,#psw:hover,#cpsw:hover{
+    border-bottom: 2px solid lightgreen;
+    transition: all 2s;
+}
+label{
+    color: white;
+    font-size: small;
+    font-weight: 400;
+    margin: 0 20px 0 20px;
+}
+input#sub_btn{
+    width: 120px;
+    height: 30px;
+    padding: 0 20px 0 20px;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 15px;
+    margin: 20px 80px;
+}
+span#log1{
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
+span#sign1{
+    padding-right: 40px;
+}

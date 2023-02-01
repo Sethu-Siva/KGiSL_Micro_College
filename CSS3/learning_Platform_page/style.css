@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+body{
+    background-image: url('isometric-e-learning-background-template.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    width: 100%;
+    display: flex;
+}
+img{
+    padding-left: 25px;
+    height: 55px;
+    width: 55px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+ul li{
+    padding: 20px 30px;
+}
