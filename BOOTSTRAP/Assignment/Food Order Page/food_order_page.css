@@ -3,8 +3,6 @@
     background-color: #f6c56e;
     color: #323f4b;
     border-radius: 20px 20px 0 0;
-    position: absolute;
-    top: 65%;
 }
 .card-title{
     font-family: 'Bree Serif', serif;
@@ -17,12 +15,5 @@
     color: #323f4b;
     font-size: small;
     border: none;
-    border-radius: 20px 20px;
-}
-.card-img-top{  
-    height: 65vh;
-}
-.card{
-    margin: 50px 0 0 50px;
-    width: 18rem;
+    border-radius: 20px;
 }

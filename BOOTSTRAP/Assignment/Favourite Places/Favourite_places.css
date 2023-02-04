@@ -1,0 +1,10 @@
+.container-fluid{
+    background-color: aqua;
+}
+.row{
+    background-color: white;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
