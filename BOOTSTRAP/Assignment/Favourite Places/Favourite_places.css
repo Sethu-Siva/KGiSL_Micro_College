@@ -1,10 +1,11 @@
+img{
+    width: 100%;
+    height: 100%;
+}
 .container-fluid{
     background-color: aqua;
 }
 .row{
-    background-color: white;
-}
-img{
-    width: 100px;
-    height: 100px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
