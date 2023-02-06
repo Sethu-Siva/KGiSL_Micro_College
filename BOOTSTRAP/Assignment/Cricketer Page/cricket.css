@@ -1,0 +1,9 @@
+.banner{
+    background-color: rgb(220, 77, 101);
+}
+body{
+    background-color: rgba(156, 195, 230, 0.422);;
+}
+.row{
+    border-radius: 20px;
+}
