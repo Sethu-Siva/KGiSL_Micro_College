@@ -1,0 +1,18 @@
+.container-fluid{
+    background-color:#19232d;
+}
+.social_icons{
+    background-color: #202b36;
+    color: #5a7184;
+    border-radius: 50%;
+    padding: 15px;
+}
+.text{
+    color: #5a7184;
+}
+.contact_icon{
+    color: #5a7184;
+}
+.copy_text{
+    color: #959ead;
+}
