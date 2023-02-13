@@ -33,10 +33,10 @@ class Assignment{
 		System.out.println("Second Name : " + a.l_name);
         System.out.println("---------------------\n\n");
 
-        // 2. To check wether java is installed or not
-        System.out.println("-------------------------------------------");
-        System.out.println("2. To check wether java is installed or not");
-        System.out.println("-------------------------------------------");
+        // 2. To check whether java is installed or not
+        System.out.println("--------------------------------------------");
+        System.out.println("2. To check whether java is installed or not");
+        System.out.println("--------------------------------------------");
         a.javaVersion = System.getProperty("java.version");
         System.out.println("JAVA Version : " + a.javaVersion);
         a.javaVendor = System.getProperty("java.vendor");
@@ -55,8 +55,7 @@ class Assignment{
         System.out.println("--------------------------------------");
         System.out.println("Enter Your Character (Single Char) : ");
         a.c = sc.next().charAt(0);
-        int temp;
-        temp = (int)a.c;
+        int temp = (int)a.c;
         System.out.println("The ASCII Value for given Char " + a.c + " is : " + temp);
         System.out.println("---------------------\n\n");
     }

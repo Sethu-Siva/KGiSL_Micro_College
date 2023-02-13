@@ -14,3 +14,11 @@ Mevan Repository -
 Day - 2
 
 compiler confuse = Ambiguity
+
+-------------------------------------------------
+
+Day - 3
+
+Arrays
+-------
+	-collection of elements of similar type.
