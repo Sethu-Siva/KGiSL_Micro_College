@@ -1,0 +1,74 @@
+JAVA
+-----------------
+
+Jar Files
+Packages
+Libraries
+Dependancy
+
+
+
+Mevan Repository - 
+-------------------------------------------------
+
+Day - 2
+
+compiler confuse = Ambiguity
+
+-------------------------------------------------
+
+Day - 3
+
+Arrays
+-------
+	-collection of elements of similar type.
+
+
+
+Method - A method is a collection of statements that perform some specific task and return the results to the caller.
+	 - Code reusability.
+       - Method declaration must be inside the class.
+
+
+constructor - Each time an object is created using new() keyword at least one constructor is invocked to 
+		  assign initial values to the data members of the same class.
+
+
+Access Specifiers 
+**********************************
+
+Access Modifiers					Default	Private	Protected	Public
+--------------------------------------------------------------------------------------
+inside the class					y		y		y		y
+sub class inside same package			y		n		y		y
+outside the package				n		n		n		y
+within the subclass outside package		n		n		y		y
+
+
+Packages
+***************************
+	A package is nothing but a physical folder structure (Directories) that contains
+a group of related classes, interfaces, and sub-packages according to their functionality.
+
+Package Naming Convensions
+----------------------------
+
+Syntax:
+	package companySpecification.CompanyName.ClientName.ProjectName.ModuleName;
+
+	eg:-
+		package com.ibm.hdfc.loan.homeloan;
+
+compling java Package in cmd	- javac -d . className.java
+To Run java Package in cmd	- java className.java
+------------------------------------------------------------------------------------------------
+
+
+InterFaces in Java
+******************************
+	An interface can be defined as a container that stores the signatures of the
+methods to be implemented in the code segment. It improves the level of Abstraction.
+
+Interface is used with (implements) - keyword.
+
+Abstraction - Hiding the data and Showing the Essential data.
