@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 
-class Assignment{
+class Assignment {
     String f_name = null, l_name = null, Temp = null;
     String javaVersion, javaVendor, javaHome, javaClassPath, javaVendorUrl;
     char c;
