@@ -1,10 +1,13 @@
 import java.util.*;
 import java.lang.*;
 
-class Assignment {
+class Assignment 
+{
     String f_name = null, l_name = null, Temp = null;
     String javaVersion, javaVendor, javaHome, javaClassPath, javaVendorUrl;
     char c;
+    String firstName, secondName;
+
     public static void main(String args[])
     {
         Assignment a = new Assignment();
@@ -58,5 +61,16 @@ class Assignment {
         int temp = (int)a.c;
         System.out.println("The ASCII Value for given Char " + a.c + " is : " + temp);
         System.out.println("---------------------\n\n");
+
+        // 4, 5 String Methods
+        System.out.print("Enter Your First Name : ");
+        firstName = sc.next();
+        System.out.print("Enter Your Second Name : ");
+        secondName = sc.next();
+        System.out.println("----------------------------");
+        System.out.println("Concat Method : " + firstName.concat(secondName));
+        System.out.println("Concat using '+' : " + firstName + " " + secondName);
+        System.out.println("In LowerCase : " + firstName.toLowerCase());
+        System.out.println("In UpperCase : " + secondName.toUpperCase());
     }
 }
