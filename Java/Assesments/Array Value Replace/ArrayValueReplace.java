@@ -1,3 +1,5 @@
+// Java Program For replacing a Given Value in an Array 
+
 import java.util.*;
 import java.lang.*;
 
@@ -49,5 +51,6 @@ class ArrayValueReplace
         {
             System.out.print(" " + x + " ");
         }
+        System.out.println("\n------------------------------------------------------\n");
     }
 }

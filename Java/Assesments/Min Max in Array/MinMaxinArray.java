@@ -1,3 +1,5 @@
+// Finding Minimum & Maximum Value in Given Array
+
 import java.util.*;
 import java.lang.*;
 
@@ -66,5 +68,6 @@ class MinMaxinArray
         System.out.println("\n----------------------------------------------");
         System.out.println("\nMinimum Value in Given Array is : " + min_num);
         System.out.println("\nMaximum Value in Given Array is : " + max_num);
+        System.out.println("\n----------------------------------------------\n");
     }
 }

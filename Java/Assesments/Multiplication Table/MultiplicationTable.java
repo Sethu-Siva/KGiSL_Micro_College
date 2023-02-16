@@ -1,3 +1,5 @@
+// Java Program to Display Multiplication Table
+
 import java.util.*;
 import java.lang.*;
 

@@ -1,3 +1,12 @@
+/* Using Java Program to Find Whether the Java is Installed or Not
+    Also Finding the Following,
+        * Java Version
+        * Java Vendor
+        * Java Vendor URL
+        * java Home Path
+        * java Class Path
+*/
+
 import java.util.*;
 import java.lang.*;
 
@@ -9,7 +18,6 @@ class JavaInstalledOrNot
     {
         JavaInstalledOrNot a = new JavaInstalledOrNot();
 
-        // 2. To check whether java is installed or not
         System.out.println("\n\n--------------------------------------------");
         System.out.println("2. To check whether java is installed or not");
         System.out.println("--------------------------------------------");

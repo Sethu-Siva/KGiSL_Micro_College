@@ -1,6 +1,7 @@
+// Java Program for Reverse the Given Values (Integer Array)
+
 import java.util.*;
 import java.lang.*;
-import java.util.Arrays;
 
 class ReverseArray
 {

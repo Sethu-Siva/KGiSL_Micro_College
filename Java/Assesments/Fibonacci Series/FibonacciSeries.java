@@ -1,3 +1,5 @@
+// Java Program for Performing Fibonacci Series
+
 import java.util.*;
 import java.lang.*;
 
@@ -8,10 +10,10 @@ class FibonacciSeries
         Scanner sc = new Scanner(System.in);
 
         System.out.println("\n\n***************************************************");
-        System.out.println("\tFibonacci Series");
+        System.out.println("\t\tFibonacci Series");
         System.out.println("***************************************************\n");
 
-        System.out.print("\nEnter the limit to Stop : ");
+        System.out.print("Enter the limit to Stop : ");
         int limit = sc.nextInt();
 
         int a = 0, b = 1, c = 1;
@@ -30,5 +32,6 @@ class FibonacciSeries
             System.out.print(" " + c);
         }
         while(c <= limit);
+        System.out.println("\n***************************************************\n");
     }
 }       
