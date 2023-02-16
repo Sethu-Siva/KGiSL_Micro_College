@@ -1,5 +1,0 @@
-1. write a java program to swap 2 variables using 3rd variables ?
-2. to check wether java is installed or not
-3. print Ascii value of a given char
-4. concatination of two strings
-5. all Strings to lowercase 

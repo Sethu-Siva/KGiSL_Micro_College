@@ -13,9 +13,9 @@ class MultiplicationTable
         System.out.print("Enter the No.Of Terms : ");
         int terms = sc.nextInt();
 
-        System.out.println("***********");
+        System.out.println("___________");
         System.out.println( table + "  Tables");
-        System.out.println("***********");
+        System.out.println("-----------");
         for ( int i = 1; i <= terms; i++ )
         {
             System.out.println(i + " x " + table + " = " + (i*table));

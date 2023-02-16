@@ -11,7 +11,6 @@ class Calculator
     public void display()
     {
         
-
         System.out.println("\n\n**********************************");
         System.out.println("\tCalculator");
         System.out.println("**********************************\n");

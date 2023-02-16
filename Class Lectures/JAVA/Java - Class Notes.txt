@@ -72,3 +72,33 @@ methods to be implemented in the code segment. It improves the level of Abstract
 Interface is used with (implements) - keyword.
 
 Abstraction - Hiding the data and Showing the Essential data.
+
+Syntax : 
+---------
+	abstract class ClassName
+	{
+		//abstract Methods
+		abstract void methodName();
+		abstract void methodName();
+		//concrete Methods
+		void methodName()
+		{
+			S.O.P("");
+		}
+	}
+
+Polymorphism
+*****************
+	Same name with Diffrent defenition within the same class.
+	can be implemented through,
+		1) method Overloading(Static Polymorphism or Compile Time Polymorphism),
+		2) method overriding(Dinamic Polymorphism or Runtime Polymorphism).
+
+
+Wrapper Class
+**************
+	A wrapper class wraps (encloses) around a primitive datatypes
+and gives it an object appearance.
+	
+	1) Auto Boxing	- converting primitive Data Type into Object Type
+	2) Unboxinfg	- converting Object Type into Primitive Data Type

@@ -34,8 +34,6 @@ public class ShapeArea implements Area, CircumFerence
         System.out.println("Area of the Circle is : " + areaOfCircle);
     }
 
-    
-
     public void Square()
     {
         Scanner sc = new Scanner(System.in);
@@ -45,7 +43,6 @@ public class ShapeArea implements Area, CircumFerence
         System.out.println("Area of the Square is : " + areaOfSquare);
     }
     
-
     public void Rectangle()
     {
         Scanner sc = new Scanner(System.in);
