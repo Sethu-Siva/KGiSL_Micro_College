@@ -102,3 +102,36 @@ and gives it an object appearance.
 	
 	1) Auto Boxing	- converting primitive Data Type into Object Type
 	2) Unboxinfg	- converting Object Type into Primitive Data Type
+
+Exception Handling
+***********************
+
+	An exception is a problem that arises during the excecution of a program.
+	
+		1 ) A user has entered an invalid data
+		2 ) File Not Found
+		3 ) A network connection has been lost in the middle of communications
+		4 ) the JVM has run out of memory
+
+types	
+------
+	1) Checked Exceptions - it is exception that occures at compile time, also called compile time exceptions.
+	2) UnChecked Exceptions - it is an exception that occures at the time of excecutuion. these are also called RunTime Exceptions.
+
+Syntax for try Catch
+--------------------
+
+class ClassName
+{
+	public static void main(String[] args)
+	{
+		try
+		{
+			//code that may raise exception
+		}
+		catch(Exception Exception_Object)
+		{
+			// rest of the program
+		}
+	}
+}
