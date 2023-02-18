@@ -135,3 +135,33 @@ class ClassName
 		}
 	}
 }
+
+Java Collections Frameworks
+******************************
+	The Java Collection Framework is a collection of interfaces and Classes,
+which helps in storing and processing the data efficiently.
+
+
+	Itarable - 
+			collection-
+					List-
+						ArrayList
+						LinkedList
+						Vector
+					Queue-
+						Deque
+						PriorityQueue
+					Set-
+						HashSet
+						LinkedHasSet
+						SortedSet
+						TreeSet
+
+			Map-
+				Hasable
+				LinkedHashMap
+				HashMap
+				TreeMap-
+					TreeMap
+
+

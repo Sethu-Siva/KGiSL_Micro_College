@@ -47,6 +47,13 @@ class secondChild extends firstChild
         System.out.print("Enter Your Age : ");
         age = sc.nextInt();
     }
+    public void GetJobDetails()
+    {
+        System.out.print("Enter Your JobRole : ");
+        jobRole = sc.next();
+        System.out.print("Enter Your Salary : ");
+        Salary = sc.nextDouble();
+    }
 }
 
 class AbstractExample
