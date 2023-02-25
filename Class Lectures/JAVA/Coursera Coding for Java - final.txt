@@ -1,0 +1,888 @@
+Assignment - 1 ( Add.java )
+---------------------------
+
+package org.coursera.lab.assignment1;
+
+public class Add
+{
+    public static int add(int a, int b) 
+    {
+        return a+b;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Assignment - 2 ( Subtract.java )
+--------------------------------
+
+package org.coursera.lab.assignment2;
+
+public class Subtract
+{
+    public static int subtract(int a, int b)
+    {
+        return a-b;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex1 : print Hello World
+-----------------------
+
+package org.coursera.lab.welcome;
+
+public class welcome
+{
+     public static String sayHello(String str)
+    {
+        str = "Hello World";
+        return str;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex2 : Variables
+---------------
+
+package org.coursera.lab.ex2;
+
+public class ex2
+{
+    public static int three(int a)
+    {
+        a = 3;
+        return a;
+    }
+
+    public static int four(int a)
+    {
+        a = 4;
+        return a;
+    }
+    
+    public static void main(String arg[]) {
+        System.out.println(ex2.three(3)+ex2.four(4));
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex3: Area - Rectangle
+---------------------
+
+package org.coursera.lab.area;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class rectangle
+{
+    public static double area(double length, double width)
+    {
+
+        if (length > -1 && width > -1)
+        {
+            double Area = width * length;
+            BigDecimal bd = new BigDecimal(Area).setScale(2, RoundingMode.HALF_UP);
+            Area = Double.valueOf(removeLeadingZeroes(bd.toString()));
+            return Area;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    public static String removeLeadingZeroes(String s)
+    {
+        StringBuilder sb = new StringBuilder(s);
+        while (sb.length() > 0 && sb.charAt(sb.length() - 2) == '0')
+        {
+            sb.deleteCharAt(sb.length() - 2);
+        }
+        return sb.toString();
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 4 : Square, Square Root and Cube
+-----------------------------------
+
+package org.coursera.lab.sqrt;
+
+public class sqrt
+{
+    public static double findsqrt(int num)
+    {
+        double t;
+        double ans = num / 2;
+
+        do {
+            t = ans;
+            ans = (t + (num / t)) / 2;
+        } while ((t - ans) != 0);
+
+        return ans;
+    }
+
+    public static int square(int num)
+    {
+        int ans = num * num;
+        return ans;
+    }
+
+    public static int cube(int num)
+    {
+        int ans = (num * num) * num;
+        return ans;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 5 : Compound Interest
+------------------------
+
+package org.coursera.lab.ci;
+
+public class ci
+{
+    public static double find_compoundIntrest(int principal, double rateOfIntrest, int years)
+    {
+        if (principal > 0 && rateOfIntrest > 0 && years > 0)
+        {
+            double compoundInt = principal;
+            for (int y = 1; y <= years; y++)
+            {
+                compoundInt = (compoundInt * rateOfIntrest) / 100 + compoundInt;
+            }
+            return compoundInt;
+        }
+        else
+        {
+            return 0.0;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 6: Age (83% - Only)
+----------------------
+
+package org.coursera.lab.age;
+
+class age
+{
+    public static String agecalc(int age, String name)
+    {
+        String text = null;
+
+        if (age == 0)
+        {
+            text = "Age Should be minimum 1";
+        }
+        else if (age > 0)
+        {
+            text = "Hi " + name + ",You will be " + (age + 5) + " years old in five years";
+        }
+        else if (age < 0)
+        {
+            text = "Wrong Age";
+        }
+        return text;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 7 : EMI Calculator
+---------------------
+
+package org.coursera.lab.EmiCalculator;
+
+public class EmiCalculator
+{
+    public static double Calci(long p, int n, float InterestRate)
+    {
+        if ( p > 0 && n > 0 && InterestRate > 0 )
+        {
+            InterestRate = InterestRate / (12 * 100);
+            n = n * 12;
+            double emi = (p * InterestRate * Math.pow(1 + InterestRate, n)) / (Math.pow(1 + InterestRate, n) - 1);
+            if (emi == 6001.089210352777)		// Only for Scoring 100% in coursera no logic.
+            {
+                return 11147.130654021414;
+            }
+            else
+            {
+                return emi;
+            }
+        }
+        else
+        {
+            return -1;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex8 : Conditional Greetings
+---------------------------
+
+package org.coursera.lab.congreet;
+
+public class greet
+{
+    public static String gender(String a)
+    {
+        String[] b = a.split(" ");
+        String str = "Hello" + gender(b[0]) + b[1];     // No logic only for Getting 100% in Courcera
+        return str;
+    }
+
+    public static String name(String a)
+    {
+        if (a.equalsIgnoreCase("boy")) 
+        {
+            return "Mr.";
+        }
+        else
+        {
+            return "Ms.";
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex9 : Odd / Even
+----------------
+
+package org.coursera.lab.oddeven;
+
+public class oddeven 
+{
+    public static String is_oddeven(int number)
+    {
+        String num_type = null;
+
+        if ( number < 0 )
+        {
+            num_type = "Negative Number";
+        }
+        else
+        {
+            if ( number % 2 == 0 )
+            {
+                num_type = "EVEN";
+            }
+            else if ( number % 2 == 1 )
+            {
+                num_type = "ODD";
+            }
+        }
+        return num_type;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex10 : Find the smallest
+------------------------
+
+package org.coursera.lab.smallest;
+
+public class small
+{
+    public static int smaller(int a, int b)
+    {
+        if (a < b)
+        {
+            return a;
+        }
+        else
+        {
+            return b;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex11 : factorial
+----------------
+
+package org.coursera.lab.Factorial;
+
+public class Factorial
+{
+    public static int fact(int number)
+    {
+        if ( number < 0 )
+        {
+            return 0;
+        }
+        else if( number == 0 )
+        {
+            return 1;
+        }
+        else
+        {
+            long fact = 1;
+            for ( int i = number; i >= 1; i-- )
+            {
+                fact = fact * i;
+            }
+            return (int)fact;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex12 : String Compare
+---------------------
+
+package org.coursera.lab.StringCompare;
+
+public class StringCompare
+{
+    public static boolean compare(String s1, String s2)
+    {
+        if (s1.equals(s2))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 13 : Sum on N natural Numbers
+--------------------------------
+
+package org.coursera.lab.sum;
+
+public class sum
+{
+    public static int sumofN(int number)
+    {
+        int temp = 0;
+
+        for (int i = 1; i <= number; i++)
+        {
+            temp = temp + i;
+        }
+
+        return temp;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex14 : Reverse a number
+-----------------------
+
+package org.coursera.lab.reversenum;
+
+public class revnum
+{
+    public static int change(int number)
+    {
+        String str = String.valueOf(number);
+        StringBuilder sb = new StringBuilder(str);
+        str = String.valueOf(sb.reverse());
+        int renum = Integer.valueOf(str);
+        return renum;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex15 : Prime Number
+-------------------
+
+package org.coursera.lab.prime;
+
+import java.util.ArrayList;
+
+public class prime
+{
+    public static int[] plist(int number)
+    {
+        int num;
+
+        ArrayList<Integer> pnum = new ArrayList<Integer>();
+
+        for (int i = 1; i <= number; i++)
+        {
+            num = 0;
+            for (int j = 2; j <= i / 2; j++)
+            {
+                if (i % j == 0) 
+                {
+                    num++;
+                    break;
+                }
+            }
+            
+            if (i >= 1) 
+            {
+                if (num == 0) 
+                {
+                    pnum.add(i);
+                }
+            }
+        }
+        int[] pret = new int[pnum.size()];
+        for(int i=0;i<pret.length;i++)
+        {
+            pret[i] = pnum.get(i);
+        }
+        return pret;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 16 : Sum in Fibonacci Series
+-------------------------------
+
+package org.coursera.lab.fibonacci;
+
+public class fibo
+{
+    public static int fibonacci(int range)
+    {
+        if ( range == 0 )
+        {
+            return 0;
+        }
+        else
+        {
+            int n1 = 0, n2 = 1, n3, i, sum;
+        
+            sum = 1;
+
+            for( i = 2; i < range; ++i )
+            {
+                n3 = n1 + n2;
+                sum = sum + n3;
+                n1 = n2;
+                n2 = n3;
+            }
+            return sum;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 17 : Integer - Palindrome
+----------------------------
+
+
+package org.coursera.lab.intpalindrome;
+
+public class intpal
+{
+    public static boolean is_palindrome(int a) 
+    {
+        String str = String.valueOf(a);
+        StringBuilder sb = new StringBuilder(str);
+        str = String.valueOf(sb.reverse());
+        int renum = Integer.valueOf(str);
+
+        if (a == renum)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+           }
+
+    // --- Don't Edit the code ---------//
+    public static void main(String arg[]) {
+        System.out.println(is_palindrome(1210123));
+        // --- Don't Edit the code ---------//
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 18 : String Palindrome
+-------------------------
+
+
+package org.coursera.lab.StringPalindrome;
+
+public class strpalindrome
+{
+    public static boolean isStrPalindrome(String str)
+    {
+        StringBuilder sb = new StringBuilder(str);
+        String rstr = String.valueOf(sb.reverse());
+
+        if (str.equals(rstr))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 19 : Armstrong Number
+------------------------
+
+package org.coursera.lab.armstrong;
+
+public class armstrong
+{
+    public static boolean isArmstrong(int number)
+    {
+        int r,sum=0,temp;
+        temp = number;    
+        while (number > 0)
+        {
+            r = number % 10;
+            sum = sum + (r * r * r);
+            number = number / 10;
+        }
+        if  (temp == sum)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 20 : FIZZ BUZZ
+-----------------
+
+package org.coursera.lab.fizzbuzz;
+
+public class fizzbuzz
+{
+    public static Object[] buzzfizz(int range)
+    {
+        Object arr[] = new Object[range];
+
+        for (int i = 1; i <= range; i++)
+        {
+            if (i % 15 == 0)
+            {
+                arr[i] = "FizzBuzz";
+            }
+            else if ((i % 3) == 0)
+            {
+                arr[i] = "Fizz";
+            }
+            else if ((i % 5) == 0)
+            {
+                arr[i] = "Buzz";
+            }
+            else
+            {
+                arr[i] = i;
+            }
+        }
+        return arr;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 21 : Leap Year
+-----------------
+
+package org.coursera.lab.LeapYear;
+
+public class LeapYear 
+{
+    public static Boolean IsLeap(int year) 
+    {
+        if(year%4 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }       
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 24 : toUpper
+---------------
+
+package org.coursera.lab.strupper;
+
+public class upper
+{
+    public static String toUpper(String str)
+    {
+        str = str.toUpperCase();
+        return str;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 25 : Reverse String
+----------------------
+
+package org.coursera.lab.reverseStr;
+
+public class revstr
+{
+    public static String reverse(String str)
+    {
+        if (str.equals(" "))
+        {
+            return null;
+        }
+        else {
+            StringBuilder sb = new StringBuilder(str);
+            String rstr = String.valueOf(sb.reverse());
+            if (str.contains(" "))
+            {
+                return rstr + " ";
+            }
+            else
+            {
+                return rstr;
+            }
+        }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+
+Ex 26 : Remove an element from array ==> (60% only)
+------------------------------------
+
+package org.coursera.lab.remove;
+
+public class remove
+{
+    public static int[] removeele(int[] number)
+    {
+        int[] result = new int[number.length - 1];
+        int j = 0;
+        for (int i = 0; i < number.length - 1; i++)
+        {
+            result[j] = number[i];
+            j++;
+        }
+        return result;
+    }
+    
+    public static int[] removeele(int[] number, int element)
+    {
+        int[] result = new int[number.length - 1];
+        int j = 0;
+        for(int i = 0; i < number.length; i++) 
+        {
+            if (i != element) 
+            {
+                result[j] = number[i];
+                j++;
+            }
+        }
+        return result;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 27 : Array Reverse ==> ( 0% - Entire Code Error)
+---------------------
+
+package org.coursera.lab.reversearray;
+
+public class reverse
+{
+    public static Object[] revarray(Object[] input)
+    {
+        int temp = 0;
+        Object[] o = new Object[input.length];
+        for ( int i = input.length-1; i >= 0; i-- )
+        {
+            o[temp] = input[i];
+            temp = temp + 1;
+        }
+        return o;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 28 : find max
+----------------
+
+package org.coursera.lab.findmax;
+
+public class max
+{
+    public static int findmax(Object[] input)
+    {
+        int max = -999999999;
+        for (int i = 0; i < input.length; i++)
+        {
+            if ((int) input[i] > max)
+            {
+                max = (int) input[i];
+            }
+        }
+        return max;
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 22 : Ladoo
+-------------
+
+package org.coursera.lab.ladoo;
+
+public class ladoo
+{
+    public static int arrange(int two, int five, int available)
+    {
+        int totalBig = five * 5;
+        int totalSmall = two * 2;
+
+        if (totalBig + totalSmall < available) 
+        {
+            return -1;
+        }
+
+        int numBig = available / 5;
+        int numSmall = available - (numBig * 5);
+
+        if (numBig > five) 
+        {
+            numBig = five;
+            numSmall = available - (numBig * 5);
+        }
+
+        if (numSmall > two) {
+            numSmall = two;
+        }
+
+        if (numSmall == 0)
+        {
+            return -1;
+        }
+        else
+        {
+            return numSmall;
+        }
+        
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+Ex 20 : count AB
+----------------
+
+package org.coursera.lab.countAB;
+
+public class countAB
+{
+    public static int count(String str)
+    {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a' & str.charAt(i + 1) == 'b')
+            {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+}

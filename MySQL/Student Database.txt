@@ -1,0 +1,458 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mydatabase         |
+| mysql              |
+| performance_schema |
+| sample             |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> create database Students;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mydatabase         |
+| mysql              |
+| performance_schema |
+| sample             |
+| students           |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use students;
+Database changed
+mysql> create table Student_Profiles (
+    -> Roll_No int,
+    -> Name char(30),
+    -> DOB date,
+    -> Department char(30),
+    -> City char(30)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc Student_Profiles;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| Roll_No    | int      | YES  |     | NULL    |       |
+| Name       | char(30) | YES  |     | NULL    |       |
+| DOB        | date     | YES  |     | NULL    |       |
+| Department | char(30) | YES  |     | NULL    |       |
+| City       | char(30) | YES  |     | NULL    |       |
++------------+----------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> create table marks (
+    -> Roll_No int ,
+    -> Name char(30),
+    -> mark1 int,
+    -> mark2 int,
+    -> mark3 int,
+    -> mark4 int,
+    -> mark5 int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc marks;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| Roll_No | int      | YES  |     | NULL    |       |
+| Name    | char(30) | YES  |     | NULL    |       |
+| mark1   | int      | YES  |     | NULL    |       |
+| mark2   | int      | YES  |     | NULL    |       |
+| mark3   | int      | YES  |     | NULL    |       |
+| mark4   | int      | YES  |     | NULL    |       |
+| mark5   | int      | YES  |     | NULL    |       |
++---------+----------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+
+
+mysql> select * from Student_Profiles;
+Empty set (0.00 sec)
+
+mysql> desc Student_profiles;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| Roll_No    | int      | YES  |     | NULL    |       |
+| Name       | char(30) | YES  |     | NULL    |       |
+| DOB        | date     | YES  |     | NULL    |       |
+| Department | char(30) | YES  |     | NULL    |       |
+| City       | char(30) | YES  |     | NULL    |       |
++------------+----------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Student_Profiles values
+    -> (162201,'Sethu','1999-06-11','BCA','Coimbatore');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Student_Profiles values
+    -> (162202,'Siva','1999-12-05','MCA','Salem');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Student_Profiles values
+    -> (162203,'Guna','1997-11-17','BCOM','Erode');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Student_Profiles values
+    -> (162205,'Mani','1998-06-24','MCA','Ooty');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Student_Profiles;
++---------+-------+------------+------------+------------+
+| Roll_No | Name  | DOB        | Department | City       |
++---------+-------+------------+------------+------------+
+|  162201 | Sethu | 1999-06-11 | BCA        | Coimbatore |
+|  162202 | Siva  | 1999-12-05 | MCA        | Salem      |
+|  162203 | Guna  | 1997-11-17 | BCOM       | Erode      |
+|  162205 | Mani  | 1998-06-24 | MCA        | Ooty       |
++---------+-------+------------+------------+------------+
+4 rows in set (0.00 sec)
+
+mysql> desc marks;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| Roll_No | int      | YES  |     | NULL    |       |
+| Name    | char(30) | YES  |     | NULL    |       |
+| mark1   | int      | YES  |     | NULL    |       |
+| mark2   | int      | YES  |     | NULL    |       |
+| mark3   | int      | YES  |     | NULL    |       |
+| mark4   | int      | YES  |     | NULL    |       |
+| mark5   | int      | YES  |     | NULL    |       |
++---------+----------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> insert into marks (Roll_No,Name,mark1,mark2,mark3,mark4,mark5) values
+    -> (162201,'Sethu',97,75,98,45,75),
+    -> (162202,'Siva',45,78,54,78,45),
+    -> (162203,'Guna',78,84,48,78,96),
+    -> (162204,'Mani',14,45,75,15,78),
+    -> (162205,'Tamil',75,65,78,85,92)
+    -> ;
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> update Student_profiles set Roll_No=162204 where name='mani';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> insert into Student_Profiles (Roll_No,Name,DOB,Department,City) values
+    -> (162205,'Tamil','1995-05-12','Mcom','Karur');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Student_Profiles;
++---------+-------+------------+------------+------------+
+| Roll_No | Name  | DOB        | Department | City       |
++---------+-------+------------+------------+------------+
+|  162201 | Sethu | 1999-06-11 | BCA        | Coimbatore |
+|  162202 | Siva  | 1999-12-05 | MCA        | Salem      |
+|  162203 | Guna  | 1997-11-17 | BCOM       | Erode      |
+|  162204 | Mani  | 1998-06-24 | MCA        | Ooty       |
+|  162205 | Tamil | 1995-05-12 | Mcom       | Karur      |
++---------+-------+------------+------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 |
++---------+-------+-------+-------+-------+-------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 |
++---------+-------+-------+-------+-------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table marks add Total float(3,2);
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | Total |
++---------+-------+-------+-------+-------+-------+-------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 |  NULL |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 |  NULL |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 |  NULL |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 |  NULL |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 |  NULL |
++---------+-------+-------+-------+-------+-------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table Student_Profiles Rename column DOB to Date_Of_Birth;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from Student_Profiles;
++---------+-------+---------------+------------+------------+
+| Roll_No | Name  | Date_Of_Birth | Department | City       |
++---------+-------+---------------+------------+------------+
+|  162201 | Sethu | 1999-06-11    | BCA        | Coimbatore |
+|  162202 | Siva  | 1999-12-05    | MCA        | Salem      |
+|  162203 | Guna  | 1997-11-17    | BCOM       | Erode      |
+|  162204 | Mani  | 1998-06-24    | MCA        | Ooty       |
+|  162205 | Tamil | 1995-05-12    | Mcom       | Karur      |
++---------+-------+---------------+------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> Desc Student_Profiles;
++---------------+----------+------+-----+---------+-------+
+| Field         | Type     | Null | Key | Default | Extra |
++---------------+----------+------+-----+---------+-------+
+| Roll_No       | int      | YES  |     | NULL    |       |
+| Name          | char(30) | YES  |     | NULL    |       |
+| Date_Of_Birth | date     | YES  |     | NULL    |       |
+| Department    | char(30) | YES  |     | NULL    |       |
+| City          | char(30) | YES  |     | NULL    |       |
++---------------+----------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc marks;
++---------+------------+------+-----+---------+-------+
+| Field   | Type       | Null | Key | Default | Extra |
++---------+------------+------+-----+---------+-------+
+| Roll_No | int        | YES  |     | NULL    |       |
+| Name    | char(30)   | YES  |     | NULL    |       |
+| mark1   | int        | YES  |     | NULL    |       |
+| mark2   | int        | YES  |     | NULL    |       |
+| mark3   | int        | YES  |     | NULL    |       |
+| mark4   | int        | YES  |     | NULL    |       |
+| mark5   | int        | YES  |     | NULL    |       |
+| Total   | float(3,2) | YES  |     | NULL    |       |
++---------+------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from Student_Profiles;
++---------+-------+---------------+------------+------------+
+| Roll_No | Name  | Date_Of_Birth | Department | City       |
++---------+-------+---------------+------------+------------+
+|  162201 | Sethu | 1999-06-11    | BCA        | Coimbatore |
+|  162202 | Siva  | 1999-12-05    | MCA        | Salem      |
+|  162203 | Guna  | 1997-11-17    | BCOM       | Erode      |
+|  162204 | Mani  | 1998-06-24    | MCA        | Ooty       |
+|  162205 | Tamil | 1995-05-12    | Mcom       | Karur      |
++---------+-------+---------------+------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | Total |
++---------+-------+-------+-------+-------+-------+-------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 |  NULL |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 |  NULL |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 |  NULL |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 |  NULL |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 |  NULL |
++---------+-------+-------+-------+-------+-------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> delete from Student_Profiles where Roll_No = 162204;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Student_Profiles;
++---------+-------+---------------+------------+------------+
+| Roll_No | Name  | Date_Of_Birth | Department | City       |
++---------+-------+---------------+------------+------------+
+|  162201 | Sethu | 1999-06-11    | BCA        | Coimbatore |
+|  162202 | Siva  | 1999-12-05    | MCA        | Salem      |
+|  162203 | Guna  | 1997-11-17    | BCOM       | Erode      |
+|  162205 | Tamil | 1995-05-12    | Mcom       | Karur      |
++---------+-------+---------------+------------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | Total |
++---------+-------+-------+-------+-------+-------+-------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 |  NULL |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 |  NULL |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 |  NULL |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 |  NULL |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 |  NULL |
++---------+-------+-------+-------+-------+-------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> alter table marks modify total float(5,2);
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> update marks set total=mark1+mark2+mark3+mark4+mark5;
+Query OK, 5 rows affected (0.01 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  |
++---------+-------+-------+-------+-------+-------+-------+--------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |
++---------+-------+-------+-------+-------+-------+-------+--------+
+5 rows in set (0.00 sec)
+
+mysql> alter table marks add Average float(5,2);
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> alter table marks add Grade char(2);
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update marks set Average = total/5;
+Query OK, 5 rows affected (0.01 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | NULL  |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | NULL  |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | NULL  |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | NULL  |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | NULL  |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update marks set Grade = 'P' where mark1>40 and mark2>40 and mark3>40 and mark4>40 and mark5>40;
+Query OK, 4 rows affected (0.01 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | P     |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | P     |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | P     |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | NULL  |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | P     |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update marks set Grade = 'F' where mark1<40 and mark2<40 and mark3<40 and mark4<40 and mark5<40;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update marks set Grade = 'P' where mark1>40 and mark2>40 and mark3>40 and mark4>40 and mark5>40;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 4  Changed: 0  Warnings: 0
+
+mysql> update marks set Grade = 'P' where mark1>40 or mark2>40 or mark3>40 or mark4>40 or mark5>40;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 5  Changed: 1  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | P     |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | P     |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | P     |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | P     |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | P     |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update marks set Grade = 'P' where mark1>40 and mark2>40 and mark3>40 and mark4>40 and mark5>40;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 4  Changed: 0  Warnings: 0
+
+mysql> update marks set Grade = 'F' where mark1>40 or mark2>40 or mark3>40 or mark4>40 or mark5>40;
+Query OK, 5 rows affected (0.01 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | F     |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | F     |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | F     |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | F     |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | F     |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update marks set Grade = 'P' where mark1>40 and mark2>40 and mark3>40 and mark4>40 and mark5>40;
+Query OK, 4 rows affected (0.01 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | P     |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | P     |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | P     |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | F     |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | P     |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update marks set Grade = 'F' where mark1<40 or mark2<40 or mark3<40 or mark4<40 or mark5<40;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | P     |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | P     |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | P     |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | F     |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | P     |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_students |
++--------------------+
+| marks              |
+| student_profiles   |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from student_profiles;
++---------+-------+---------------+------------+------------+
+| Roll_No | Name  | Date_Of_Birth | Department | City       |
++---------+-------+---------------+------------+------------+
+|  162201 | Sethu | 1999-06-11    | BCA        | Coimbatore |
+|  162202 | Siva  | 1999-12-05    | MCA        | Salem      |
+|  162203 | Guna  | 1997-11-17    | BCOM       | Erode      |
+|  162205 | Tamil | 1995-05-12    | Mcom       | Karur      |
++---------+-------+---------------+------------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from marks;
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+| Roll_No | Name  | mark1 | mark2 | mark3 | mark4 | mark5 | total  | Average | Grade |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+|  162201 | Sethu |    97 |    75 |    98 |    45 |    75 | 390.00 |   78.00 | P     |
+|  162202 | Siva  |    45 |    78 |    54 |    78 |    45 | 300.00 |   60.00 | P     |
+|  162203 | Guna  |    78 |    84 |    48 |    78 |    96 | 384.00 |   76.80 | P     |
+|  162204 | Mani  |    14 |    45 |    75 |    15 |    78 | 227.00 |   45.40 | F     |
+|  162205 | Tamil |    75 |    65 |    78 |    85 |    92 | 395.00 |   79.00 | P     |
++---------+-------+-------+-------+-------+-------+-------+--------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql>

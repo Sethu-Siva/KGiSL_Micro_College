@@ -1,0 +1,5 @@
+MySQL Installation Video:
+https://www.youtube.com/watch?v=GIRcpjg-3Eg
+
+MySQL Software Download:
+https://dev.mysql.com/downloads/installer/

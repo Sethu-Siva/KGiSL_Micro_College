@@ -1,0 +1,59 @@
+Coursera - Java Status
+----------------------
+
+
+Week 1
+-------
+
+Variables & Operators
+---------------------
+
+Ex1 - 100%
+Ex2 - 100%
+Ex3 - 100%
+Ex4 - 100%
+Ex5 - 100%
+Ex6 - 75%		- Age (age(0, "kala")->  "Hi kala,You will be 45 years old in five years") ==> Test case not given for value 0.
+Ex7 - 100%
+
+Conditional Statements
+----------------------
+
+Ex8 - 100%		- No Logic but code works
+Ex9 - 100%
+Ex10 - 100%
+
+-------------------------------------------------------------------------------------------------------------
+
+Week 2
+------
+
+Controlled Conditional Statements
+---------------------------------
+
+Ex11 - 100%
+Ex12 - 100%
+Ex13 - 100%
+Ex14 - 100%
+Ex15 - 100%
+Ex17 - 100%
+Ex18 - 100%
+Ex19 - 100%
+Ex20 - 100%
+Ex21 - 100%
+
+-------------------------------------------------------------------------------------------------------------
+
+Week 3
+------
+
+Array & String
+--------------
+
+Ex24 - 100%
+Ex25 - 100%		
+Ex26 - 60%		- Removing Array Element 	==> Code Crt But Got TestCase Error
+Ex27 - 0%		- Array Reverse 			==> Code Crt But Got 0%
+Ex28 - 100%
+Ex22 - 100%
+Ex20 - 100%

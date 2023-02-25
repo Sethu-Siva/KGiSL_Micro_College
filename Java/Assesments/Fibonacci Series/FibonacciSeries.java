@@ -1,7 +1,6 @@
 // Java Program for Performing Fibonacci Series
 
 import java.util.*;
-import java.lang.*;
 
 class FibonacciSeries
 {

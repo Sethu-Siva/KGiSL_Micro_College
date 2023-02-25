@@ -1,0 +1,55 @@
+SQL:Structure Query Language
+
+It is used to Store,Retrieve and Manage data in a RDBMS
+
+SQL Lanaguage types:
+
+1. DDL - Data Definition Langauge
+2. DML - Data Manipulation Langauge
+3. TCL - Transaction Control Language
+4. DCL - Data Control Langauge
+5. DQL - Data Query Langauge
+
+
+DDL:
+
+To define the structure for the data using table.
+
+1.create
+2.Alter
+3.Trancaute
+4. Drop
+
+DML:
+
+To manipulate/process the data.
+
+1. Insert
+2. Select
+3. Update
+4. Delete
+
+TCL :
+
+To support for transactional data
+1. Rollback
+2. Commit
+
+DCL:
+
+To enable/disable user privilage and limit to access data.
+1. grant
+2. Revoke
+
+DQL:
+To retrieve,filter and analyze the data
+1. select
+
+
+
+
+
+
+
+
+

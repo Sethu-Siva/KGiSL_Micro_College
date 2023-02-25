@@ -1,0 +1,184 @@
+DataBase Commands
+-----------------
+
+mysql> CREATE DATABASE [IF NOT EXISTS] database_name;   		// Creates a database
+
+mysql> SHOW DATABASES; 								// Displays all available databases
+
+mysql> USE database_name; 								// select a particular database to work with.
+
+mysql> DROP DATABASE [IF EXISTS] database_name;   			// Deletes a purticular Database
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+Table Commands
+-----------------
+
+CREATE
+*********
+
+mysql> CREATE TABLE [IF NOT EXISTS] table_name(  				// Creates a table
+    	 column_definition1,  
+    	 column_definition2,  
+     	 ........,  
+    	 table_constraints  
+	 );
+
+ALTER
+********
+
+1 ) ADD a column in the table
+-----------------------------
+
+mysql> ALTER TABLE table_name  
+	 ADD new_column_name column_definition  
+	 [ FIRST | AFTER column_name ];
+
+
+2 ) MODIFY column in the table ( Only DataType )
+------------------------------------------------
+
+mysql> ALTER TABLE table_name  
+	 MODIFY column_name column_definition  
+	 [ FIRST | AFTER column_name ]; 
+
+3 ) RENAME column name in table
+-------------------------------
+
+mysql> ALTER TABLE table_name  
+	 CHANGE COLUMN old_name new_name   
+	 column_definition  
+	 [ FIRST | AFTER column_name ];
+
+
+4 ) DROP column in table
+------------------------
+
+mysql> ALTER TABLE table_name  
+	 DROP COLUMN column_name;
+
+6) RENAME table
+----------------
+
+mysql> ALTER TABLE table_name  
+	 RENAME TO new_table_name;
+
+7) Dropping the Table
+----------------------
+
+mysql> DROP TABLE "table_name"; 
+
+
+
+mysql> SHOW TABLES; 											// Displays available tables
+
+mysql> RENAME old_table TO new_table;  							// change the name of the table
+
+mysql> ALTER TABLE old_table_name RENAME TO new_table_name;  
+
+mysql> TRUNCATE [TABLE] table_name;  								// Deletes Datas only not Table Structure
+
+mysql> {DESCRIBE | DESC} table_name; 								// Shows the table Structure
+
+mysql> DROP TABLE  table_name;  
+		OR,  
+mysql> DROP TABLE  schema_name.table_name;  						// Deletes a entire table
+
+
+
+SELECT Column_Name_1, Column_Name_2, ....., Column_Name_N FROM Table_Name; 	// Displays purticular Column values
+
+SELECT * FROM table_name; 										// Displays all Datas inside the table
+
+SELECT * FROM Name_of_Table WHERE [condition];  						// Select Query with condition
+
+
+
+Select Query - Where clause
+-----------------------------
+
+- COMPARISION OPERATOR
+
+	=		- equals
+	<>		- Not Equals
+	<		- leass than
+	<=		- less than or equals
+	>		- greater
+	>=		- greater than or qual
+
+- LIKE OPERATOR ( keywords - (Like, Not Like) )
+
+	%		- Represents zero or more chars
+	_		- Represents a single character
+
+- LOGICAL OPERATOR
+	
+	AND		- Both condition needs to be true
+	OR		- Either any one condition needs to be true
+	NOT		- Nagates the condition
+
+- BETWEEN AND IN
+
+	IN		- To check if a value is present in the list of values
+	BETWEEN	- selects values within a given range ( Logical AND - required )
+
+
+- ORDERBY and DISTINCT
+- AGGREGATE FUNCTION
+- GROUP BY AND HAVING CLAUSE
+- OPERATORS
+- SET OPERATIONS – UNION & UNION ALL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Date Functions
+**************
+
+mysql> SELECT ADDDATE('YYYY-MM-DD', INTERVAL [Value] [year/month/week/day]);
+
+mysql> SELECT ADDTIME ('HH:MM:SS','HH:MM:SS');
+
+mysql> SELECT CONVERT_TZ('YYYY-MM-DD HH:MM:SS','+HH:MM','+HH:MM');
+
+mysql> SELECT CURDATE();
+
+mysql> SELECT CURRENT_DATE();
+
+mysql> SELECT CURRENT_TIME();
+
+mysql> SELECT CURRENT_TIMESTAMP();
+
+mysql> SELECT DATEDIFF('YYYY-MM-DD','YYYY-MM-DD');
+
+mysql> SELECT DAY('YYYY-MM-DD');
+
+mysql> SELECT DATE_FORMAT('YYYY-MM-DD HH:MM:SS', '%format');			// formats %Y, %p, %a, %w, %U, %u
+
+mysql> SELECT TIME('YYYY-MM-DD HH:MM:SS');
+
+mysql> SELECT HOUR('HH:MM:SS');
+
+mysql> SELECT MINUTE('HH:MM:SS');
+
+mysql> SELECT SECOND('HH:MM:SS');
+
+-------------------------------------------------------------------------------------------------------------------------------------

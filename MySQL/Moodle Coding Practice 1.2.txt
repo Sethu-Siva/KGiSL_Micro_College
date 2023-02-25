@@ -1,0 +1,147 @@
+1 ) adding single row into tables
+----------------------------------
+
+mysql> insert into player values ('Raj',26,120);
+Query OK, 1 row affected (0.01 sec)
+
+2 ) adding Multiple rows into tables
+------------------------------------
+
+mysql> insert into player values ('Ram',28,125),('Charan',25,173),('Ravan',20,152);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+3 ) Select all the records from player table
+--------------------------------------------
+
+mysql> select * from player;
++--------+------+-------+
+| name   | age  | score |
++--------+------+-------+
+| Ram    |   28 |    30 |
+| Sethu  |   23 |    50 |
+| Siva   |   22 |    45 |
+| Mano   |   27 |    41 |
+| Sankar |   21 |    23 |
+| Raj    |   26 |   120 |
+| Ram    |   28 |   125 |
+| Charan |   25 |   173 |
+| Ravan  |   20 |   152 |
++--------+------+-------+
+9 rows in set (0.00 sec)
+
+4 ) Updating a record
+---------------------
+
+mysql> update player set age = 30
+    -> where name = 'Ram';
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+5 ) Deleting a row
+------------------
+
+mysql> delete from player where name = 'Ravan';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from player;
++--------+------+-------+
+| name   | age  | score |
++--------+------+-------+
+| Ram    |   30 |    30 |
+| Sethu  |   23 |    50 |
+| Siva   |   22 |    45 |
+| Mano   |   27 |    41 |
+| Sankar |   21 |    23 |
+| Raj    |   26 |   120 |
+| Ram    |   30 |   125 |
+| Charan |   25 |   173 |
++--------+------+-------+
+8 rows in set (0.00 sec)
+
+6 ) Adding a Column to extisting table
+--------------------------------------
+
+mysql> alter table player add strike_rate float;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc player;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| name        | varchar(200) | YES  |     | NULL    |       |
+| age         | int          | YES  |     | NULL    |       |
+| score       | int          | YES  |     | NULL    |       |
+| strike_rate | float        | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from player;
++--------+------+-------+-------------+
+| name   | age  | score | strike_rate |
++--------+------+-------+-------------+
+| Ram    |   30 |    30 |        NULL |
+| Sethu  |   23 |    50 |        NULL |
+| Siva   |   22 |    45 |        NULL |
+| Mano   |   27 |    41 |        NULL |
+| Sankar |   21 |    23 |        NULL |
+| Raj    |   26 |   120 |        NULL |
+| Ram    |   30 |   125 |        NULL |
+| Charan |   25 |   173 |        NULL |
++--------+------+-------+-------------+
+8 rows in set (0.00 sec)
+
+7 ) Retriving Purticular column from player table
+-------------------------------------------------
+
+mysql> select name,age from player;
++--------+------+
+| name   | age  |
++--------+------+
+| Ram    |   30 |
+| Sethu  |   23 |
+| Siva   |   22 |
+| Mano   |   27 |
+| Sankar |   21 |
+| Raj    |   26 |
+| Ram    |   30 |
+| Charan |   25 |
++--------+------+
+8 rows in set (0.00 sec)
+
+8 ) Renaming a Column Name
+---------------------------
+
+mysql> alter table player rename column name to full_name;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc player;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| full_name   | varchar(200) | YES  |     | NULL    |       |
+| age         | int          | YES  |     | NULL    |       |
+| score       | int          | YES  |     | NULL    |       |
+| strike_rate | float        | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+9) Dropping a Table from database
+---------------------------------
+
+mysql> drop table player;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++-----------------------------+
+| Tables_in_moodle_assesments |
++-----------------------------+
+| customer                    |
+| order_details               |
+| student                     |
++-----------------------------+
+3 rows in set (0.00 sec)
+
+mysql>

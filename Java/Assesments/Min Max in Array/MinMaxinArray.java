@@ -1,7 +1,6 @@
 // Finding Minimum & Maximum Value in Given Array
 
 import java.util.*;
-import java.lang.*;
 
 class MinMaxinArray
 {

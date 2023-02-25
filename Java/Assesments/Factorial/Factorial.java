@@ -1,8 +1,6 @@
 // Java Program for Performing Factorial
 
 import java.util.*;
-import java.lang.*;
-
 class Factorial
 {
     public static void main(String[] args)

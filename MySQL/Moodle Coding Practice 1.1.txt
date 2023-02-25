@@ -1,0 +1,147 @@
+1 ) Create a student table to store name, age, Score of students
+
+command
+----------
+
+mysql> create table student (
+    -> Name varchar(200),
+    -> Age integer,
+    -> Score integer
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+Output
+----------
+
+mysql> desc student;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| Name  | varchar(200) | YES  |     | NULL    |       |
+| Age   | int          | YES  |     | NULL    |       |
+| Score | int          | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+_______________________________________________________________________________________________________________________
+
+2 ) Create a Customer table to store the Data.
+
+command
+----------
+
+mysql> create table customer (
+    -> customer_id integer,
+    -> first_name varchar(200),
+    -> last_name varchar(200),
+    -> date_of_birth date,
+    -> address text,
+    -> phone_number integer
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+Output
+--------
+
+mysql> desc customer;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| customer_id   | int          | YES  |     | NULL    |       |
+| first_name    | varchar(200) | YES  |     | NULL    |       |
+| last_name     | varchar(200) | YES  |     | NULL    |       |
+| date_of_birth | date         | YES  |     | NULL    |       |
+| address       | text         | YES  |     | NULL    |       |
+| phone_number  | int          | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+________________________________________________________________________________________________________________________
+
+3 ) Create an Order_Details table to store the data
+
+command
+-------
+
+mysql> create table order_details (
+    -> order_id integer,
+    -> customer_id integer,
+    -> order_datetime datetime,
+    -> shipped_datetime datetime,
+    -> total_amount float
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+output
+------
+
+mysql> desc order_details;
++------------------+----------+------+-----+---------+-------+
+| Field            | Type     | Null | Key | Default | Extra |
++------------------+----------+------+-----+---------+-------+
+| order_id         | int      | YES  |     | NULL    |       |
+| customer_id      | int      | YES  |     | NULL    |       |
+| order_datetime   | datetime | YES  |     | NULL    |       |
+| shipped_datetime | datetime | YES  |     | NULL    |       |
+| total_amount     | float    | YES  |     | NULL    |       |
++------------------+----------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+______________________________________________________________________________________________________________________
+
+4 ) Players table
+
+command
+-------
+
+mysql> create table player (
+    -> name varchar(200),
+    -> age integer,
+    -> score integer
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into player values ('Ram',28,30);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into player values ('Sethu',23,50),('Siva',22,45),('Mano',27,41),('Sankar',21,23);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+output
+------
+
+mysql> desc player;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| name  | varchar(200) | YES  |     | NULL    |       |
+| age   | int          | YES  |     | NULL    |       |
+| score | int          | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+_______________________________________________________________________________________________________________________
+
+5 ) Get all the players from players table
+
+mysql> select name,age,score from player;
++--------+------+-------+
+| name   | age  | score |
++--------+------+-------+
+| Ram    |   28 |    30 |
+| Sethu  |   23 |    50 |
+| Siva   |   22 |    45 |
+| Mano   |   27 |    41 |
+| Sankar |   21 |    23 |
++--------+------+-------+
+5 rows in set (0.00 sec)
+_______________________________________________________________________________________________________________________
+
+6 ) Retriving a single Record in playes table using where clause
+
+mysql> select name,age,score from player where name = 'Ram';
++------+------+-------+
+| name | age  | score |
++------+------+-------+
+| Ram  |   28 |    30 |
++------+------+-------+
+1 row in set (0.00 sec)
+
+mysql>

@@ -1,0 +1,175 @@
+Products Table
+**************
+
+mysql> select * from products;
++----------------------------+-------------+-------+-----------+--------+
+| P_Name                     | Catagory    | Price | Brand     | Rating |
++----------------------------+-------------+-------+-----------+--------+
+| Black Shirt                | Clothing    |   900 | Puma      |    4.8 |
+| Blue Shirt                 | Clothing    |   800 | Alen      |    4.6 |
+| Black Jean                 | Clothing    |  1800 | Denim     |    4.5 |
+| Blue Jean                  | Clothing    |  1600 | Denim     |    4.3 |
+| T-Shirts                   | Clothing    |   500 | Puma      |      4 |
+| Foodie                     | Clothing    |  2000 | Dark      |    3.9 |
+| Laptop                     | Electronics | 50000 | Apple     |    4.9 |
+| Mobiles                    | Electronics | 15000 | Android   |    4.5 |
+| Smart Watch                | Electronics |  5000 | Noise     |    4.7 |
+| Bourbon Cookies            | Snack       |    50 | Britaniya |    4.7 |
+| Bourbon Small              | Snack       |    25 | Britaniya |    4.2 |
+| Bourbon With Extra Cookies | Snack       |   100 | Britaniya |    4.8 |
+| Potato Chips               | Snack       |    50 | Lays      |      5 |
+| Tangi Tomato Chips         | Snack       |    75 | Lays      |    4.8 |
+| Hot & Spice Chips          | Snack       |   100 | Lays      |    4.3 |
++----------------------------+-------------+-------+-----------+--------+
+15 rows in set (0.00 sec)
+
+___________________________________________________________________________________________________________________________________
+
+1 ) Get all details of products from the "PUMA" Brand.
+------------------------------------------------------
+
+command
+-------
+mysql> select * from products where brand = "Puma";
+
+Output
+------
++-------------+----------+-------+-------+--------+
+| P_Name      | Catagory | Price | Brand | Rating |
++-------------+----------+-------+-------+--------+
+| Black Shirt | Clothing |   900 | Puma  |    4.8 |
+| T-Shirts    | Clothing |   500 | Puma  |      4 |
++-------------+----------+-------+-------+--------+
+2 rows in set (0.00 sec)
+
+___________________________________________________________________________________________________________________________________
+
+2 ) Products Ends with "Jeans".
+-------------------------------
+
+command
+-------
+mysql> select * from products where P_Name like "%Jean";
+
+output
+------
++------------+----------+-------+-------+--------+
+| P_Name     | Catagory | Price | Brand | Rating |
++------------+----------+-------+-------+--------+
+| Black Jean | Clothing |  1800 | Denim |    4.5 |
+| Blue Jean  | Clothing |  1600 | Denim |    4.3 |
++------------+----------+-------+-------+--------+
+2 rows in set (0.00 sec)
+
+______________________________________________________________________________________________________________________________________
+
+3 ) Products Starts with "BourBoun".
+
+command
+-------
+mysql> select * from products where P_Name like "Bourbon%";
+
+output
+------
++----------------------------+----------+-------+-----------+--------+
+| P_Name                     | Catagory | Price | Brand     | Rating |
++----------------------------+----------+-------+-----------+--------+
+| Bourbon Cookies            | Snack    |    50 | Britaniya |    4.7 |
+| Bourbon Small              | Snack    |    25 | Britaniya |    4.2 |
+| Bourbon With Extra Cookies | Snack    |   100 | Britaniya |    4.8 |
++----------------------------+----------+-------+-----------+--------+
+3 rows in set (0.00 sec)
+
+______________________________________________________________________________________________________________________________________
+
+4 ) List all the "Chips" in the Database.
+
+command
+-------
+mysql> select * from products where P_Name like '%Chips%';
+
+output
+------
++--------------------+----------+-------+-------+--------+
+| P_Name             | Catagory | Price | Brand | Rating |
++--------------------+----------+-------+-------+--------+
+| Potato Chips       | Snack    |    50 | Lays  |      5 |
+| Tangi Tomato Chips | Snack    |    75 | Lays  |    4.8 |
+| Hot & Spice Chips  | Snack    |   100 | Lays  |    4.3 |
++--------------------+----------+-------+-------+--------+
+3 rows in set (0.00 sec)
+
+_____________________________________________________________________________________________________________________________________
+
+5 ) Name Matches ( Out of the last 4 characters, first character is "h" and the third character is "r".
+-------------------------------------------------------------------------------------------------------
+
+command
+-------
+mysql> select * from products where P_Name like '%h_r_';
+
+output
+------
++-------------+----------+-------+-------+--------+
+| P_Name      | Catagory | Price | Brand | Rating |
++-------------+----------+-------+-------+--------+
+| Black Shirt | Clothing |   900 | Puma  |    4.8 |
+| Blue Shirt  | Clothing |   800 | Alen  |    4.6 |
++-------------+----------+-------+-------+--------+
+2 rows in set (0.00 sec)
+
+_____________________________________________________________________________________________________________________________________
+
+6 ) Price is less than or equal to 1000.
+----------------------------------------
+
+command
+-------
+mysql> select * from products where price <= 1000;
+
+output
+------
++----------------------------+----------+-------+-----------+--------+
+| P_Name                     | Catagory | Price | Brand     | Rating |
++----------------------------+----------+-------+-----------+--------+
+| Black Shirt                | Clothing |   900 | Puma      |    4.8 |
+| Blue Shirt                 | Clothing |   800 | Alen      |    4.6 |
+| T-Shirts                   | Clothing |   500 | Puma      |      4 |
+| Bourbon Cookies            | Snack    |    50 | Britaniya |    4.7 |
+| Bourbon Small              | Snack    |    25 | Britaniya |    4.2 |
+| Bourbon With Extra Cookies | Snack    |   100 | Britaniya |    4.8 |
+| Potato Chips               | Snack    |    50 | Lays      |      5 |
+| Tangi Tomato Chips         | Snack    |    75 | Lays      |    4.8 |
+| Hot & Spice Chips          | Snack    |   100 | Lays      |    4.3 |
++----------------------------+----------+-------+-----------+--------+
+9 rows in set (0.00 sec)
+
+_____________________________________________________________________________________________________________________________________
+
+7 ) Get all the Best Rated Products.
+------------------------------------
+
+command
+-------
+mysql> select * from products where Rating > 4.0;
+
+output
+------
++----------------------------+-------------+-------+-----------+--------+
+| P_Name                     | Catagory    | Price | Brand     | Rating |
++----------------------------+-------------+-------+-----------+--------+
+| Black Shirt                | Clothing    |   900 | Puma      |    4.8 |
+| Blue Shirt                 | Clothing    |   800 | Alen      |    4.6 |
+| Black Jean                 | Clothing    |  1800 | Denim     |    4.5 |
+| Blue Jean                  | Clothing    |  1600 | Denim     |    4.3 |
+| Laptop                     | Electronics | 50000 | Apple     |    4.9 |
+| Mobiles                    | Electronics | 15000 | Android   |    4.5 |
+| Smart Watch                | Electronics |  5000 | Noise     |    4.7 |
+| Bourbon Cookies            | Snack       |    50 | Britaniya |    4.7 |
+| Bourbon Small              | Snack       |    25 | Britaniya |    4.2 |
+| Bourbon With Extra Cookies | Snack       |   100 | Britaniya |    4.8 |
+| Potato Chips               | Snack       |    50 | Lays      |      5 |
+| Tangi Tomato Chips         | Snack       |    75 | Lays      |    4.8 |
+| Hot & Spice Chips          | Snack       |   100 | Lays      |    4.3 |
++----------------------------+-------------+-------+-----------+--------+
+13 rows in set (0.00 sec)

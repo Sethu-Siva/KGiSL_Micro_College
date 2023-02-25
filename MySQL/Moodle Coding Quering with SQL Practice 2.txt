@@ -1,0 +1,315 @@
+Available Products in Products Table
+------------------------------------
+
+mysql> select * from products;
++----------------------------+-------------+--------+-----------+--------+
+| P_Name                     | Catagory    | Price  | Brand     | Rating |
++----------------------------+-------------+--------+-----------+--------+
+| Black Shirt                | Clothing    |    900 | Puma      |    4.8 |
+| Blue Shirt                 | Clothing    |    800 | Alen      |    4.6 |
+| Black Jean                 | Clothing    |   1800 | Denim     |    4.5 |
+| Blue Jean                  | Clothing    |   1600 | Denim     |    4.3 |
+| T-Shirts                   | Clothing    |    500 | Puma      |      4 |
+| Foodie                     | Clothing    |   2000 | Dark      |    3.9 |
+| Laptop                     | Electronics |  50000 | Apple     |    4.9 |
+| Mobiles                    | Electronics |  15000 | Android   |    4.5 |
+| Smart Watch                | Electronics |   5000 | Noise     |    4.7 |
+| Bourbon Cookies            | Snack       |     50 | Britaniya |    4.7 |
+| Bourbon Small              | Snack       |     25 | Britaniya |    4.2 |
+| Bourbon With Extra Cookies | Snack       |    100 | Britaniya |    4.8 |
+| Potato Chips               | Snack       |     50 | Lays      |      5 |
+| Tangi Tomato Chips         | Snack       |     75 | Lays      |    4.8 |
+| Hot & Spice Chips          | Snack       |    100 | Lays      |    4.3 |
+| OnePlus Nord               | Electronics |  50000 | OnePlus   |    4.2 |
+| Nexa Oneplus               | Electronics |  75000 | Oneplus   |    4.5 |
+| Oneplus Tv                 | Electronics | 150000 | Oneplus   |    3.5 |
+| Redmi max 14               | Electronics |  10000 | Redmi     |      4 |
+| Redmi Note 10              | Electronics |  15000 | Redmi     |    2.7 |
+| Redmi lite                 | Electronics |   8000 | Redmi     |    3.6 |
+| Black Forest Cake          | Foods       |    500 | Cadbury   |    4.5 |
+| Red Welvet Cake            | Foods       |    800 | Cadbury   |    4.9 |
+| Chocalote Cake             | Foods       |    400 | Cadbury   |    3.6 |
+| Vannila Cake               | Foods       |    250 | Cadbury   |    3.8 |
+| Black Forest Cake          | Foods       |    400 | Britaniya |      4 |
+| Red Welvet Cake            | Foods       |    750 | Britaniya |    4.2 |
+| Chocalote Cake             | Foods       |    399 | Britaniya |    4.1 |
+| Vannila Cake               | Foods       |    300 | Britaniya |    2.8 |
+| Red Shirt                  | Clothing    |    300 | Nike      |    4.2 |
+| Black Shirt                | Clothing    |   1000 | Nike      |    4.9 |
+| Green Shirt                | Clothing    |    990 | Nike      |    2.5 |
+| Yellow Shirt               | Clothing    |    250 | Nike      |      3 |
+| Red Shirt                  | Clothing    |    540 | Puma      |    4.2 |
+| Black Shirt                | Clothing    |    600 | Puma      |    3.5 |
+| Green Shirt                | Clothing    |    350 | Puma      |    1.2 |
+| Yellow Shirt               | Clothing    |    145 | Puma      |    4.1 |
+| Red Shirt                  | Clothing    |    280 | Levis     |    4.1 |
+| Black Shirt                | Clothing    |   1490 | Levis     |    3.9 |
+| Green Shirt                | Clothing    |    450 | Levis     |    4.6 |
+| Yellow Shirt               | Clothing    |    350 | Levis     |    3.6 |
++----------------------------+-------------+--------+-----------+--------+
+41 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+1 ) Get all the Details of products that belongs to clothing category and price less than 700.
+----------------------------------------------------------------------------------------------
+
+command
+-------
+
+mysql> select * from products where Catagory = "Clothing" and price < 700;
+
+Output
+------
+
++--------------+----------+-------+-------+--------+
+| P_Name       | Catagory | Price | Brand | Rating |
++--------------+----------+-------+-------+--------+
+| T-Shirts     | Clothing |   500 | Puma  |      4 |
+| Red Shirt    | Clothing |   300 | Nike  |    4.2 |
+| Yellow Shirt | Clothing |   250 | Nike  |      3 |
+| Red Shirt    | Clothing |   540 | Puma  |    4.2 |
+| Black Shirt  | Clothing |   600 | Puma  |    3.5 |
+| Green Shirt  | Clothing |   350 | Puma  |    1.2 |
+| Yellow Shirt | Clothing |   145 | Puma  |    4.1 |
+| Red Shirt    | Clothing |   280 | Levis |    4.1 |
+| Green Shirt  | Clothing |   450 | Levis |    4.6 |
+| Yellow Shirt | Clothing |   350 | Levis |    3.6 |
++--------------+----------+-------+-------+--------+
+10 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+2 ) Get all the Details of products that belongs to "Denim" Brand with rating greater than 4.
+---------------------------------------------------------------------------------------------
+
+command
+-------
+
+mysql> select * from products where Brand = "Denim" and Rating > 4.0;
+
+Output
+------
+
++------------+----------+-------+-------+--------+
+| P_Name     | Catagory | Price | Brand | Rating |
++------------+----------+-------+-------+--------+
+| Black Jean | Clothing |  1800 | Denim |    4.5 |
+| Blue Jean  | Clothing |  1600 | Denim |    4.3 |
++------------+----------+-------+-------+--------+
+2 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+3 ) Get all the Best rated products with price less than or equal to 1000.
+--------------------------------------------------------------------------
+
+command
+-------
+
+mysql> select * from products where Price < 1000 and Rating > 4.0;
+
+Output
+------
+
++----------------------------+----------+-------+-----------+--------+
+| P_Name                     | Catagory | Price | Brand     | Rating |
++----------------------------+----------+-------+-----------+--------+
+| Black Shirt                | Clothing |   900 | Puma      |    4.8 |
+| Blue Shirt                 | Clothing |   800 | Alen      |    4.6 |
+| Bourbon Cookies            | Snack    |    50 | Britaniya |    4.7 |
+| Bourbon Small              | Snack    |    25 | Britaniya |    4.2 |
+| Bourbon With Extra Cookies | Snack    |   100 | Britaniya |    4.8 |
+| Potato Chips               | Snack    |    50 | Lays      |      5 |
+| Tangi Tomato Chips         | Snack    |    75 | Lays      |    4.8 |
+| Hot & Spice Chips          | Snack    |   100 | Lays      |    4.3 |
+| Black Forest Cake          | Foods    |   500 | Cadbury   |    4.5 |
+| Red Welvet Cake            | Foods    |   800 | Cadbury   |    4.9 |
+| Red Welvet Cake            | Foods    |   750 | Britaniya |    4.2 |
+| Chocalote Cake             | Foods    |   399 | Britaniya |    4.1 |
+| Red Shirt                  | Clothing |   300 | Nike      |    4.2 |
+| Red Shirt                  | Clothing |   540 | Puma      |    4.2 |
+| Yellow Shirt               | Clothing |   145 | Puma      |    4.1 |
+| Red Shirt                  | Clothing |   280 | Levis     |    4.1 |
+| Green Shirt                | Clothing |   450 | Levis     |    4.6 |
++----------------------------+----------+-------+-----------+--------+
+17 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+4 ) Get all the products from the products table whose 
+	1) rating is above 3.6 and 
+	2) Price is less than 1000 and
+	3) Belongings to "Puma" Band.
+_______________________________________________________
+
+commad
+------
+
+mysql> select * from products where Rating > 3.6 and price < 1000 and Brand = "Puma";
+
+Output
+------
+
++--------------+----------+-------+-------+--------+
+| P_Name       | Catagory | Price | Brand | Rating |
++--------------+----------+-------+-------+--------+
+| Black Shirt  | Clothing |   900 | Puma  |    4.8 |
+| T-Shirts     | Clothing |   500 | Puma  |      4 |
+| Red Shirt    | Clothing |   540 | Puma  |    4.2 |
+| Yellow Shirt | Clothing |   145 | Puma  |    4.1 |
++--------------+----------+-------+-------+--------+
+4 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+5 ) Get all the products from "puma", "Denim" or "Nike" brand.
+--------------------------------------------------------------
+
+command
+-------
+
+mysql> select * from products where Brand = 'Puma' or Brand = 'Denim' or Brand = 'Nike';
+
+Output
+------
+
++--------------+----------+-------+-------+--------+
+| P_Name       | Catagory | Price | Brand | Rating |
++--------------+----------+-------+-------+--------+
+| Black Shirt  | Clothing |   900 | Puma  |    4.8 |
+| Black Jean   | Clothing |  1800 | Denim |    4.5 |
+| Blue Jean    | Clothing |  1600 | Denim |    4.3 |
+| T-Shirts     | Clothing |   500 | Puma  |      4 |
+| Red Shirt    | Clothing |   300 | Nike  |    4.2 |
+| Black Shirt  | Clothing |  1000 | Nike  |    4.9 |
+| Green Shirt  | Clothing |   990 | Nike  |    2.5 |
+| Yellow Shirt | Clothing |   250 | Nike  |      3 |
+| Red Shirt    | Clothing |   540 | Puma  |    4.2 |
+| Black Shirt  | Clothing |   600 | Puma  |    3.5 |
+| Green Shirt  | Clothing |   350 | Puma  |    1.2 |
+| Yellow Shirt | Clothing |   145 | Puma  |    4.1 |
++--------------+----------+-------+-------+--------+
+12 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+6 ) Get all the details of products whose
+	1) Brand is "Redmi" with rating greater than 4 or
+	2) products that belongs to "Oneplus" Brand.
+_________________________________________________________
+
+command
+-------
+
+mysql> select * from products where (Brand = "Redmi" or Brand = "Oneplus") and Rating > 4.0;
+
+Output
+------
+
++--------------+-------------+-------+---------+--------+
+| P_Name       | Catagory    | Price | Brand   | Rating |
++--------------+-------------+-------+---------+--------+
+| OnePlus Nord | Electronics | 50000 | OnePlus |    4.2 |
+| Nexa Oneplus | Electronics | 75000 | Oneplus |    4.5 |
++--------------+-------------+-------+---------+--------+
+2 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+7 ) Get only cakes from "Cadbury" and "Britaniya" Brands that have rating greater than 4.0;
+-------------------------------------------------------------------------------------------
+
+command
+-------
+
+mysql> select * from products where P_Name like "%Cake" and (Brand = "Cadbury" or Brand = "Britaniya") and Rating > 4.0;
+
+Output
+------
+
++-------------------+----------+-------+-----------+--------+
+| P_Name            | Catagory | Price | Brand     | Rating |
++-------------------+----------+-------+-----------+--------+
+| Black Forest Cake | Foods    |   500 | Cadbury   |    4.5 |
+| Red Welvet Cake   | Foods    |   800 | Cadbury   |    4.9 |
+| Red Welvet Cake   | Foods    |   750 | Britaniya |    4.2 |
+| Chocalote Cake    | Foods    |   399 | Britaniya |    4.1 |
++-------------------+----------+-------+-----------+--------+
+4 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
+
+8 ) Get all the details of products whose
+	1) Brand is "Puma" and rating greater than 3.5 or
+	2) Brand is "Denim" and rating greater than 4.0.
+_________________________________________________________
+
+command
+-------
+
+mysql> select * from products where
+    -> (Brand = "Puma" and Rating > 3.5)
+    -> or
+    -> (Brand = "Denim" and Rating > 4.0);
+
+Output
+------
+
++--------------+----------+-------+-------+--------+
+| P_Name       | Catagory | Price | Brand | Rating |
++--------------+----------+-------+-------+--------+
+| Black Shirt  | Clothing |   900 | Puma  |    4.8 |
+| Black Jean   | Clothing |  1800 | Denim |    4.5 |
+| Blue Jean    | Clothing |  1600 | Denim |    4.3 |
+| T-Shirts     | Clothing |   500 | Puma  |      4 |
+| Red Shirt    | Clothing |   540 | Puma  |    4.2 |
+| Yellow Shirt | Clothing |   145 | Puma  |    4.1 |
++--------------+----------+-------+-------+--------+
+6 rows in set (0.00 sec)
+
+
+__________________________________________________________________________________________________________________________
+
+
+
+9 ) Get all the shirts available in "puma", "Nike" or "Levis" Brands, excluding the black coloured shirts.
+----------------------------------------------------------------------------------------------------------
+
+command
+-------
+
+mysql> select * from products where
+    -> (P_Name like '%Shirt%' and P_Name not like '%black%shirt%')
+    -> and
+    -> (Brand = 'Puma' or Brand = 'Nike' or Brand = 'Levis');
+
+Output
+------
+
++--------------+----------+-------+-------+--------+
+| P_Name       | Catagory | Price | Brand | Rating |
++--------------+----------+-------+-------+--------+
+| T-Shirts     | Clothing |   500 | Puma  |      4 |
+| Red Shirt    | Clothing |   300 | Nike  |    4.2 |
+| Green Shirt  | Clothing |   990 | Nike  |    2.5 |
+| Yellow Shirt | Clothing |   250 | Nike  |      3 |
+| Red Shirt    | Clothing |   540 | Puma  |    4.2 |
+| Green Shirt  | Clothing |   350 | Puma  |    1.2 |
+| Yellow Shirt | Clothing |   145 | Puma  |    4.1 |
+| Red Shirt    | Clothing |   280 | Levis |    4.1 |
+| Green Shirt  | Clothing |   450 | Levis |    4.6 |
+| Yellow Shirt | Clothing |   350 | Levis |    3.6 |
++--------------+----------+-------+-------+--------+
+10 rows in set (0.00 sec)
+
+__________________________________________________________________________________________________________________________
+
