@@ -15,7 +15,7 @@ function error(e)
         document.write(a + " + " + e + " = " + c + "<br>");
         document.write(a + " + " + b + " = " + (a+b));
     }
-    catch(err) 
+    catch(err)
     {
         console.log("Error : " , err);
         document.write("Error : " , err);
