@@ -1,0 +1,210 @@
+1) Consider the following relations for a boat management application for a beach resort:
+
+Choose appropriate foreign keys and other constraints
+
+
+SAILOR (SID,NAME,DOB,GENDER)
+
+* name column must have a value
+
+BOAT (BID,BTYPE,BNAME,COLOR)
+
+** Boat name must be unique
+
+BTYPE can take two values (D, S)
+
+D (Deluxe) S (Super Deluxe)
+
+SAILS (SID, BID, DOT, SHIFT)
+
+DOT (Date of Trip)
+
+SHIFT can take two values (FN or AN)
+
+-------------------------------------------------------------------------------------
+
+TABLES CREATION
+---------------
+
+SAILOR
+------
+
+mysql> CREATE TABLE Sailor (
+    -> SID INT PRIMARY KEY,
+    -> Name VARCHAR (255) NOT NULL,
+    -> DOB DATE,
+    -> Gender ENUM ('M','F')
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+
+BOAT
+----
+
+mysql> CREATE TABLE Boat (
+    -> BID INT PRIMARY KEY NOT NULL,
+    -> BType CHAR(1) CHECK (BType IN ('D', 'S')),
+    -> BName VARCHAR(50) UNIQUE NOT NULL,
+    -> Color VARCHAR(50)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+
+SAILS
+-----
+
+mysql> CREATE TABLE Sails (
+    -> SID INT,
+    -> BID INT,
+    -> DOT DATE,
+    -> Shift CHAR(2) CHECK (Shift IN ('FN', 'AN')),
+    -> PRIMARY KEY (SID, BID),
+    -> FOREIGN KEY (SID) REFERENCES Sailor (SID),
+    -> FOREIGN KEY (BID) REFERENCES Boat (BID)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+--------------------------------------------------------------------------------------------------------------------
+
+DESCRIBE TABLES
+---------------
+
+mysql> DESC SAILOR;
++--------+---------------+------+-----+---------+-------+
+| Field  | Type          | Null | Key | Default | Extra |
++--------+---------------+------+-----+---------+-------+
+| SID    | int           | NO   | PRI | NULL    |       |
+| Name   | varchar(255)  | NO   |     | NULL    |       |
+| DOB    | date          | YES  |     | NULL    |       |
+| Gender | enum('M','F') | YES  |     | NULL    |       |
++--------+---------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> DESC BOAT;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| BID   | int         | NO   | PRI | NULL    |       |
+| BType | char(1)     | YES  |     | NULL    |       |
+| BName | varchar(50) | NO   | UNI | NULL    |       |
+| Color | varchar(50) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> DESC SAILS;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| SID   | int     | NO   | PRI | NULL    |       |
+| BID   | int     | NO   | PRI | NULL    |       |
+| DOT   | date    | YES  |     | NULL    |       |
+| Shift | char(2) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+INSERTING VALUES INTO EACH TABLES
+---------------------------------
+
+mysql> INSERT INTO SAILOR (SID,NAME,DOB,GENDER) VALUES
+    -> (1, 'John', '1995-04-27', 'M'),
+    -> (2, 'Luke', '1996-02-02', 'M'),
+    -> (3, 'Amelia', '1995-05-18', 'F'),
+    -> (4, 'Emma', '1995-07-19', 'F'),
+    -> (5, 'Olivia', '1996-08-17', 'F'),
+    -> (6, 'Oliver', '1996-09-02', 'M'),
+    -> (7, 'Noah', '1996-10-21', 'M'),
+    -> (8, 'Mia', '1997-01-02', 'F'),
+    -> (9, 'Ava', '1997-03-01', 'F'),
+    -> (10, 'Logan', '1997-04-18', 'M');
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+
+mysql> INSERT INTO BOAT (BID,BTYPE,BNAME,COLOR) VALUES
+    -> (1, 'D', 'Boat1', 'Blue'),
+    -> (2, 'S', 'Boat2', 'Green'),
+    -> (3, 'D', 'Boat3', 'Red'),
+    -> (4, 'S', 'Boat4', 'Yellow'),
+    -> (5, 'D', 'Boat5', 'Purple'),
+    -> (6, 'S', 'Boat6', 'Orange'),
+    -> (7, 'D', 'Boat7', 'White'),
+    -> (8, 'S', 'Boat8', 'Brown'),
+    -> (9, 'D', 'Boat9', 'Black'),
+    -> (10, 'S', 'Boat10', 'Gray');
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+
+mysql> INSERT INTO SAILS (SID, BID, DOT, SHIFT) VALUES
+    -> (1, 1, '2020-04-27', 'FN'),
+    -> (2, 2, '2020-05-02', 'AN'),
+    -> (3, 3, '2020-05-18', 'FN'),
+    -> (4, 4, '2020-07-19', 'AN'),
+    -> (5, 5, '2020-08-17', 'FN'),
+    -> (6, 6, '2020-09-02', 'AN'),
+    -> (7, 7, '2020-10-21', 'FN'),
+    -> (8, 8, '2021-01-02', 'AN'),
+    -> (9, 9, '2021-03-01', 'FN'),
+    -> (10, 10, '2021-04-18', 'AN');
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+---------------------------------------------------------------------------------------------------------------------------
+
+DISPLAY DETAILS
+---------------
+
+
+mysql> SELECT * FROM SAILOR;
++-----+--------+------------+--------+
+| SID | Name   | DOB        | Gender |
++-----+--------+------------+--------+
+|   1 | John   | 1995-04-27 | M      |
+|   2 | Luke   | 1996-02-02 | M      |
+|   3 | Amelia | 1995-05-18 | F      |
+|   4 | Emma   | 1995-07-19 | F      |
+|   5 | Olivia | 1996-08-17 | F      |
+|   6 | Oliver | 1996-09-02 | M      |
+|   7 | Noah   | 1996-10-21 | M      |
+|   8 | Mia    | 1997-01-02 | F      |
+|   9 | Ava    | 1997-03-01 | F      |
+|  10 | Logan  | 1997-04-18 | M      |
++-----+--------+------------+--------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT * FROM BOAT;
++-----+-------+--------+--------+
+| BID | BType | BName  | Color  |
++-----+-------+--------+--------+
+|   1 | D     | Boat1  | Blue   |
+|   2 | S     | Boat2  | Green  |
+|   3 | D     | Boat3  | Red    |
+|   4 | S     | Boat4  | Yellow |
+|   5 | D     | Boat5  | Purple |
+|   6 | S     | Boat6  | Orange |
+|   7 | D     | Boat7  | White  |
+|   8 | S     | Boat8  | Brown  |
+|   9 | D     | Boat9  | Black  |
+|  10 | S     | Boat10 | Gray   |
++-----+-------+--------+--------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT * FROM SAILS;
++-----+-----+------------+-------+
+| SID | BID | DOT        | Shift |
++-----+-----+------------+-------+
+|   1 |   1 | 2020-04-27 | FN    |
+|   2 |   2 | 2020-05-02 | AN    |
+|   3 |   3 | 2020-05-18 | FN    |
+|   4 |   4 | 2020-07-19 | AN    |
+|   5 |   5 | 2020-08-17 | FN    |
+|   6 |   6 | 2020-09-02 | AN    |
+|   7 |   7 | 2020-10-21 | FN    |
+|   8 |   8 | 2021-01-02 | AN    |
+|   9 |   9 | 2021-03-01 | FN    |
+|  10 |  10 | 2021-04-18 | AN    |
++-----+-----+------------+-------+
+10 rows in set (0.00 sec)

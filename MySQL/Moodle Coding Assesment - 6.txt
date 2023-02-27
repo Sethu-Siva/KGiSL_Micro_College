@@ -1,0 +1,314 @@
+
+mysql> select * from emp;
++-------+--------+-----------+------+------------+---------+---------+--------+
+| empno | ename  | job       | mgr  | hiredate   | sal     | comm    | deptno |
++-------+--------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1993-06-13 |  800.00 |    0.00 |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1998-08-15 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1996-03-26 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1995-10-31 | 2975.00 |    NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1998-12-05 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1992-06-11 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1993-05-14 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1996-03-05 | 3000.00 |    NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1990-06-09 | 5000.00 |    0.00 |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1995-06-04 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1999-06-04 | 1100.00 |    NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 2000-06-23 |  950.00 |    NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1997-12-05 | 3000.00 |    NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 2000-01-21 | 1300.00 |    NULL |     10 |
++-------+--------+-----------+------+------------+---------+---------+--------+
+14 rows in set (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+
+| deptno | dname      | location |
++--------+------------+----------+
+|     10 | Accounting | New York |
+|     20 | Research   | Dallas   |
+|     30 | Sales      | Chicago  |
+|     40 | Operations | Boston   |
++--------+------------+----------+
+4 rows in set (0.01 sec)
+
+mysql> select * from salgrade;
++-------+---------+----------+
+| grade | losal   | hisal    |
++-------+---------+----------+
+|     1 |  700.00 |  1200.00 |
+|     2 | 1201.00 |  1400.00 |
+|     3 | 1401.00 |  2000.00 |
+|     4 | 2001.00 |  3000.00 |
+|     5 | 3001.00 | 99999.00 |
++-------+---------+----------+
+5 rows in set (0.01 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+1. Write a query to display the name,job.salary department name and department number for all employees.
+--------------------------------------------------------------------------------------------------------
+
+
+mysql> SELECT e.ename, e.job, e.sal, d.dname, d.deptno
+    -> FROM emp e
+    -> INNER JOIN dept d
+    -> ON e.deptno = d.deptno;
++--------+-----------+---------+------------+--------+
+| ename  | job       | sal     | dname      | deptno |
++--------+-----------+---------+------------+--------+
+| SMITH  | CLERK     |  800.00 | Research   |     20 |
+| ALLEN  | SALESMAN  | 1600.00 | Sales      |     30 |
+| WARD   | SALESMAN  | 1250.00 | Sales      |     30 |
+| JONES  | MANAGER   | 2975.00 | Research   |     20 |
+| MARTIN | SALESMAN  | 1250.00 | Sales      |     30 |
+| BLAKE  | MANAGER   | 2850.00 | Sales      |     30 |
+| CLARK  | MANAGER   | 2450.00 | Accounting |     10 |
+| SCOTT  | ANALYST   | 3000.00 | Research   |     20 |
+| KING   | PRESIDENT | 5000.00 | Accounting |     10 |
+| TURNER | SALESMAN  | 1500.00 | Sales      |     30 |
+| ADAMS  | CLERK     | 1100.00 | Research   |     20 |
+| JAMES  | CLERK     |  950.00 | Sales      |     30 |
+| FORD   | ANALYST   | 3000.00 | Research   |     20 |
+| MILLER | CLERK     | 1300.00 | Accounting |     10 |
++--------+-----------+---------+------------+--------+
+14 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+2. Display the jos available in DALLAS.
+---------------------------------------
+
+
+mysql> SELECT job
+    -> FROM emp
+    -> INNER JOIN dept
+    -> ON emp.deptno = dept.deptno
+    -> WHERE dept.location = 'DALLAS';
++---------+
+| job     |
++---------+
+| CLERK   |
+| MANAGER |
+| ANALYST |
+| CLERK   |
+| ANALYST |
++---------+
+5 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+3.Display the name,job,salary and the salary grade for each employee.
+---------------------------------------------------------------------
+
+mysql> SELECT e.ename, e.job, e.sal, s.grade
+    -> FROM emp e
+    -> INNER JOIN salgrade s ON e.sal BETWEEN s.losal AND s.hisal;
++--------+-----------+---------+-------+
+| ename  | job       | sal     | grade |
++--------+-----------+---------+-------+
+| SMITH  | CLERK     |  800.00 |     1 |
+| ALLEN  | SALESMAN  | 1600.00 |     3 |
+| WARD   | SALESMAN  | 1250.00 |     2 |
+| JONES  | MANAGER   | 2975.00 |     4 |
+| MARTIN | SALESMAN  | 1250.00 |     2 |
+| BLAKE  | MANAGER   | 2850.00 |     4 |
+| CLARK  | MANAGER   | 2450.00 |     4 |
+| SCOTT  | ANALYST   | 3000.00 |     4 |
+| KING   | PRESIDENT | 5000.00 |     5 |
+| TURNER | SALESMAN  | 1500.00 |     3 |
+| ADAMS  | CLERK     | 1100.00 |     1 |
+| JAMES  | CLERK     |  950.00 |     1 |
+| FORD   | ANALYST   | 3000.00 |     4 |
+| MILLER | CLERK     | 1300.00 |     2 |
++--------+-----------+---------+-------+
+14 rows in set (0.01 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+4. Display the dept name and no. of employees working in each dept.
+-------------------------------------------------------------------
+
+mysql> SELECT d.dname, COUNT(e.empno)
+    -> FROM dept d
+    -> LEFT JOIN emp e ON d.deptno = e.deptno
+    -> GROUP BY d.dname;
++------------+----------------+
+| dname      | COUNT(e.empno) |
++------------+----------------+
+| Accounting |              3 |
+| Research   |              5 |
+| Sales      |              6 |
+| Operations |              0 |
++------------+----------------+
+4 rows in set (0.01 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+5. Display the empno,name,dept name,loc,grade of all employees.
+---------------------------------------------------------------
+
+
+mysql> SELECT e.empno, e.ename, d.dname, d.location, s.grade
+    -> FROM emp e
+    -> INNER JOIN dept d ON e.deptno = d.deptno
+    -> INNER JOIN salgrade s ON e.sal BETWEEN s.losal AND s.hisal;
++-------+--------+------------+----------+-------+
+| empno | ename  | dname      | location | grade |
++-------+--------+------------+----------+-------+
+|  7369 | SMITH  | Research   | Dallas   |     1 |
+|  7499 | ALLEN  | Sales      | Chicago  |     3 |
+|  7521 | WARD   | Sales      | Chicago  |     2 |
+|  7566 | JONES  | Research   | Dallas   |     4 |
+|  7654 | MARTIN | Sales      | Chicago  |     2 |
+|  7698 | BLAKE  | Sales      | Chicago  |     4 |
+|  7782 | CLARK  | Accounting | New York |     4 |
+|  7788 | SCOTT  | Research   | Dallas   |     4 |
+|  7839 | KING   | Accounting | New York |     5 |
+|  7844 | TURNER | Sales      | Chicago  |     3 |
+|  7876 | ADAMS  | Research   | Dallas   |     1 |
+|  7900 | JAMES  | Sales      | Chicago  |     1 |
+|  7902 | FORD   | Research   | Dallas   |     4 |
+|  7934 | MILLER | Accounting | New York |     2 |
++-------+--------+------------+----------+-------+
+14 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+6. Display the empno,name,deptno and the dept name for all employees.
+Include the depts which is not having any employees.
+---------------------------------------------------------------------
+
+
+mysql> SELECT e.empno, e.ename, e.deptno, d.dname
+    -> FROM emp e
+    -> LEFT JOIN dept d
+    -> ON e.deptno = d.deptno;
++-------+--------+--------+------------+
+| empno | ename  | deptno | dname      |
++-------+--------+--------+------------+
+|  7369 | SMITH  |     20 | Research   |
+|  7499 | ALLEN  |     30 | Sales      |
+|  7521 | WARD   |     30 | Sales      |
+|  7566 | JONES  |     20 | Research   |
+|  7654 | MARTIN |     30 | Sales      |
+|  7698 | BLAKE  |     30 | Sales      |
+|  7782 | CLARK  |     10 | Accounting |
+|  7788 | SCOTT  |     20 | Research   |
+|  7839 | KING   |     10 | Accounting |
+|  7844 | TURNER |     30 | Sales      |
+|  7876 | ADAMS  |     20 | Research   |
+|  7900 | JAMES  |     30 | Sales      |
+|  7902 | FORD   |     20 | Research   |
+|  7934 | MILLER |     10 | Accounting |
++-------+--------+--------+------------+
+14 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+7. Display the deptno and dept name which is having no. employees.
+------------------------------------------------------------------
+
+
+mysql> SELECT dept.deptno, dept.dname
+    -> FROM dept
+    -> LEFT JOIN emp
+    -> ON dept.deptno = emp.deptno
+    -> GROUP BY dept.deptno
+    -> HAVING COUNT(emp.empno) = 0;
++--------+------------+
+| deptno | dname      |
++--------+------------+
+|     40 | Operations |
++--------+------------+
+1 row in set (0.01 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+8. Display the employee name and their manager's name for all employees.
+------------------------------------------------------------------------
+
+
+mysql> SELECT e.ename, m.ename
+    -> FROM emp e
+    -> INNER JOIN emp m
+    -> ON m.empno = e.mgr;
++--------+-------+
+| ename  | ename |
++--------+-------+
+| SMITH  | FORD  |
+| ALLEN  | BLAKE |
+| WARD   | BLAKE |
+| JONES  | KING  |
+| MARTIN | BLAKE |
+| BLAKE  | KING  |
+| CLARK  | KING  |
+| SCOTT  | JONES |
+| TURNER | BLAKE |
+| ADAMS  | SCOTT |
+| JAMES  | BLAKE |
+| FORD   | JONES |
+| MILLER | CLARK |
++--------+-------+
+13 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+9. Display the dept name which is having maximum employees.
+-----------------------------------------------------------
+
+
+mysql> SELECT dept.dname
+    -> FROM dept
+    -> INNER JOIN emp ON dept.deptno = emp.deptno
+    -> GROUP BY dept.dname
+    -> ORDER BY COUNT(emp.empno) DESC
+    -> LIMIT 1;
++-------+
+| dname |
++-------+
+| Sales |
++-------+
+1 row in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+10.Write a query to find the empno, ename, job, deptno, dname and loc of all the employees. 
+Include the departments which is having no employees and the employees who had not been allocated any dept.
+-----------------------------------------------------------------------------------------------------------
+
+
+mysql> SELECT e.empno, e.ename, e.job, e.deptno, d.dname, d.location
+    -> FROM emp e
+    -> LEFT OUTER JOIN dept d ON e.deptno = d.deptno;
++-------+--------+-----------+--------+------------+----------+
+| empno | ename  | job       | deptno | dname      | location |
++-------+--------+-----------+--------+------------+----------+
+|  7369 | SMITH  | CLERK     |     20 | Research   | Dallas   |
+|  7499 | ALLEN  | SALESMAN  |     30 | Sales      | Chicago  |
+|  7521 | WARD   | SALESMAN  |     30 | Sales      | Chicago  |
+|  7566 | JONES  | MANAGER   |     20 | Research   | Dallas   |
+|  7654 | MARTIN | SALESMAN  |     30 | Sales      | Chicago  |
+|  7698 | BLAKE  | MANAGER   |     30 | Sales      | Chicago  |
+|  7782 | CLARK  | MANAGER   |     10 | Accounting | New York |
+|  7788 | SCOTT  | ANALYST   |     20 | Research   | Dallas   |
+|  7839 | KING   | PRESIDENT |     10 | Accounting | New York |
+|  7844 | TURNER | SALESMAN  |     30 | Sales      | Chicago  |
+|  7876 | ADAMS  | CLERK     |     20 | Research   | Dallas   |
+|  7900 | JAMES  | CLERK     |     30 | Sales      | Chicago  |
+|  7902 | FORD   | ANALYST   |     20 | Research   | Dallas   |
+|  7934 | MILLER | CLERK     |     10 | Accounting | New York |
++-------+--------+-----------+--------+------------+----------+
+14 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------
+
