@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Database</title>
+    <link rel="stylesheet" href="Students.css">
+    <script type="text/javascript" src="Students.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="Details_Entry">
+        <h4>Student Detail Form</h4><br>
+        <div class="input_box">
+            <label for="">Name</label><br>
+            <input type="text" class="t_box" name="full_name" id="name" value=""><br><br>
+        </div>
+        <div class="input_box">
+            <label for="">Roll No</label><br>
+            <input type="text" class="t_box" name="roll_no" id="roll_no"><br><br>
+        </div>
+        <div class="input_box">
+            <label for="">Tamil</label><br>
+            <input type="text" class="t_box" name="t_mark" id="t_mark"><br><br>
+        </div>
+        <div class="input_box">
+            <label for="">English</label><br>
+            <input type="text" class="t_box" name="e_mark" id="e_mark"><br><br>
+        </div>
+        <div class="input_box">
+            <label for="">Maths</label><br>
+            <input type="text" class="t_box" name="m_mark" id="m_mark"><br><br>
+        </div>
+        <div class="input_box">
+            <label for="">Science</label><br>
+            <input type="text" class="t_box" name="s_mark" id="s_mark"><br><br>
+        </div>
+        <div class="input_box">
+            <label for="">Social</label><br>
+            <input type="text" class="t_box" name="ss_mark" id="ss_mark"><br><br>
+        </div>
+        <input type="button" value="Submit" id="sub_btn" onclick="add()">
+    </div>
+    <div class="Display">
+        <table class="table" id="MyData">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Tamil</th>
+                    <th>English</th>
+                    <th>Maths</th>
+                    <th>Science</th>
+                    <th>Social</th>
+                    <th>Total</th>
+                    <th>Average</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    background: url('BG-Color.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Details_Entry{
+    position: absolute;
+    top:10%;
+    left:5%;
+    display: block;
+    width: 300px;
+    border: 1px solid blue;
+    padding: 25px;
+    line-height: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(58, 58, 226, 0.507);
+    color: blue;
+}
+h4{
+    border-bottom: 3px solid blue;
+}
+.t_box{
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid blue;
+    outline: none;
+    background-color: inherit;
+    color: Black;
+    margin-left:50px;
+}
+.input_box{
+    outline: none;
+}
+#sub_btn{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    border-radius: 25px;
+    height: 35px;
+    width: 100px;
+    margin-left: 70px;
+    margin-right: auto;
+}
+.Display{
+    position:absolute;
+    top: 10%;
+    left: 40%;
+}
+table{
+    padding: 5px;
+    border-collapse: collapse;
+    width: 800px !important;
+}
+thead{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+td,th{
+    padding: auto;
+}
+td{
+    background-color: aliceblue !important;
+    color: black;
+}
