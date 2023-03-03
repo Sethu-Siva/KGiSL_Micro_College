@@ -1,0 +1,477 @@
+Variable 
+********
+
+Task - 1
+---------
+
+var geographicLocation = "Chennai";
+var jobTitle = "Full Stack Developer";
+
+console.log("You will be a",jobTitle,"in",geographicLocation);
+
+Task - 2
+--------
+
+var firstName = "Ram",lastName = "Kumar",age = 30;
+
+Task - 3
+--------
+
+var birthYear = 1999,futureYear = 2030;
+var currentAge = futureYear - birthYear;
+console.log("I will be either",currentAge - 1,"or",currentAge,"in",futureYear);
+
+Task - 4
+--------
+
+var currentAge = 23,maxAge = 70,amtPerDay = 100 ;
+
+var total = ( ( maxAge - currentAge ) * 365 ) * amtPerDay ;
+
+console.log("You will need",total,"to last you until the ripe old age of",maxAge);
+
+
+Operator Exercise
+*****************
+
+Task - 1
+--------
+
+let result = 5 * 7;         // Multiplication
+console.log(result);
+
+let reminder = 13 % 7;      // Reminder Operator
+console.log(reminder);
+
+let x = 10;
+let y = 10;
+
+x += y;                     // Right Assignment Operator
+
+console.log(x);
+
+x += y;
+
+console.log(x);
+
+Task -2
+--------
+
+var anchoviesPizzaScore = 0;
+var  pepperoniPizzaScore = 4;
+var  hawaiianPizzaScore = 4;
+var  chickenBaconRanchPizzaScore = 6;
+
+console.log( ( anchoviesPizzaScore < pepperoniPizzaScore ) );               // 0 < 4 = true
+console.log( ( chickenBaconRanchPizzaScore > hawaiianPizzaScore ) );        // 6 > 4 = true
+console.log( ( hawaiianPizzaScore > pepperoniPizzaScore ) );                // 4 > 4 = false
+console.log( ( pepperoniPizzaScore <= chickenBaconRanchPizzaScore ) );      // 4 <= 6 = true
+console.log( ( hawaiianPizzaScore >= pepperoniPizzaScore ) );               // 4 >= 4 = true
+
+
+Control Statements
+*******************
+
+Exercise - Display an alert....
+---------------------------
+
+let num1 = 3;
+let num2 = -7;
+let num3 = 2;
+
+let product = num1 * num2 * num3;       // 3 x (-7) x 2 = (-42)
+
+if ( product > 0 )
+{
+  console.log("The sign is +");
+}
+else if ( product < 0 )
+{
+  console.log("The sign is -");
+}
+else
+{
+  console.log("The product is 0");
+}
+
+
+
+Exercise - Odd & Even
+---------------------
+
+
+for ( i = 0; i <= 15; i++ )
+{
+    if ( i % 2 == 0 )
+    {
+        console.log(i,"is even");
+    }
+    else
+    {
+        console.log(i,"is odd");
+    }
+}
+
+
+Exercise - Largest Between...
+-----------------------------
+
+let num_1 = 5;
+let num_2 = 7;
+
+if ( num_1 > num_2 )
+{
+    console.log(num_1,"is the largest.");
+}
+else if ( num_1 < num_2 )
+{
+    console.log(num_2,"is the largest.");
+}
+else
+{
+    console.log(num_1,"and",num_2,"are equal");
+}
+
+
+Exercise - Sum the multiples
+-----------------------------
+
+
+let sum = 0;
+
+for (let i = 1; i < 10; i++) {
+  if (i % 3 == 0 || i % 5 == 0) {
+    sum += i;
+  }
+}
+
+console.log("The sum of multiples of 3 and 5 under 10 is: " + sum);
+
+
+Exercise - "FizzBuzz"
+---------------------
+
+for (let i = 1; i <= 100; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+    {
+        console.log("FizzBuzz");
+    }
+    else if (i % 3 == 0)
+    {
+        console.log("Fizz");
+    }
+    else if (i % 5 == 0)
+    {
+        console.log("Buzz");
+    }
+    else
+    {
+        console.log(i);
+    }
+}
+
+
+Exercise - GCD
+--------------
+
+function gcd(num1, num2)
+{
+    if (num2 === 0)
+    {
+        return num1;
+    }
+    return gcd(num2, num1 % num2);
+}
+
+console.log(gcd(24, 36));
+
+
+Function Basic
+**************
+
+Task -1
+-------
+
+function getNationBird()
+{
+    return "Peacock";
+}
+
+console.log("The national bird of India is the",getNationBird());
+
+
+Task -2
+-------
+
+function greet() {
+
+  return "Hello! Have a nice day";
+
+}
+
+console.log(greet());
+
+Task -3
+-------
+
+function add(num1,num2)
+{
+    let res = num1 + num2;
+    return res;
+}
+
+console.log(add(10,200));
+
+Task -4
+-------
+
+function average(a, b)
+{
+  const result = (a + b) / 2;
+  console.log(result);
+  return result;
+}
+
+
+average(4, 2);
+
+Task -5
+-------
+
+function greetWithName(name)
+{
+  const message = `Hi ${name}`;
+  return message;
+}
+
+
+const personName = "Aravindh Kumar";
+const greeting = greetWithName(personName);
+console.log(greeting);
+
+Task -6
+-------
+
+const convertMinutesToSeconds = (minutes) => {
+    return minutes * 60;
+}
+  console.log(convertMinutesToSeconds(5));
+
+
+Function Exersice
+*****************
+
+Task - 1
+--------
+
+function findLargest(num1, num2, num3){
+  if (num1 > num2 && num1 > num3) {
+    console.log(num1 + " is the largest.");
+  } else if (num2 > num1 && num2 > num3) {
+    console.log(num2 + " is the largest.");
+  } else {
+    console.log(num3 + " is the largest.");
+  }
+}
+
+findLargest(5, 10, 3); 
+findLargest(4, 8, 12);
+findLargest(7, 7, 7);
+
+
+Task - 2
+--------
+
+function findTriangleType(side1, side2, side3) {
+  if (side1 == side2 && side2 == side3) {
+    console.log("Equilateral triangle.");
+  } else if (side1 == side2 || side2 == side3 || side1 == side3) {
+    console.log("Isosceles triangle.");
+  } else {
+    console.log("Scalene triangle.");
+  }
+}
+
+findTriangleType(5, 5, 5);
+findTriangleType(4, 4, 6);
+findTriangleType(3, 4, 5);
+
+
+Task - 3
+--------
+
+function checkInRange(num, start, end) {
+  if (num >= start && num <= end) {
+    console.log("Between the range");
+  } else {
+    console.log("Outside the range");
+  }
+}
+
+checkInRange(15, 11, 30);
+checkInRange(20, 34, 51);
+
+
+Task - 4
+--------
+
+function evalNumbers(num1, num2, operation) {
+  if (operation === "add") {
+    console.log(num1 + num2);
+  } else if (operation === "subtract") {
+    console.log(num1 - num2);
+  } else if (operation === "multiply") {
+    console.log(num1 * num2);
+  } else if (operation === "divide") {
+    console.log(num1 / num2);
+  } else if (operation === "modulus") {
+    console.log(num1 % num2);
+  } else {
+    console.log("Invalid operation");
+  }
+}
+
+evalNumbers(4, 5, "add");
+evalNumbers(10, 3, "divide");
+evalNumbers(7, 2, "modulus");
+evalNumbers(2, 3, "power");
+
+
+Task - 5
+--------
+
+function checkLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log("Leap year");
+  } else {
+    console.log("Not a leap year");
+  }
+}
+
+checkLeapYear(2020);
+checkLeapYear(2021);
+checkLeapYear(2000);
+checkLeapYear(1900);
+
+
+Task - 6
+--------
+
+function findGrade(marks) {
+  if (marks >= 90 && marks <= 100) {
+    console.log("S grade");
+  } else if (marks >= 80 && marks < 90) {
+    console.log("A grade");
+  } else if (marks >= 70 && marks < 80) {
+    console.log("B grade");
+  } else if (marks >= 60 && marks < 70) {
+    console.log("C grade");
+  } else if (marks >= 50 && marks < 60) {
+    console.log("D grade");
+  } else if (marks >= 40 && marks < 50) {
+    console.log("E grade");
+  } else if (marks >= 0 && marks < 40) {
+    console.log("Student has failed");
+  } else {
+    console.log("Invalid marks");
+  }
+}
+
+findGrade(95);
+findGrade(85);
+findGrade(75);
+findGrade(65);
+findGrade(55);
+findGrade(45);
+findGrade(35);
+findGrade(105);
+
+
+Task - 7
+--------
+
+function findDaysInMonth(month, year) {
+  if (month < 1 || month > 12) {
+    console.log("Invalid month");
+  } else if (month === 2) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+      console.log("The Month has 29 days.");
+    } else {
+      console.log("The Month has 28 days.");
+    }
+  } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+    console.log("The Month has 30 days.");
+  } else {
+    console.log("The Month has 31 days.");
+  }
+}
+
+findDaysInMonth(2, 2012);
+findDaysInMonth(2, 2014);
+findDaysInMonth(4, 2022);
+findDaysInMonth(12, 2023);
+findDaysInMonth(13, 2023);
+
+
+Arrays
+******
+
+Task - 1
+--------
+
+const myArray = ['Orange', 25, 100, true, 33.58];
+
+console.log(myArray);
+
+
+Task - 2
+--------
+
+const myArray = [25, false, "green", "apple"];
+
+const index = 0;
+
+console.log(myArray[index]);
+
+
+Task - 3
+--------
+
+let myList = [25, 50, "center", 75, 100];
+
+const index = 0;
+const newValue = 5;
+
+myList[index] = newValue;
+
+console.log(myList);
+
+
+Task - 4
+--------
+
+const arr = [12,23,"KGM",45,56,67];
+const arrLength = arr.length;
+
+console.log(arrLength);
+
+
+Task - 5
+--------
+
+const arr = [1, 2, 4];
+arr.push(100);
+
+console.log(arr);
+
+
+Task - 6
+--------
+
+let arr = [1,2,3,4,"KGM","empty"];
+
+let removedValue = arr.pop();
+console.log(removedValue);
+
+console.log(arr);
