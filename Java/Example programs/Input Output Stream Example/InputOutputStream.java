@@ -14,6 +14,6 @@ class InputOutputStream
             str = br.readLine();
             System.out.println(str);
         }
-        while(!str.equalsIgnoreCase("Exit") || str.contains(str.equalsIgnoreCase("Exit")));
+        while(!str.equalsIgnoreCase("Exit") || str.contains("Exit"));
     }
 }

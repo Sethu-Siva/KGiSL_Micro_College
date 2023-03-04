@@ -1,6 +1,3 @@
-import java.util.*;
-import java.lang.*;
-
 class Temp
 {
     int age = 23;

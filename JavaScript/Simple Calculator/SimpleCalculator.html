@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href="SimpleCalculator.css">
+    <script type="text/JavaScript" src="SimpleCalculator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row mx-auto">
+            <div class="col-6">
+                <form class="form">
+                    <table>
+                        <tr>
+                            <td><label for="firstNumber">Enter the Value for  A : </label></td>
+                            <td><input type="number" id="firstNumber"><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="secondNumber">Enter the Value for B :</label></td>
+                            <td><input type="number" id="secondNumber"><br></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <input type="button" onclick="Calculate()" value="+">
+                            </td>
+                            <td>
+                                <input type="button" onclick="Calculate()" value="-">
+                            </td>
+                            <td>
+                                <input type="button" onclick="Calculate()" value="*">
+                            </td>
+                            <td>
+                                <input type="button" onclick="Calculate()" value="/">
+                            </td>
+                            <td>
+                                <input type="button" onclick="Calculate()" value="%">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
