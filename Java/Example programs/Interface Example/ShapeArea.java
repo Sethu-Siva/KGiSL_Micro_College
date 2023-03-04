@@ -1,6 +1,4 @@
 import java.util.*;
-import java.lang.*;
-
 interface Area
 {
     public void Square();
@@ -32,6 +30,7 @@ public class ShapeArea implements Area, CircumFerence
         double r = sc.nextDouble();
         double areaOfCircle = 3.142 * r * r;
         System.out.println("Area of the Circle is : " + areaOfCircle);
+        sc.close();
     }
 
     public void Square()
@@ -41,6 +40,7 @@ public class ShapeArea implements Area, CircumFerence
         double s = sc.nextDouble();
         double areaOfSquare = s * s;
         System.out.println("Area of the Square is : " + areaOfSquare);
+        sc.close();
     }
     
     public void Rectangle()
@@ -52,6 +52,7 @@ public class ShapeArea implements Area, CircumFerence
         double b = sc.nextDouble();
         double areaOfRectangle = l * b;
         System.out.println("Area of the Rectangle is : " + areaOfRectangle);
+        sc.close();
     }
 
     public void Triangle()
@@ -63,6 +64,7 @@ public class ShapeArea implements Area, CircumFerence
         double height = sc.nextDouble();
         double areaOfTriangle = (base*height)/2;
         System.out.println("Area of the Rectangle is : " + areaOfTriangle);
+        sc.close();
     }
 
     public static void main(String[] args)

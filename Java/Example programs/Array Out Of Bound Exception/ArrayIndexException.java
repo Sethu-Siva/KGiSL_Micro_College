@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class ArrayIndexException
 {
@@ -29,5 +28,6 @@ class ArrayIndexException
         {
             System.out.println(e);
         }
+        sc.close();
     }
 }

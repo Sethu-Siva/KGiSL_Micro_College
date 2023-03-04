@@ -1,6 +1,4 @@
 import java.util.*;
-import java.lang.*;
-
 class ForLoopWithArray
 {
     public static void main(String[] args)
@@ -19,5 +17,6 @@ class ForLoopWithArray
             int temp = i + 1;
             System.out.print("Fruite " + temp + " : " + fruites[i] + "\n");
         }
+        sc.close();
     }
 }

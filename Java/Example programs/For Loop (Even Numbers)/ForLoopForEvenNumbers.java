@@ -1,12 +1,11 @@
 import java.util.*;
-import java.lang.*;
 
 class ForLoopEvenNumbers
 {
     public static void main(String[] args)
     {
         
-        int limit, num, temp = 1;
+        int limit, temp = 1;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter the Limit : ");
@@ -26,5 +25,6 @@ class ForLoopEvenNumbers
                 System.out.print(evenNumbers[i] + "\n");
             }
         }
+        sc.close();
     }
 }

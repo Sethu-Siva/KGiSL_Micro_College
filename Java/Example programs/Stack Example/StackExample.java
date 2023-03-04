@@ -1,6 +1,4 @@
 import java.util.*;
-import java.lang.*;
-
 class StackExample
 {
     public static void main(String[] args)
@@ -35,5 +33,6 @@ class StackExample
 
         System.out.print("\nPeek Value : " + names.peek());
 
+        sc.close();
     }
 }

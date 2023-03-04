@@ -1,6 +1,3 @@
-import java.util.*;
-import java.lang.*;
-
 class DoWhileExample
 {
     public static void main(String[] args)

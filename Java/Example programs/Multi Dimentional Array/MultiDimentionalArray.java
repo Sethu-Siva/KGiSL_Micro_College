@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class MultiDimentionalArray
 {
@@ -36,5 +35,6 @@ class MultiDimentionalArray
             }
             System.out.print("\n");
         }
+        sc.close();
     }
 }

@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class MethodExample
 {
@@ -25,6 +24,7 @@ class MethodExample
         System.out.print("Enter the B value : ");
         number_2 = sc.nextInt();
         sum = number_1 + number_2;
+        sc.close();
         return sum;
     }
 
@@ -38,7 +38,6 @@ class MethodExample
     public static void main(String[] args)
     {
         int r;
-        String names;
         MethodExample me = new MethodExample();
 
         me.myPrint();

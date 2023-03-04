@@ -1,7 +1,4 @@
 import java.util.*;
-import java.lang.*;
-
-
 class OperatorExample
 {
 	public static void main(String args[])
@@ -20,7 +17,7 @@ class OperatorExample
 		--x;
 		System.out.println("--X : " + x);
 		System.out.println("-------------------------------------------------");
-		int a=1,b=2;
+		int a=1;
 		System.out.println(a++ + ++a);
 		int c=10,d=-10;
 		System.out.println(c);
@@ -84,5 +81,6 @@ class OperatorExample
 		sn -= 8;
 		System.out.println("Number_1 : " + fn);
 		System.out.println("Number_2 : " + sn);
+		sc.close();
 	}
 }

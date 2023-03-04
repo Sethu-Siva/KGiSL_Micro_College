@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class DivisibleByZero 
 {
@@ -34,5 +33,6 @@ class DivisibleByZero
         {
             System.out.println("Done...!");
         }
+        sc.close();
     }
 }

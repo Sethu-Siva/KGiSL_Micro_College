@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class LinkedListExample
 {
@@ -23,5 +22,6 @@ class LinkedListExample
         {
             System.out.print(it.next() + " ");
         }
+        sc.close();
     }
 }

@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class DecisionMaking
 {
@@ -144,5 +143,6 @@ class DecisionMaking
             default :
                 System.out.println("Please Enter a Valid name....!");
         }
+        sc.close();
     }
 }

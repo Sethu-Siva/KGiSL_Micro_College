@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class VectorListExample
 {
@@ -32,5 +31,6 @@ class VectorListExample
         {
             System.out.print(s + " ");
         }
+        sc.close();
     }
 }

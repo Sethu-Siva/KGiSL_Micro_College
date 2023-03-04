@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class ForEachExample
 {
@@ -25,5 +24,6 @@ class ForEachExample
         {
             System.out.println(n);  
         }
+        sc.close();
     }
 }

@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 abstract class Parent
 {
@@ -46,6 +45,7 @@ class secondChild extends firstChild
         name = sc.next();
         System.out.print("Enter Your Age : ");
         age = sc.nextInt();
+        sc.close();
     }
     public void GetJobDetails()
     {

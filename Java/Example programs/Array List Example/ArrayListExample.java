@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class ArrayListExample
 {
@@ -21,5 +20,6 @@ class ArrayListExample
         {
             System.out.print(s + " ");
         }
+        sc.close();
     }
 }
