@@ -1,5 +1,6 @@
 var d = new Date();
 console.log(d);
+
 console.log("Date          :",d.getDate());
 console.log("Day in Week   :",d.getDay());
 console.log("Month         :",d.getMonth());
