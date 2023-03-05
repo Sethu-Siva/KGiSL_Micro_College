@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Example</title>
+</head>
+<body>
+    <script>
+        
+        class Company
+        {
+            constructor()
+            {
+                this.CName="KGiSL";
+            }
+        }
+        class Employee extends Company
+        {
+            constructor(id,name)
+            {
+                super();
+                this.id=id;
+                this.name=name;
+            }
+        }
+        var emp = new Employee(101,"Siva");
+
+        document.writeln(emp.id + " " + emp.name + " " + emp.CName);
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter Setter Example</title>
+</head>
+<body>
+    <script>
+        class Students
+        {
+            constructor()
+            {
+                var name;
+                var marks;
+            }
+
+            getName()
+            {
+                return this.name;
+            }
+
+            setName(name)
+            {
+                this.name=name;
+            }
+
+            getMarks()
+            {
+                return this.marks;
+            }
+
+            setMarks(marks)
+            {
+                if ( marks < 0 || marks > 100 )
+                {
+                    alert("Invalid Marks...!");
+                }
+                else
+                {
+                    this.marks = marks;
+                }
+            }
+        }
+
+        var std = new Students();
+
+        std.setName("Sethu");
+        std.setMarks(95);
+
+        document.write(std.getName() + " " + std.getMarks());
+
+        std.setName("Siva");
+        std.setMarks(85);
+
+        document.write(std.getName() + " " + std.getMarks());
+
+    </script>
+</body>
+</html>

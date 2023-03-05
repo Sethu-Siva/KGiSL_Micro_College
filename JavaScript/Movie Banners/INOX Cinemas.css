@@ -1,0 +1,13 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+.Ban_Size{
+    height: 600px;
+    background: url('Pvrcinemas_logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#head{
+    text-align: center;
+    font-size: 50px;
+}

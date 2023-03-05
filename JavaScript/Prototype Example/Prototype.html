@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Example</title>
+</head>
+<body>
+    <script>
+        function Person(fname,lname,age,eyecolor)
+        {
+            this.firstName = fname;
+            this.LastName = lname;
+            this.age = age;
+            this.eyecolor = eyecolor;
+        }
+
+        Person.prototype.nationality = "English";
+
+        Person.prototype.name = function()
+        {
+            return (this.firstName + " " + this.LastName);
+        }
+
+        console.log(typeof(Person));
+        var p = new Person("Sethu","Siva",23,"Brown");
+
+        document.write(p.name() + " " + p.age + " " + p.eyecolor + " " + p.nationality);
+
+    </script>
+</body>
+</html>
