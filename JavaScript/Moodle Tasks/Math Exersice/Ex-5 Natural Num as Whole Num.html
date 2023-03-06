@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Num As Whole Num</title>
+</head>
+<body>
+    <script>
+        function is_Natural(val)
+        {
+            if ( typeof(val) !== 'number' )
+            {
+                return 'Not a Number';
+            }
+            else if ( ((Math.floor(val) === val )) && ( val >= 0.0 ) && ( val != 'Infinity' ) )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        console.log(is_Natural(-15));
+        console.log(is_Natural(1));
+        console.log(is_Natural(10.22));
+        console.log(is_Natural(10/0));
+    </script>
+</body>
+</html>

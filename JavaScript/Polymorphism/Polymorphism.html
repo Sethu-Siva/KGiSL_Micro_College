@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polymorphism</title>
+</head>
+<body>
+    <script>
+        class A
+        {
+            display()
+            {
+                document.writeln("A is invoked");
+            }
+        }
+        class B extends A
+        {
+            display()
+            {
+                super.display();
+                document.writeln("B is invoked");
+            }
+        }
+
+        var b = new B();
+        b.display();
+
+    </script>
+</body>
+</html>

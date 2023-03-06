@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generation</title>
+</head>
+<body>
+    <script>
+        function rand(min,max)
+        {
+            if ( min == null && max == null )
+            {
+                return 0;
+            }
+            else if ( min > max || max == null )
+            {
+                max = min;
+            }
+
+            var ran_num = Math.floor( Math.random() * max );
+            return ran_num;
+        }
+
+        console.log(rand(20,1));
+        console.log(rand(1,10));
+        console.log(rand(6));
+        console.log(rand());
+
+    </script>
+</body>
+</html>

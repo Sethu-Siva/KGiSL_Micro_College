@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abstract</title>
+</head>
+<body>
+    <script>
+        // creating a constructor function
+        function Vehicle(vehicleName)
+        {
+            this.vehicleName = vehicleName;
+            throw new Error("Sthu");
+        }
+
+        Vehicle.prototype.display = function() {
+            return this.vehicleName;
+        }
+
+        var vehicle = new Vehicle();
+        
+    </script>
+</body>
+</html>

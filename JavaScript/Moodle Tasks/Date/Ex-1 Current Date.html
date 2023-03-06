@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date</title>
+</head>
+<body>
+    <script>
+        function curday(sep)
+        {
+            var d = new Date();
+            var date = d.getDate() + sep + d.getMonth() + sep + d.getFullYear();
+            return date;
+        }
+
+        console.log(curday('-'));
+
+        console.log(curday('*'));
+    </script>
+</body>
+</html>

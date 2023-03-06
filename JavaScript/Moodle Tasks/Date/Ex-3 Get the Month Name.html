@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get The Month Name</title>
+</head>
+<body>
+    <script>
+        function month_name(date)
+        {
+            var d = new Date(date);
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            return monthNames[d.getMonth()];
+        }
+
+        console.log(month_name(new Date("10/11/2009")));
+
+        console.log(month_name(new Date("11/13/2014")));
+    </script>
+</body>
+</html>
