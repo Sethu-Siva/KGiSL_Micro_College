@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function check()
+        {
+            var text_1 = document.getElementById("text_box_1").value;
+
+            var text_2 = document.getElementById("text_box_2").value;
+
+            if ( text_1 == "" || text_2 == "" )
+            {
+                alert("One of your data is empty, kindly fill it and try again....!");
+            }
+            else
+            {
+                alert ( text_1 + " " + text_2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="text1">Enter the First Text : </label>
+    <input type="text" name="text1" id="text_box_1"><br>
+    <label for="text2">Enter the Second Text : </label>
+    <input type="text" name="text2" id="text_box_2"><br>
+    <input type="button" value="Check" onclick="check()">
+</body>
+</html>

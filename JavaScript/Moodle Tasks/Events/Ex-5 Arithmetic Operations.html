@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <script>
+        function add()
+        {
+            var fn = parseInt(document.getElementById("firstNumber").value);
+            var sn = parseInt(document.getElementById("secondNumber").value);
+            document.getElementById("Result").value = fn + sn;
+        }
+        function sub()
+        {
+            var fn = parseInt(document.getElementById("firstNumber").value);
+            var sn = parseInt(document.getElementById("secondNumber").value);
+            document.getElementById("Result").value = fn - sn;
+        }
+        function mul()
+        {
+            var fn = parseInt(document.getElementById("firstNumber").value);
+            var sn = parseInt(document.getElementById("secondNumber").value);
+            document.getElementById("Result").value = fn * sn;
+        }
+        function div()
+        {
+            var fn = parseInt(document.getElementById("firstNumber").value);
+            var sn = parseInt(document.getElementById("secondNumber").value);
+            document.getElementById("Result").value = fn / sn;
+        }
+        function mod()
+        {
+            var fn = parseInt(document.getElementById("firstNumber").value);
+            var sn = parseInt(document.getElementById("secondNumber").value);
+            document.getElementById("Result").value = fn % sn;
+        }
+    </script>
+</head>
+<body>
+    <label for="f_num">Enter the Value for A : </label>
+    <input type="text" name="f_num" id="firstNumber"><br><br>
+    <label for="s_num">Enter the Value for B : </label>
+    <input type="text" name="s_num" id="secondNumber"><br><br>
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="sub()">
+    <input type="button" value="*" onclick="mul()">
+    <input type="button" value="/" onclick="div()">
+    <input type="button" value="%" onclick="mod()"><br><br>
+    <label for="res">Result : </label>
+    <input type="text" name="res" id="Result">
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Compare</title>
+    <script>
+        function check()
+        {
+            var text_1 = document.getElementById("text_box_1").value;
+
+            var text_2 = document.getElementById("text_box_2").value;
+
+            var errMsg = document.getElementById("msg");
+
+            errMsg.style.color = "Red";
+
+            if ( text_1 == "" || text_2 == "" )
+            {
+                errMsg.innerText = "Please Fill Both Input Boxes....!"
+            }
+            else
+            {
+                if ( text_1 == text_2 )
+                {
+                    errMsg.innerText = "";
+                    alert("Data's are equal");
+                }
+                else
+                {
+                    
+
+                    errMsg.innerText = "Data's are NOT equal";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="text1">Enter the First Text : </label>
+    <input type="text" name="text1" id="text_box_1"><br>
+    <label for="text2">Enter the Second Text : </label>
+    <input type="text" name="text2" id="text_box_2"><br>
+    <input type="button" value="Check" onclick="check()">
+    <p id="msg"></p>
+</body>
+</html>

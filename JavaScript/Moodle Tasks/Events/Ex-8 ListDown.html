@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+    <script>
+        function dis()
+        {
+            var btn = document.getElementById("create_btn");
+            btn.setAttribute("disabled",true);
+        }
+
+        function add()
+        {
+            var val = parseInt(document.getElementById("t_box").value);
+
+            var op = '<option>Numbers</option>';
+
+            var sl = document.getElementById("myvalues");
+
+            for ( var i = 1; i <= val; i++ )
+            {
+                op += ('<option value=' + i + '>' + i + '</option>');
+            }
+
+            sl.innerHTML = op;
+            var btn = document.getElementById("create_btn");
+            btn.removeAttribute("disabled");
+        }
+
+        function create()
+        {
+            var val = document.getElementById("myvalues").value;
+
+            if ( val == "Numbers" )
+            {
+                alert("Select a Number from DropDown....!");
+            }
+            else
+            {
+                var div = document.getElementById("added");
+                var st ='<label for="noOfUser">Select the No of Users to be Created : </label>';
+                var sl = '<select name="noOfUser" id=Select_Boxof_' + i + '>';
+                var op = '<option>Numbers</option>';
+                for ( var i = 1; i <= val; i++ )
+                {
+                    op += ('<option value=' + i + '>' + i + '</option>');
+                }
+                st += (sl + op + '</select>');
+            }
+            div.innerHTML = st;
+        }
+    </script>
+</head>
+<body onload="dis()">
+    <div>
+        <form>
+            <label for="t_box">Enter the Number : </label>
+            <input type="number" id="t_box" name="t_box">
+            <input type="button" id="add_btn" value="Add" onclick="add()" onkeypress="add()">
+            <br>
+            <select id="myvalues"></select>
+            <input type="button" id="create_btn" value="Create" onclick="create()">
+            <div id="added"></div>
+        </form>
+    </div>
+</body>
+</html>
