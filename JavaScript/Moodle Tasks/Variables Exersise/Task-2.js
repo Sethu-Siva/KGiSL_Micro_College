@@ -1,0 +1,1 @@
+var firstName = "Ram",lastName = "Kumar",age = 30;

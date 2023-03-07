@@ -1,0 +1,49 @@
+JSON
+****
+
+JSON stands for JavaScript Object Notation. it is a text based document.
+
+
+// JSON data - "Name" : "Sethu"
+
+// JSON object - {"Name" : "Sethu", "Age" : 23}
+
+// JSON Array - ["HTML","CSS","JS"]
+
+we can call the value of JSON using ( (.) - dot notation or ([]) - Bracket Notation ).
+
+
+JSON 			-	The key value pair should be in double quotes.
+				JSON cannot contain functions.
+				JSON can be created and used by other programming languages.
+
+JS Objects 		-	The key value pair can be without double quotes.
+				JS Objects can contain functions.
+				JS object can only be created and used by other programming languages.
+
+
+JSON Document to JS Object convertion = // const obj = JSON.parse(JSON_Doc_Name)
+
+JSON Document to String convertion = // const str = JSON.stringify(JSON_Doc_Name)
+
+
+Arrow Function
+**************
+
+syntax
+------
+
+let myFunction = (args1,args2,.....argsN) =>
+{
+	statement(s)
+}
+
+eg
+--
+
+let greet = () => console.log("Hello");
+
+greet();
+
+
+Arrow function with ( No args, One Args, More than One Args ).
