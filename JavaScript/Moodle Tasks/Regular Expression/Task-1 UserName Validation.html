@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Name Validation</title>
+    <script>
+        function validate()
+        {
+            var ptn = new RegExp(/^[^0-9\W_][A-z_0-9]{5,20}$/);
+            var uname = document.getElementById("UName").value;
+            var sts1 = document.getElementById("Status1");
+            var sts2 = document.getElementById("Status2");
+            var sts3 = document.getElementById("Status3");
+            var sts4 = document.getElementById("Status4");
+            
+            if (uname.match(ptn))
+            {
+                sts1.style.color = "Green";
+                sts2.style.color = "Green";
+                sts3.style.color = "Green";
+                sts4.style.color = "Green";
+            }
+            else
+            {
+                if (uname == "")
+                {
+                    sts1.style.color = "Red";
+                }
+                else
+                {
+                    sts1.style.color = "Green";
+                }
+                if ((uname.length < 6) || (uname.length > 20))
+                {
+                    sts2.style.color = "Red";
+                }
+                else
+                {
+                    sts2.style.color = "Green";
+                }
+                if (!uname.search(/^[0-9]/))
+                {
+                    sts3.style.color = "Red";
+                }
+                else
+                {
+                    sts3.style.color = "Green";
+                }
+                if (uname.match(/[^A-z0-9_]/))
+                {
+                    sts4.style.color = "Red";
+                }
+                else
+                {
+                    sts4.style.color = "Green";
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="validate()">
+    <label for="UName">User Name : </label>
+    <input type="text" name="UName" id="UName" onkeyup="validate()"><br>
+    <br>
+    <span id="Status1">Name Should not be empty.</span><br>
+    <span id="Status2">Name should be within 6 - 20 characters.</span><br>
+    <span id="Status3">Name should not start with Numerics.</span><br>
+    <span id="Status4">Name Can contain special Char of ( _ ) only.</span>
+</body>
+</html>

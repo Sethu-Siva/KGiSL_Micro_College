@@ -47,3 +47,8 @@ greet();
 
 
 Arrow function with ( No args, One Args, More than One Args ).
+
+
+Objects  - allows us to create a single entity that stroes data items by key.
+
+Arrays - aloows us to gather data items into an ordered list.

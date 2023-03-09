@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function body()
+        {
+            const users = [
+                {
+                    firstname   : 'Sethu',
+                    lastname    : 'Siva',
+                    emailid     : 'sivarocks742@gmail.com',
+                    phoneno     : '8220865109',
+                    password    : 'Password123',
+                    Address     : {
+                        AddressLine1: '1/419, Sri Devi Nagar',
+                        AddressLine2: 'Kadhirnaicken Palayam',
+                        city        : 'Coimbatore',
+                        state       : 'Tamil Nadu',
+                        country     : 'India',
+                        pincode     : '641017'
+                        }
+                },
+                {
+                    firstname   : 'Siva',
+                    lastname    : 'King',
+                    emailid     : 'myemail@gmail.com',
+                    phoneno     : '8681865109',
+                    password    : 'Password123',
+                    Address     : {
+                        AddressLine1: '1/419, Sri Devi Nagar',
+                        AddressLine2: 'Kadhirnaicken Palayam',
+                        city        : 'Coimbatore',
+                        state       : 'Tamil Nadu',
+                        country     : 'India',
+                        pincode     : '641017'
+                    }
+                }
+                ];
+
+                
+                const headerRow = '<tr><th>First Name</th><th>Last Name</th><th>Email ID</th><th>Phone Number</th><th>Address Line 1</th><th>Address Line 2</th><th>City</th><th>State</th><th>Country</th><th>Pincode</th></tr>';
+
+                const bodyRows = users.map(user => {
+                return `<tr><td>${user.firstname}</td><td>${user.lastname}</td><td>${user.emailid}</td><td>${user.phoneno}</td><td>${user.Address.AddressLine1}</td><td>${user.Address.AddressLine2}</td><td>${user.Address.city}</td><td>${user.Address.state}</td><td>${user.Address.country}</td><td>${user.Address.pincode}</td></tr>`;
+                });
+
+                const tableHtml = `<table>${headerRow}${bodyRows.join('')}</table>`;
+
+                let bdy = document.getElementById("dis");
+                bdy.innerHTML = tableHtml;
+        }
+    </script>
+</head>
+<body onload="body()">
+    <div id="dis"></div>
+</body>
+</html>
