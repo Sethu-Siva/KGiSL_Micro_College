@@ -1,0 +1,54 @@
+#head_text{
+    font-weight: bolder;
+    color: rgba(255, 0, 0, 0.678);
+}
+.head_height{
+    padding-top: 25px;
+    font-size: x-large;
+}
+.font_size_nav{
+    color: white;
+    font-size: medium;
+}
+li{
+    margin-left: 30px;
+}
+#Primary_Div{
+    height: 600px;
+    background: url('vecteezy_man-holding-a-dumbbell-in-a-gym-with-row-of-dumbbells-in-the-background_2031342.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#perf{
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+#tack{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top: 63%;
+    left: 15%;
+}
+#best_text{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+#second_Div{
+    background-color: rgba(255, 0, 0, 0.678);
+}
+#offer_text{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+.card-title{
+    background-color: rgba(255, 0, 0, 0.678);
+    color: white;
+}

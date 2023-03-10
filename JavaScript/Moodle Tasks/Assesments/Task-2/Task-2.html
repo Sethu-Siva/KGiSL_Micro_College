@@ -19,7 +19,7 @@
                         <tbody>
                             <tr>
                                 <td><label for="ename"><span class="text-danger">* </span>Employee Name : </label></td>
-                                <td><input type="text" name="ename" id="ename" onkeyup="validateName()"><br>
+                                <td><input type="text" name="ename" id="ename" onchange="validatefields()">
                                     <span id="nameptn"></span>
                                 </td>
                             </tr>
@@ -33,11 +33,13 @@
                             </tr>
                             <tr>
                                 <td><label for="pno"><span class="text-danger">* </span>Phone Number : </label></td>
-                                <td><input type="text" name="pnum" id="pnum"></td>
+                                <td><input type="text" name="pnum" id="pnum" onchange="checkPhone()">
+                                    <span id="phsts"></span>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label for="bpay"><span class="text-danger">* </span>Basic Pay : </label></td>
-                                <td><input type="text" name="bpay" id="bpay" onkeyup="calc()"></td>
+                                <td><input type="text" name="bpay" id="bpay" onchange="calc()"></td>
                             </tr>
                             <tr>
                                 <td><label for="hra">House Rent Allowance : </label></td>

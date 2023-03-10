@@ -5,7 +5,7 @@ async function show()
     var a = '';
     datas.map((value,index) => {
         a += '<div><table id="mytable"><tbody><tr>';
-        a += '<td><img src="' + value.image + '" alt="' + value.title + '"/ width="200px" height="200px"></td>'
+        a += '<td><img src="' + value.image + '" alt="' + value.title + '" width="200px" height="200px"/></td>'
         a += '<td><b>' + value.title + '</b><br>'
         a += 'Price : $'+ value.price +'<br>';
         a += 'description : '+ value.description +'<br>';

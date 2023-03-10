@@ -63,20 +63,40 @@ function addtotable()
 
     td.innerHTML = cmds;
 }
-function validateName()
+function validatefields()
 {
     var name = document.getElementById("ename").value;
+    var nameptn = document.getElementById("nameptn");
 
-    var ptn = new RegExp(/^[^0-9\W_][A-z_]$/);
+    var ptn = new RegExp(/^[^0-9\W_][A-z_]{3,15}$/);
 
     if (name.match(ptn))
     {
         var sts = true;
+        nameptn.innerHTML = "";
     }
     else
     {
-        var nameptn = document.getElementById("nameptn");
         nameptn.style.color="Red";
-        nameptn.innerText = ""
+        nameptn.innerText = "Pattern NOT Matched."
+    }
+}
+
+function checkPhone()
+{
+    var phnum = document.getElementById("pnum").value;
+    var phsts = document.getElementById("phsts");
+
+    var phptn = new RegExp(/^[6-9]{1}[0-9]{9}$/);
+
+    if ( phnum.match(phptn) )
+    {
+        var sts = true;
+        phsts.innerHTML = "";
+    }
+    else
+    {
+        phsts.style.color="Red";
+        phsts.innerText = "Pattern NOT Matched."
     }
 }
