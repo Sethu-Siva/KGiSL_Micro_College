@@ -8,7 +8,7 @@
     <script>
         function validate()
         {
-            var ptn = new RegExp(/^[^0-9\W_][A-z_0-9]{5,20}$/);
+            var ptn = /^[^0-9\W_][A-z_0-9]{5,20}$/;
             var uname = document.getElementById("UName").value;
             var sts1 = document.getElementById("Status1");
             var sts2 = document.getElementById("Status2");
