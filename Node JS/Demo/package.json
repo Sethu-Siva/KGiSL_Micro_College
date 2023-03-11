@@ -1,0 +1,11 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "For Sample Purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm sample --version"
+  },
+  "author": "SethuSiva",
+  "license": "ISC"
+}
