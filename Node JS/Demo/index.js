@@ -1,27 +1,6 @@
-console.log("test");
+const { find } = require("./Accounts/account");
 
-var a = [1,2,3,4,5];
-var b = [6,7,3,9,10];
+var a = [5,9,1,5,6];
+var b = [1,2,3,4,5];
 
-var z = [];
-
-function find()
-{
-    for ( var i = 0; i < a.length; i++ )
-    {
-        for ( var j = 0; j < b.length; j++ )
-        {
-            if ( a[i] == b[j] )
-            {
-                z.push({
-                    no : a[i],
-                    name : "Sethu"
-                })
-            }
-        }
-    }
-    return z;
-}
-
-
-console.log(find());
+console.log(find(a,b));

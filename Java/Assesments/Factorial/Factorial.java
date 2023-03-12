@@ -29,5 +29,6 @@ class Factorial
         System.out.print(" = " + fact);
         System.out.println("\n-------------------------------------\n");
 
+        sc.close();
     }
 }

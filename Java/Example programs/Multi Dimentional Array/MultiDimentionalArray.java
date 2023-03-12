@@ -19,7 +19,7 @@ class MultiDimentionalArray
         {
             for (int j = 0; j <= colLimit-1; j++)
             {
-                System.out.print("Enter the (" + i + " x " + j +") value : ");
+                System.out.print("Enter the (" + (i + 1) + " x " + (j + 1) +") value : ");
                 matrix[i][j] = sc.nextInt();
             }
         }
