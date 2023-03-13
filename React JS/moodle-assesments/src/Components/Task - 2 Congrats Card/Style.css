@@ -1,0 +1,16 @@
+body {
+    background-image: url('congrats-card-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#congratCard {
+    background-color: rgb(185, 227, 231);
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+}
+.msg
+{
+    margin-top: 80px;
+    text-align: center;
+}
