@@ -1,0 +1,26 @@
+.socialButtonsPage {
+    height: 690px;
+    background-image: url('Background-Imgae.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.headerDiv {
+    padding-top: 150px;
+    text-align: center;
+}
+.TitleMsg {
+    color: white;
+    font-size: 75px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.buttons {
+    text-align: center;
+    padding-top: 30px;
+}
+input {
+    margin-left: 20px;
+    margin-right: auto;
+    padding: 10px 30px !important;
+    border-radius: 15px !important;
+}

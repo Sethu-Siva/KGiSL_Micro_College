@@ -1,7 +1,8 @@
-body {
+.CongratPage {
     background-image: url('congrats-card-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 690px;
 }
 #congratCard {
     background-color: rgb(185, 227, 231);

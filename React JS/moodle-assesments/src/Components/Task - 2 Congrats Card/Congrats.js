@@ -8,7 +8,7 @@ export function Congrat()
 {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid CongratPage">
                 <div className="container">
                     <div className="row">
                         <div className="col-2 col-lg-4"></div>

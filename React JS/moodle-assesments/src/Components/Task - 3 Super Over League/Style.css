@@ -1,0 +1,14 @@
+.LeaguePage {
+    background-color: rgb(3, 3, 35);
+    height: 690px;;
+}
+.leagueTitle {
+    color: white;
+    font-size: x-large;
+    margin-top: 100px;
+    text-align: center;
+}
+.BannerImages {
+    text-align: center;
+    margin-top: 30px;
+}
