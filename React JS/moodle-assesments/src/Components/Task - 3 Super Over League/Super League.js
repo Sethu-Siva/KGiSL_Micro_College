@@ -1,6 +1,5 @@
 import React from 'react';
 import './Style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import RoyalChallengersBannerImage from './Royal Challengers.jpg';
 import ChennaiSuperKingsBannerImage from './Chennai Super Kings.jpg';
 

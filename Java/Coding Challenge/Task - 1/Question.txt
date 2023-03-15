@@ -1,0 +1,42 @@
+an array X of size Z that contains non-negative integers must be given. The task is to determine whether the number that is formed by selecting the last digit of all the Z numbers is divisible by 10.
+
+Input format
+
+First line: a single integer Z denoting the size of array X.
+Second line: Z space-separated integers.
+Output format
+
+If the number is divisible by 10, then print YES. Otherwise, print NO.
+
+
+Sample Input
+------------
+
+5
+
+85 25 65 21 84
+
+ 
+
+Sample Output
+-------------
+
+No
+
+The number formed is 55514, whish is not divisible by 10. So, the output is No.
+
+
+
+Sample Input
+------------
+
+3
+
+11 20 50
+
+Sample Output
+-------------
+
+ Yes
+
+The number formed is 100, whish is divisible by 10. So, the output is Yes.

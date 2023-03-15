@@ -1,0 +1,9 @@
+.LoginDesignPage {
+    background-image: linear-gradient(to right, rgb(137, 19, 166) , rgb(202, 57, 212));
+    height: 690px;
+}
+.Page {
+    height: 400px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}

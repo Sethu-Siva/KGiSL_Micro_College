@@ -1,5 +1,4 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.css';
 import './Style.css';
 import CardProfilePic from './congrats-card-profile-img.png';
 import watchPic from './congrats-card-watch-img.png';
