@@ -1,9 +1,21 @@
 .LoginDesignPage {
-    background-image: linear-gradient(to right, rgb(137, 19, 166) , rgb(202, 57, 212));
-    height: 690px;
+    background-image: linear-gradient(to right, rgb(118, 10, 146) , rgb(162, 14, 173));
+    padding: 5% 5%;
 }
 .Page {
-    height: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 50px;
+}
+.LoginPic {
+    margin: 10% auto;
+}
+.emailBox {
     background-color: whitesmoke;
     border-radius: 25px;
+}
+input { 
+    border: none;
+    outline: none;
+    background-color: inherit;
 }

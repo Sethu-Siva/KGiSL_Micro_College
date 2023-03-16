@@ -1,7 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { Menu } from './Menu';
 import { Hello } from './Components/Task - 1 Hello World/Hello World';
 import { Congrat } from './Components/Task - 2 Congrats Card/Congrats';
 import { League } from './Components/Task - 3 Super Over League/Super League'
@@ -14,16 +15,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Hello/>}/>
-            <Route path='/Congrate' element={<Congrat/>}/>
+            <Route path='/' element={<Menu/>}/>
+            <Route path='/Hello' element={[<Menu/>,<Hello/>]}/>
+            <Route path='/Congrat' element={[<Menu/>,<Congrat/>]}/>
+            <Route path='/League' element={[<Menu/>,<League/>]}/>
+            <Route path='/SocialButtons' element={[<Menu/>,<SocialButtons/>]}/>
+            <Route path='/Notifications' element={[<Menu/>,<Notifications/>]}/>
+            <Route path='/LoginDesign' element={[<Menu/>,<LoginDesign/>]}/>
         </Routes>
       </BrowserRouter>
-      <Hello/>
-      <Congrat/>
-      <League/>
-      <SocialButtons/>
-      <Notifications/>
-      <LoginDesign/>
     </>
   );
 }
