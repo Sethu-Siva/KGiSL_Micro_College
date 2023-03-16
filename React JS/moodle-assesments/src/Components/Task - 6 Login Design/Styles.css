@@ -1,21 +1,42 @@
 .LoginDesignPage {
     background-image: linear-gradient(to right, rgb(118, 10, 146) , rgb(162, 14, 173));
-    padding: 5% 5%;
+    height: 100vh;
+    padding: 5%;
 }
 .Page {
-    height: 500px;
+    height: max-content;
     background-color: white;
     border-radius: 50px;
 }
 .LoginPic {
     margin: 10% auto;
 }
-.emailBox {
+.inputBox {
     background-color: whitesmoke;
     border-radius: 25px;
+    padding: 3% 0 3% 2% !important;
 }
 input { 
     border: none;
     outline: none;
     background-color: inherit;
+    padding: 0 !important;
+}
+legend {
+    font-weight: bolder;
+}
+.subButton {
+    background-color: rgb(65, 197, 65);
+    border-radius: 25px;
+    padding: 3% 0 !important;
+}
+.greenishText {
+    color: rgb(41, 212, 41) !important;
+}
+a { 
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: black;
 }
