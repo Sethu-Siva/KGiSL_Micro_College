@@ -34,6 +34,8 @@ class IsDivicibleByTen
             System.out.println("Not Number");
             System.exit(0);
         }
+
+        sc.close();
         
         for ( int j : arrayValues)
         {

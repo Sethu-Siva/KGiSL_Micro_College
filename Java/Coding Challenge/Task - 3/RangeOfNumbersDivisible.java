@@ -25,5 +25,6 @@ public class RangeOfNumbersDivisible
         }
 
         System.out.println(count);
+        sc.close();
     }
 }

@@ -61,5 +61,7 @@ public class CheckTruckNumber
         {
             System.out.println(e);
         }
+
+        sc.close();
     }
 }
