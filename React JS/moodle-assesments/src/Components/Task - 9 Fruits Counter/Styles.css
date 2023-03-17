@@ -1,0 +1,12 @@
+.FruiteCounterPage {
+    height: 100vh;
+    background-color: rgba(255, 230, 0, 0.782);
+}
+.count {
+    color: rgba(255, 230, 0, 0.782);
+}
+.contentDiv {
+    margin-top: 5%;
+    border-radius: 25px;
+    padding: 3%;
+}

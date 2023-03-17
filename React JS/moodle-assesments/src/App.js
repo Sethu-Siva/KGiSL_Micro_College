@@ -9,6 +9,9 @@ import { League } from './Components/Task - 3 Super Over League/Super League'
 import { SocialButtons } from './Components/Task - 4 Social Buttons/Social Buttons';
 import { Notifications } from './Components/Task - 5 Notification Application/Notification Application';
 import { LoginDesign } from './Components/Task - 6 Login Design/Login';
+import { TechCards } from './Components/Task - 7 Technology Cards/Tech Cards';
+import { HooksCounter } from './Components/Task - 8 Hooks Assignment/Hooks';
+import { FruiteCounter } from './Components/Task - 9 Fruits Counter/Fruites';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
             <Route path='/SocialButtons' element={[<Menu/>,<SocialButtons/>]}/>
             <Route path='/Notifications' element={[<Menu/>,<Notifications/>]}/>
             <Route path='/LoginDesign' element={[<Menu/>,<LoginDesign/>]}/>
+            <Route path='/TechCards' element={[<Menu/>,<TechCards/>]}/>
+            <Route path='/HookCounter' element={[<Menu/>,<HooksCounter/>]}/>
+            <Route path='/FruitesCounter' element={[<Menu/>,<FruiteCounter/>]}/>
         </Routes>
       </BrowserRouter>
     </>

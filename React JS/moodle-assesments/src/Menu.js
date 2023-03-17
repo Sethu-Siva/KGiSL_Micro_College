@@ -29,7 +29,16 @@ export function Menu()
                     <Link class="nav-link" to="/Notifications">Notifications</Link>
                     </li>
                     <li class="nav-item">
-                    <Link class="nav-link" to="/LoginDesign">LoginDesign</Link>
+                    <Link class="nav-link" to="/LoginDesign">Login Design</Link>
+                    </li>
+                    <li class="nav-item">
+                    <Link class="nav-link" to="/TechCards">Technology Cards</Link>
+                    </li>
+                    <li class="nav-item">
+                    <Link class="nav-link" to="/HookCounter">Hooks Counter</Link>
+                    </li>
+                    <li class="nav-item">
+                    <Link class="nav-link" to="/FruitesCounter">Fruites Counter</Link>
                     </li>
                 </ul>
                 </div>
