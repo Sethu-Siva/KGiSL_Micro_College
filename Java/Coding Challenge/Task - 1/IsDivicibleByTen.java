@@ -21,6 +21,7 @@ class IsDivicibleByTen
             while ( sc.hasNext() )
             {
                 arrayValues.add(sc.nextInt());
+                
                 count++;
 
                 if ( size == count )

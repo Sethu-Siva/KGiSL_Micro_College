@@ -12,6 +12,8 @@ import { LoginDesign } from './Components/Task - 6 Login Design/Login';
 import { TechCards } from './Components/Task - 7 Technology Cards/Tech Cards';
 import { HooksCounter } from './Components/Task - 8 Hooks Assignment/Hooks';
 import { FruiteCounter } from './Components/Task - 9 Fruits Counter/Fruites';
+import { FeedBack } from './Components/Task - 10 FeedBack App/FeedBack';
+import { GiveFeedBack } from './Components/Task - 10 FeedBack App/GiveFeedBack';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
             <Route path='/TechCards' element={[<Menu/>,<TechCards/>]}/>
             <Route path='/HookCounter' element={[<Menu/>,<HooksCounter/>]}/>
             <Route path='/FruitesCounter' element={[<Menu/>,<FruiteCounter/>]}/>
+            <Route path='/FeedBack' element={[<Menu/>,<FeedBack/>]}/>
+            <Route path='/ThankYou' element={[<Menu/>,<GiveFeedBack/>]}/>
         </Routes>
       </BrowserRouter>
     </>
