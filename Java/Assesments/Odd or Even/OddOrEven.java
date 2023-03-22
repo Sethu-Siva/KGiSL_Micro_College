@@ -1,7 +1,6 @@
 // Java Program to find if Given Number is Odd or Even
 
 import java.util.*;
-import java.lang.*;
 
 class OddOrEven
 {
@@ -26,5 +25,7 @@ class OddOrEven
         }
         
         System.out.println("----------------------------------------\n");
+
+        sc.close();
     }
 }

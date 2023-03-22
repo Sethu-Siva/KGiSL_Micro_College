@@ -1,7 +1,6 @@
 // Java Program to Display Multiplication Table
 
 import java.util.*;
-import java.lang.*;
 
 class MultiplicationTable
 {
@@ -23,5 +22,6 @@ class MultiplicationTable
             System.out.println(i + " x " + table + " = " + (i*table));
         }
 
+        sc.close();
     }
 }

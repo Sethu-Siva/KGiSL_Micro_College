@@ -1,7 +1,6 @@
 // Java Program for Performing Simple Calculations Named Calculator
 
 import java.util.*;
-import java.lang.*;
 
 class Calculator
 {

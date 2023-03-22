@@ -68,5 +68,7 @@ class MinMaxinArray
         System.out.println("\nMinimum Value in Given Array is : " + min_num);
         System.out.println("\nMaximum Value in Given Array is : " + max_num);
         System.out.println("\n----------------------------------------------\n");
+
+        sc.close();
     }
 }

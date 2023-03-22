@@ -32,5 +32,7 @@ class FibonacciSeries
         }
         while(c <= limit);
         System.out.println("\n***************************************************\n");
+
+        sc.close();
     }
 }       

@@ -1,7 +1,6 @@
 // Java Program for Performing String Basic Functions like concat, toUpperCase, toLowerCase
 
 import java.util.*;
-import java.lang.*;
 
 class StringBasicFunctions 
 {
@@ -23,5 +22,7 @@ class StringBasicFunctions
         System.out.println("Concat using '+' : " + a.firstName + " " + a.secondName);
         System.out.println("In LowerCase : " + a.firstName.toLowerCase());
         System.out.println("In UpperCase : " + a.secondName.toUpperCase());
+
+        sc.close();
     }
 }

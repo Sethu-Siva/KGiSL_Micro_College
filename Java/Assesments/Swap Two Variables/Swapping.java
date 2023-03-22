@@ -1,7 +1,6 @@
 // Java Program for Swapping to Variable's Values using 3rd Variable
 
 import java.util.*;
-import java.lang.*;
 
 class Swapping 
 {
@@ -34,5 +33,7 @@ class Swapping
         System.out.println("First Name : " + a.f_name);
 		System.out.println("Second Name : " + a.l_name);
         System.out.println("---------------------\n\n");
+
+        sc.close();
     }
 }

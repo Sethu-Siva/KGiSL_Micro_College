@@ -7,9 +7,6 @@
         * java Class Path
 */
 
-import java.util.*;
-import java.lang.*;
-
 class JavaInstalledOrNot 
 {
     String javaVersion, javaVendor, javaHome, javaClassPath, javaVendorUrl;

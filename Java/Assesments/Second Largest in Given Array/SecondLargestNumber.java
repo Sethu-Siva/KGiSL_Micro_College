@@ -1,7 +1,6 @@
 // Java Program for Finding Second Largest Number in Given Series
 
 import java.util.*;
-import java.lang.*;
 
 class SecondLargestNumber
 {
@@ -54,5 +53,7 @@ class SecondLargestNumber
         System.out.println("\n-----------------------------------------");
         System.out.print("Second Largest Number in Given Array is : " + SecondLarge);
         System.out.println("\n-----------------------------------------\n");
+
+        sc.close();
     }
 }

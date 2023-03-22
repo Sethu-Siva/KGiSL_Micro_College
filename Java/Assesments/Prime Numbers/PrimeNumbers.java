@@ -1,7 +1,6 @@
 // Java Program to find Prime Numbers & their Sum Value
 
 import java.util.*;
-import java.lang.*;
 
 class PrimeNumbers
 {
@@ -41,5 +40,7 @@ class PrimeNumbers
 
         System.out.println("\n\nSum of these Prime Numbers is : " + sumOfPrimes);
         System.out.println("----------------------------------------------\n");
+        
+        sc.close();
     }
 }

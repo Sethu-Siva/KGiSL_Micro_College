@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 class Students13
 {
@@ -74,5 +73,6 @@ class Students
 
         st.display(name);
 
+        sc.close();
     }
 }

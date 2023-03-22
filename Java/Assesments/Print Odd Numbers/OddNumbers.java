@@ -1,7 +1,6 @@
 // Java Program to display Odd Numbers
 
 import java.util.*;
-import java.lang.*;
 
 class OddNumbers
 {
@@ -28,5 +27,7 @@ class OddNumbers
         }
         while(num<=limit);
         System.out.println("\n----------------------------------------\n\n");
+
+        sc.close();
     }
 }

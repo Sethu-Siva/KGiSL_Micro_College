@@ -1,7 +1,6 @@
 // Java Program for Converting Char value into ASCII Value
 
 import java.util.*;
-import java.lang.*;
 
 class CharValueOfASCII 
 {
@@ -21,5 +20,7 @@ class CharValueOfASCII
         int temp = (int)a.c;
         System.out.println("The ASCII Value for given Char " + a.c + " is : " + temp);
         System.out.println("------------------------------------------\n\n");
+
+        sc.close();
     }
 }

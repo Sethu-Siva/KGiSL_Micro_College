@@ -1,7 +1,6 @@
 // Java Program for Reverse the Given Values (Integer Array)
 
 import java.util.*;
-import java.lang.*;
 
 class ReverseArray
 {
@@ -10,7 +9,6 @@ class ReverseArray
         int temp = 0;
 
         Scanner sc = new Scanner(System.in);
-        ReverseArray mr = new ReverseArray();
 
         System.out.println("\n\n-------------------------------------------------------");
         System.out.println("\tReversing the Given Array");
@@ -44,5 +42,7 @@ class ReverseArray
             System.out.print(" " + actualArray[i] + " ");
         }
         System.out.println("\n-----------------------------------------\n");
+
+        sc.close();
     }
 }
