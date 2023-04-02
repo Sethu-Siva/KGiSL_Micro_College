@@ -1,0 +1,14 @@
+#footerSection {
+    padding: 2% 1% 1.5%;
+}
+#phoneText, #emailText, #followText {
+    font-size: 17px;
+    font-weight: 700;
+}
+#phoneNumber, #email {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+#socialIcons {
+    margin: 0 3%;
+}

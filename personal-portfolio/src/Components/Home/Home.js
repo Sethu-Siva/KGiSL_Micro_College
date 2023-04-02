@@ -21,7 +21,7 @@ export function HomePage()
                                 </div>
                                 <div id="line"></div>
                                 <span id="designationTextInsideCard">DEVELOPER</span>
-                                <div id="socialIcons">
+                                <div id="socialForumsIcons">
                                     <FontAwesomeIcon icon={faGithub} id="icons"/>
                                     <FontAwesomeIcon icon={faFacebook} id="icons"/>
                                     <FontAwesomeIcon icon={faLinkedinIn} id="icons"/>
