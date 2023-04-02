@@ -13,6 +13,7 @@ import { HooksCounter } from './Components/Task - 8 Hooks Assignment/Hooks';
 import { FruiteCounter } from './Components/Task - 9 Fruits Counter/Fruites';
 import { FeedBack } from './Components/Task - 10 FeedBack App/FeedBack';
 import { GiveFeedBack } from './Components/Task - 10 FeedBack App/GiveFeedBack';
+import { DateFunction } from './Components/Task - 11 Date Function/DateFunction';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path='/FruitesCounter' element={[<Menu/>,<FruiteCounter/>]}/>
             <Route path='/FeedBack' element={[<Menu/>,<FeedBack/>]}/>
             <Route path='/ThankYou' element={[<Menu/>,<GiveFeedBack/>]}/>
+            <Route path='/Date' element={[<Menu/>,<DateFunction/>]}/>
         </Routes>
       </BrowserRouter>
     </>

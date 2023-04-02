@@ -43,6 +43,9 @@ export function Menu()
                     <li className="nav-item">
                     <Link className="nav-link" to="/FeedBack">FeedBack</Link>
                     </li>
+                    <li className="nav-item">
+                    <Link className="nav-link" to="/Date">Date</Link>
+                    </li>
                 </ul>
                 </div>
             </div>
