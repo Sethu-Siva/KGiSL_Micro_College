@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import { NavBar } from './Components/Nav Bar/navBar';
 import { HomePage } from './Components/Home Page/Home';
+import { NavigationBar } from './Components/Nav Bar/NavigationBar';
 
 function App()
 {
   return (
     <>
-      <NavBar/>
+      <NavigationBar/>
       <HomePage/>
     </>
   );

@@ -1,15 +1,11 @@
 import React from "react";
-import './Styles.css';
 
 export function HomePage()
 {
     return (
-        <div>
-            <div className="container-fluid HomePage">
+        <div id="homepage">
+            <div className="container-fluid">
                 <div className="row">
-                <div className="col-12 HomePageDiv">
-                        <h1>Sethu Siva</h1>
-                    </div>
                 </div>
             </div>
         </div>
