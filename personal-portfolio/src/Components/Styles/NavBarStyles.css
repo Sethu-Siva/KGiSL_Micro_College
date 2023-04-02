@@ -1,3 +1,6 @@
 .nav-link:hover {
     color: black;
 }
+#navbarNav {
+    text-align: right;
+}
