@@ -1,4 +1,87 @@
 #homepage {
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.333);
+    background-color: rgb(230,218,206);
+    padding-bottom: 5%;
+}
+.pageCard {
+    padding: 5% 0 0;
+    text-align: center;
+    background-color: rgb(244,236,230);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.275);
+}
+.myPic {
+    background-color: rgb(187,189,191);
+    margin-bottom: 10%;
+}
+#nameFont {
+    font-size: 25px;
+    font-weight: bolder;
+}
+.name {
+    line-height: 0.7;
+}
+#line {
+    width: 10%;
+    border-bottom: 2px solid blue;
+    margin: 10% auto 10%;
+}
+.homeDiv {
+    padding-top: 5%;
+}
+#designationTextInsideCard {
+    letter-spacing: 7px;
+}
+#socialIcons {
+    margin-top: 15%;
+    text-align: center;
+    background-color: white;
+    padding: 4% 0;
+}
+#icons {
+    margin: 0 10px;
+    font-size: 20px;
+    /* padding: 5px; */
+}
+#helloText {
+    margin-top: 5%;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 700;
+}
+#introText {
+    margin-top: -5%;
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+}
+#resumeBtn {
+    border-radius: 25px;
+    color: white;
+    background-color: rgb(63, 149, 255);
+    margin-right: 5%;
+}
+#resumeBtn:hover {
+    color: black;
+    background-color: white;
+    outline: 2px solid rgb(63, 149, 255);
+}
+#projectsBtn {
+    border-radius: 25px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+#projectsBtn:hover {
+    outline: none;
+    border: none;
+    background-color: rgb(63, 149, 255);
+    color: white;
+}
+#certifiedText {
+    margin-top: -5%;
+    text-align: end;
+}
+#apjQuotes {
+    margin-top: 15%;
+    font-style: italic;
+    margin-bottom: 10%;
 }
