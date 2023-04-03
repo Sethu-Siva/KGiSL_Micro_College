@@ -1,16 +1,32 @@
-/* #educationSection {
-    max-height: 100vh;
-} */
-.eduPage {
+.eduText, .expText {
     background-color: whitesmoke;
 }
-#educationText {
-    padding: 75% 15%;
+#educationText, #experienceText {
+    margin: 100% 10%;
 }
-.listOfEdu {
+.listOfEdu, .expList {
     background-color: rgb(244,236,230);
     padding: 5%;
 }
 .educations {
-
+    background-color: whitesmoke;
+    padding: 5%;
+    box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5%;
+}
+#degree, #companyName {
+    font-size: 20px;
+    font-weight: 700;
+}
+.eduDetails {
+    line-height: 2;
+}
+.eduImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.companyImage {
+    width: fit-c;
+    height: 200px;
 }

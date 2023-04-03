@@ -4,7 +4,7 @@ import TnEdu from '../Images/TN-Edu.png';
 import BUEdu from '../Images/B-U_Logo.png';
 import KgCasEdu from '../Images/KgCas-Logo.png';
 import PMHSS from '../Images/PMHSS.png';
-
+import Ejil from '../Images/emerald-logo.png';
 
 export function About()
 {
@@ -13,60 +13,60 @@ export function About()
             <div id="educationSection">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-4 eduPage">
+                        <div className="col-4 eduText">
                             <h1 id="educationText">Education</h1>
                         </div>
                         <div className="col-8 listOfEdu">
                             <div className="container-fluid row educations">
                                 <div className="col-4">
-                                    <img src={BUEdu} alt="Bharathiar University Logo" className="col-12"/>
+                                    <img src={BUEdu} alt="Bharathiar University Logo" className="col-12 eduImage"/>
                                 </div>
-                                <div className="col-8">
-                                    <p>MCA - Master of Computer Applications</p>
-                                    <p>Field of Study : Computer Applications</p>
-                                    <p>Bharathiar University</p>
-                                    <p>Coimbatore</p>
-                                    <p>2020 - 2022</p>
-                                    <p>CGPA : </p>
-                                </div>
-                            </div>
-                            <div className="container-fluid row">
-                                <div className="col-4">
-                                    <img src={KgCasEdu} alt="KGCAS Logo" className="col-12"/>
-                                </div>
-                                <div className="col-8">
-                                    <p>BCA - Bachelor of Computer Applications</p>
-                                    <p>Field of Study : Computer Applications</p>
-                                    <p>KG College of Arts and Science</p>
-                                    <p>Saravanampatti - Coimbatore</p>
-                                    <p>2016 - 2019</p>
-                                    <p>CGPA : 6.5</p>
+                                <div className="col-8 eduDetails">
+                                    <span id="degree">MCA - Master of Computer Applications</span><br/>
+                                    <span>Field of Study : Computer Applications</span><br/>
+                                    <span>Bharathiar University</span><br/>
+                                    <span>Coimbatore</span><br/>
+                                    <span>2020 - 2022</span><br/>
+                                    <span>CGPA : </span>
                                 </div>
                             </div>
-                            <div className="container-fluid row">
-                                <div className="col-4">
-                                    <img src={TnEdu} alt="Tn Govt Logo" className="col-12"/>
+                            <div className="container-fluid row educations">
+                                <div className="col-8 eduDetails">
+                                    <span id="degree">BCA - Bachelor of Computer Applications</span><br/>
+                                    <span>Field of Study : Computer Applications</span><br/>
+                                    <span>KG College of Arts and Science</span><br/>
+                                    <span>Saravanampatti - Coimbatore</span><br/>
+                                    <span>2016 - 2019</span><br/>
+                                    <span>CGPA : 6.5</span>
                                 </div>
-                                <div className="col-8">
-                                    <p>HSC - Higher Secondary School</p>
-                                    <p>Field of Study : Biology & Mathamatics</p>
-                                    <p>Goverment Higher Secondary School</p>
-                                    <p>Pannimadai - CBE</p>
-                                    <p>2014 - 2016</p>
-                                    <p>Scored : 713 / 1200</p>
+                                <div className="col-4">
+                                    <img src={KgCasEdu} alt="KGCAS Logo" className="col-12 companyImage"/>
                                 </div>
                             </div>
-                            <div className="container-fluid row">
+                            <div className="container-fluid row educations">
                                 <div className="col-4">
-                                    <img src={PMHSS} alt="PMHSS Logo" className="col-12"/>
+                                    <img src={TnEdu} alt="Tn Govt Logo" className="col-12 eduImage"/>
                                 </div>
-                                <div className="col-8">
-                                    <p>SSLC - Secondary School</p>
-                                    <p>Field of Study : General Education</p>
-                                    <p>Pioneer Mills Higher Secondary School</p>
-                                    <p>Jothipuram - Coimbatore</p>
-                                    <p>2009 - 2014</p>
-                                    <p>Scored : 431 / 500</p>
+                                <div className="col-8 eduDetails">
+                                    <span id="degree">HSC - Higher Secondary School</span><br/>
+                                    <span>Field of Study : Biology & Mathamatics</span><br/>
+                                    <span>Goverment Higher Secondary School</span><br/>
+                                    <span>Pannimadai - Coimbatore</span><br/>
+                                    <span>2014 - 2016</span><br/>
+                                    <span>Scored : 713 / 1200</span>
+                                </div>
+                            </div>
+                            <div className="container-fluid row educations">
+                                <div className="col-8 eduDetails">
+                                    <span id="degree">SSLC - Secondary School</span><br/>
+                                    <span>Field of Study : General Education</span><br/>
+                                    <span>Pioneer Mills Higher Secondary School</span><br/>
+                                    <span>Jothipuram - Coimbatore</span><br/>
+                                    <span>2009 - 2014</span><br/>
+                                    <span>Scored : 431 / 500</span>
+                                </div>
+                                <div className="col-4">
+                                    <img src={PMHSS} alt="PMHSS Logo" className="col-12 eduImage"/>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,29 @@ export function About()
                 </div>
             </div>
             <div id="experienceSection">
-
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-8 expList">
+                            <div className="container-fluid row educations">
+                                <div className="col-8 eduDetails">
+                                    <span id="companyName">Junior Associate</span><br/>
+                                    <span>Field of Work : Gold Industry</span><br/>
+                                    <span>Emerald Jewel Industry India Limited</span><br/>
+                                    <span>Coimbatore</span><br/>
+                                    <span>2019-2020</span><br/>
+                                </div>
+                                <div className="col-4">
+                                    <img src={Ejil} alt="PMHSS Logo" className="col-12 companyImage"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4 expText">
+                            <div className="col-4 expPage">
+                                <h1 id="experienceText">Experience</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
