@@ -17,20 +17,20 @@ export function NavigationBar ()
                     
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/Sethu-Siva" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="/Sethu-Siva" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     ABOUT ME
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/Sethu-Siva#homepage">Home</a></li>
-                                    <li><a class="dropdown-item" href="/Sethu-Siva/About#educationSection">Education</a></li>
-                                    <li><hr class="dropdown-divider"/></li>
-                                    <li><a class="dropdown-item" href="#experienceSection">Experience</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a className="dropdown-item" href="/Sethu-Siva#homepage">Home</a></li>
+                                    <li><hr className="dropdown-divider"/></li>
+                                    <li><a className="dropdown-item" href="#experienceSection">Experience</a></li>
+                                    <li><a className="dropdown-item" href="#educationSection">Education</a></li>
                                 </ul>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/Sethu-Siva/Resume">RESUME</a>
+                                <a className="nav-link" href="/Sethu-Siva#ResumeSection">RESUME</a>
                             </li>
 
                             <li className="nav-item">

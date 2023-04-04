@@ -10,12 +10,36 @@ export function About()
 {
     return (
         <div id="About">
+            <div className="seperator"></div>
+            <div id="experienceSection">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-4 expText">
+                            <div className="col-4 expPage">
+                                <h1 id="experienceText">exp</h1>
+                            </div>
+                        </div>
+                        <div className="col-8 expList">
+                            <div className="container-fluid row educations">
+                                <div className="col-4">
+                                    <img src={Ejil} alt="PMHSS Logo" className="col-12 companyImage"/>
+                                </div>
+                                <div className="col-8 eduDetails">
+                                    <span id="companyName">Junior Associate</span><br/>
+                                    <span>Field of Work : Gold Industry</span><br/>
+                                    <span>Emerald Jewel Industry India Limited</span><br/>
+                                    <span>Coimbatore</span><br/>
+                                    <span>2019-2020</span><br/>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div className="seperator"></div>
             <div id="educationSection">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-4 eduText">
-                            <h1 id="educationText">Education</h1>
-                        </div>
                         <div className="col-8 listOfEdu">
                             <div className="container-fluid row educations">
                                 <div className="col-4">
@@ -70,30 +94,8 @@ export function About()
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div id="experienceSection">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-8 expList">
-                            <div className="container-fluid row educations">
-                                <div className="col-8 eduDetails">
-                                    <span id="companyName">Junior Associate</span><br/>
-                                    <span>Field of Work : Gold Industry</span><br/>
-                                    <span>Emerald Jewel Industry India Limited</span><br/>
-                                    <span>Coimbatore</span><br/>
-                                    <span>2019-2020</span><br/>
-                                </div>
-                                <div className="col-4">
-                                    <img src={Ejil} alt="PMHSS Logo" className="col-12 companyImage"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4 expText">
-                            <div className="col-4 expPage">
-                                <h1 id="experienceText">Experience</h1>
-                            </div>
+                        <div className="col-4 eduText">
+                            <h1 id="educationText">Edu</h1>
                         </div>
                     </div>
                 </div>

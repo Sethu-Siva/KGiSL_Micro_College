@@ -1,0 +1,31 @@
+#ResumeSection {
+    padding: 3% 1%;
+    background-color: rgb(244,236,230);
+}
+.ResumeBorder {
+    border: 2px solid rgba(0, 0, 0, 0.338);
+    outline-offset: 10px;
+    outline: 2px solid black;
+}
+#PlaceOfResume {
+    display: none;
+}
+.buttonsForResume {
+    padding: 2% 5%;
+    background-color: rgb(63, 149, 255);
+    color: white;
+    border-radius: 25px;
+}
+.buttonsForResume:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(63, 149, 255);
+}
+#buttonsForResume {
+    margin: 10% 10% 5%;
+}
+#ResumeText {
+    font-size: xx-large ;
+    font-weight: 700;
+    margin-left: 10%;
+}

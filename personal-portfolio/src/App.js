@@ -5,6 +5,7 @@ import { NavigationBar } from './Components/Nav Bar/NavigationBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer } from './Components/Footer/Footer';
 import { About } from './Components/About/About';
+import { Resume } from './Components/Resume/Resume';
 
 function App()
 {
@@ -12,8 +13,8 @@ function App()
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<NavigationBar/>}/>
-          <Route path='/Sethu-Siva' element={[<NavigationBar/>,<HomePage/>,<About/>,<Footer/>]}/>
+          {/* <Route path='/' element={<NavigationBar/>}/> */}
+          <Route path='/' element={[<NavigationBar/>,<HomePage/>,<Resume/>,<About/>,<Footer/>]}/>
           <Route path='/Sethu-Siva/About' element={[<NavigationBar/>,<About/>,<Footer/>]}/>
         </Routes>
       </BrowserRouter>
