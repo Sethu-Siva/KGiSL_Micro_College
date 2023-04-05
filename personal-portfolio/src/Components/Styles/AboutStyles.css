@@ -1,9 +1,6 @@
 .eduText, .expText {
     background-color: whitesmoke;
 }
-#educationText, #experienceText {
-    margin: 100% 10%;
-}
 .listOfEdu, .expList {
     background-color: rgb(244,236,230);
     padding: 5%;
@@ -20,15 +17,6 @@
 }
 .eduDetails {
     line-height: 2;
-}
-.eduImage {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-.companyImage {
-    width: fit-c;
-    height: 200px;
 }
 .seperator {
     height: 20px;

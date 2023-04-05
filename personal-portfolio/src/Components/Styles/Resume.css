@@ -1,11 +1,10 @@
 #ResumeSection {
-    padding: 3% 1%;
     background-color: rgb(244,236,230);
 }
 .ResumeBorder {
-    border: 2px solid rgba(0, 0, 0, 0.338);
-    outline-offset: 10px;
-    outline: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    outline-offset: 5px;
+    outline: 2px solid rgba(0, 0, 0, 0.6);
 }
 #PlaceOfResume {
     display: none;
@@ -22,10 +21,9 @@
     border: 1px solid rgb(63, 149, 255);
 }
 #buttonsForResume {
-    margin: 10% 10% 5%;
+    margin: 10% 0;
 }
 #ResumeText {
     font-size: xx-large ;
     font-weight: 700;
-    margin-left: 10%;
 }

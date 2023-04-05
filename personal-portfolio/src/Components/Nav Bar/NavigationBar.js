@@ -1,7 +1,8 @@
 import React from "react";
 import '../Styles/NavBarStyles.css';
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+// import NameLogo from '../Images/Name Logo.gif';
 
 
 export function NavigationBar ()
@@ -10,8 +11,11 @@ export function NavigationBar ()
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/Sethu-Siva">Sethu Siva</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <a className="navbar-brand" href="/Sethu-Siva">
+                        {/* <img src={NameLogo} alt="Sethu Siva" width="300"/> */}
+                        Sethu Siva
+                        </a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
                         <FontAwesomeIcon icon={faEllipsisVertical}/>
                     </button>
                     
@@ -22,8 +26,6 @@ export function NavigationBar ()
                                     ABOUT ME
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="/Sethu-Siva#homepage">Home</a></li>
-                                    <li><hr className="dropdown-divider"/></li>
                                     <li><a className="dropdown-item" href="#experienceSection">Experience</a></li>
                                     <li><a className="dropdown-item" href="#educationSection">Education</a></li>
                                 </ul>
@@ -33,12 +35,18 @@ export function NavigationBar ()
                                 <a className="nav-link" href="/Sethu-Siva#ResumeSection">RESUME</a>
                             </li>
 
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="/Sethu-Siva/Skills" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    SKILLS
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a className="dropdown-item" href="/Sethu-Siva/Skills/#softSkillSection">Soft Skills</a></li>
+                                    <li><a className="dropdown-item" href="/Sethu-Siva/Skills/#techSkillSection">Technical Skills</a></li>
+                                </ul>
+                            </li>
+
                             <li className="nav-item">
                                 <a className="nav-link" href="/Sethu-Siva/Projects">PROJECTS</a>
-                            </li>
-                            
-                            <li className="nav-item">
-                                <a className="nav-link" href="/Sethu-Siva/Skills">SKILLS</a>
                             </li>
 
                             <li className="nav-item">

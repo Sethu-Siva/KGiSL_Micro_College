@@ -31,7 +31,7 @@ export function HomePage()
                             <div className="col-12 col-lg-7 px-4 py-5 py-lg-0">
                                 <p id="helloText">Hi It's Me,</p>
                                 <p id="introText">Sethu Siva</p>
-                                <p id="certifiedText">CERTIFIED FULL STACK DEVELOPER</p>
+                                <p id="certifiedText">Certified Full Stack Developer</p>
                                 <p id="apjQuotes">Developed a number of software solutions using a variety of coding languages and has practical knowledge of programming languages like HTML, SQL, and JavaScript.</p>
                                 <a href="#ResumeSection" id="resumeBtn" className="btn px-4">RESUME</a>
                                 <a href="#ProjectsSection" id="projectsBtn" className="btn px-4">PROJECTS</a>
