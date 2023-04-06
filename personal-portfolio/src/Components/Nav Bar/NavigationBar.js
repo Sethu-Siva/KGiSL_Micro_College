@@ -40,6 +40,8 @@ export function NavigationBar ()
                                     SKILLS
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a className="dropdown-item" href="/Sethu-Siva/Skills/#Skills">Skills</a></li>
+                                    <hr className="dropdown-divider"/>
                                     <li><a className="dropdown-item" href="/Sethu-Siva/Skills/#softSkillSection">Soft Skills</a></li>
                                     <li><a className="dropdown-item" href="/Sethu-Siva/Skills/#techSkillSection">Technical Skills</a></li>
                                 </ul>

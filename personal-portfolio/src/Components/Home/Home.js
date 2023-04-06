@@ -6,6 +6,13 @@ import { faFacebook, faGithub, faInstagram, faLinkedinIn } from "@fortawesome/fr
 
 export function HomePage()
 {
+    function DisplayResumeSection()
+    {
+        var ResumeSection = document.getElementById("ResumeSection");
+
+        ResumeSection.setAttribute("style","display: block");
+    }
+
     return (
         <div id="homepage">
             <div className="container-fluid homeDiv">
@@ -33,7 +40,7 @@ export function HomePage()
                                 <p id="introText">Sethu Siva</p>
                                 <p id="certifiedText">Certified Full Stack Developer</p>
                                 <p id="apjQuotes">Developed a number of software solutions using a variety of coding languages and has practical knowledge of programming languages like HTML, SQL, and JavaScript.</p>
-                                <a href="#ResumeSection" id="resumeBtn" className="btn px-4">RESUME</a>
+                                <a href="#ResumeSection" id="resumeBtn" className="btn px-4" onClick={DisplayResumeSection}>RESUME</a>
                                 <a href="#ProjectsSection" id="projectsBtn" className="btn px-4">PROJECTS</a>
                             </div>
                         </div>

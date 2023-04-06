@@ -1,0 +1,106 @@
+#softSkillSection {
+    background-color: bisque;
+}
+.SkillCards {
+    background-color: whitesmoke;
+    padding: 2% 1%;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.3);
+    border-radius: 0 35px;
+    margin: 2% 0;
+    transition: 700ms;
+}
+.SkillCards:hover {
+    background: linear-gradient(120deg,rgba(255, 195, 122, 0.5), rgba(255, 163, 51, 0.5));
+    border-radius: 35Px 0;
+    transition: 700ms;
+    box-shadow: 2px 2px 10px 2px rgb(255, 255, 199);
+}
+#Techs {
+    margin: 5% 0;
+    width: 75%;
+}
+.progress {
+    padding: 3px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.619);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.progress-bar {
+    height: 10px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+}
+.htmlIcon {
+    color: rgb(255,77,3);
+}
+.htmlProgress-moved .htmlProgress-bar {
+    width: 90%; 
+    background-color: rgb(255,77,3);  
+    animation: htmlProgressAnimation 6s;
+}
+.cssIcon {
+    color: rgb(33,150,243);
+}
+.cssProgress-moved .cssProgress-bar {
+    width: 80%; 
+    background-color: rgb(33,150,243);
+    animation: cssProgressAnimation 6s;
+}
+.bootIcon {
+    color: rgb(94,59,127);
+}
+.bootProgress-moved .bootProgress-bar {
+    width: 75%; 
+    background-color: rgb(94,59,127);
+    animation: bootProgressAnimation 6s;
+}
+.jsIcon {
+    color: rgb(243,217,26);
+}
+.jsProgress-moved .jsProgress-bar {
+    width: 85%; 
+    background-color: rgb(243,217,26);
+    animation: jsProgressAnimation 6s;
+}
+.reactIcon {
+    color: rgb(0,216,255);
+}
+.reactProgress-moved .reactProgress-bar {
+    width: 60%; 
+    background-color: rgb(0,216,255);
+    animation: reactProgressAnimation 6s;
+}
+.nodeIcon {
+    color: rgb(83,158,67);
+}
+.nodeProgress-moved .nodeProgress-bar {
+    width: 30%; 
+    background-color: rgb(83,158,67);
+    animation: nodeProgressAnimation 6s;
+}
+@keyframes htmlProgressAnimation {
+    0%   { width: 0%; background-color: rgb(255,120,22); }
+    100% { width: 90%; background-color: rgb(255,77,3); }
+}
+@keyframes cssProgressAnimation {
+    0%   { width: 0%; background-color: rgb(169,213,247); }
+    100% { width: 80%; background-color: rgb(33,150,243); }
+}
+@keyframes bootProgressAnimation {
+    0%   { width: 0%; background-color: rgb(162, 102, 219); }
+    100% { width: 75%; background-color: rgb(94,59,127); }
+}
+@keyframes jsProgressAnimation {
+    0%   { width: 0%; background-color: rgb(232,212,77); }
+    100% { width: 85%; background-color: rgb(243,217,26); }
+}
+@keyframes reactProgressAnimation {
+    0%   { width: 0%; background-color: rgb(165, 235, 253); }
+    100% { width: 60%; background-color: rgb(0,216,255); }
+}
+@keyframes nodeProgressAnimation {
+    0%   { width: 0%; background-color: rgb(171, 255, 152); }
+    100% { width: 30%; background-color: rgb(83,158,67); }
+}

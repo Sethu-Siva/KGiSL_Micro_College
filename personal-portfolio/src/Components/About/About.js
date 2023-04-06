@@ -108,6 +108,7 @@ export function About()
                     </div>
                 </div>
             </div>
+            <div className="seperator"></div>
         </div>
     );
 }

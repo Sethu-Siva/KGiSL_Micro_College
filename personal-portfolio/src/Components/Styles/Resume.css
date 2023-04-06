@@ -1,5 +1,6 @@
 #ResumeSection {
     background-color: rgb(244,236,230);
+    display: none;
 }
 .ResumeBorder {
     border: 2px solid rgba(0, 0, 0, 0.4);

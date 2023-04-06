@@ -1,12 +1,12 @@
 #homepage {
-    background-color: rgb(230,218,206);
+    background-color: bisque;
     padding-bottom: 6%;
 }
 .pageCard {
     padding: 5% 0 0;
     text-align: center;
-    background-color: rgb(244,236,230);
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.275);
+    background-color: antiquewhite;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.275);
 }
 .myPic {
     background-color: rgb(187,189,191);
