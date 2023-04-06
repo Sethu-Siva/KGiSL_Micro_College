@@ -6,8 +6,13 @@ import AdapImg from '../Images/adaptable.png';
 import TimeManagImg from '../Images/time-management.png';
 import ProbSolImg from '../Images/puzzle-pieces.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBootstrap, faCss3Alt, faHtml5, faJava, faJs, faNodeJs, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faBootstrap, faCss3Alt, faHtml5, faJava, faJs, faLinux, faNodeJs, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
 import { faC } from "@fortawesome/free-solid-svg-icons";
+import OracleDBImage from '../Images/db-oracle.png';
+import MySqlDBImage from '../Images/db-mysql.png';
+import MongoDBImage from '../Images/db-mongo.png';
+import UiPathImage from '../Images/rpa-ui.png';
+import AutoAnyImage from '../Images/automation-anywhere-logo-a-only.webp';
 
 export function Skills()
 {
@@ -264,46 +269,118 @@ export function Skills()
                                         </div>
                                     </div>
                                     <div className="col-4">
-                                        <h3>Core Languages</h3>
-                                        <div id="Techs">
-                                            <div className="align-items-center d-flex my-3">
-                                                <span>C Programming &nbsp;</span>
-                                                <FontAwesomeIcon icon={faC} className="fs-5 cIcon"/>
+                                        <div className="container-fluid">
+                                            <div className="row">
+                                                <div className="col-12">
+                                                <h3>Core Languages</h3>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>C Programming &nbsp;</span>
+                                                            <FontAwesomeIcon icon={faC} className="fs-5 cIcon"/>
+                                                        </div>
+                                                        <div className="progress cProgress-moved">
+                                                            <div className="progress-bar cProgress-bar"></div>                       
+                                                        </div> 
+                                                    </div>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>C++ Programming &nbsp;</span>
+                                                            <FontAwesomeIcon icon={faC} className="fs-5 cppIcon"/><span className="cppIcon">++</span>
+                                                        </div>
+                                                        <div className="progress cppProgress-moved">
+                                                            <div className="progress-bar cppProgress-bar"></div>                       
+                                                        </div> 
+                                                    </div>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>Java Programming &nbsp;</span>
+                                                            <FontAwesomeIcon icon={faJava} className="fs-3 javaIcon"/>
+                                                        </div>
+                                                        <div className="progress javaProgress-moved">
+                                                            <div className="progress-bar javaProgress-bar"></div>                       
+                                                        </div> 
+                                                    </div>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>Python Programming &nbsp;</span>
+                                                            <FontAwesomeIcon icon={faPython} className="fs-4 pythonIcon"/>
+                                                        </div>
+                                                        <div className="progress pythonProgress-moved">
+                                                            <div className="progress-bar pythonProgress-bar"></div>                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-12 py-4">
+                                                    <h3>OS</h3>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>Linux Programming &nbsp;</span>
+                                                            <FontAwesomeIcon icon={faLinux} className="fs-4 linuxIcon"/>
+                                                        </div>
+                                                        <div className="progress linuxProgress-moved">
+                                                            <div className="progress-bar linuxProgress-bar"></div>                       
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className="progress cProgress-moved">
-                                                <div className="progress-bar cProgress-bar"></div>                       
-                                            </div> 
-                                        </div>
-                                        <div id="Techs">
-                                            <div className="align-items-center d-flex my-3">
-                                                <span>C++ Programming &nbsp;</span>
-                                                <FontAwesomeIcon icon={faC} className="fs-5 cppIcon"/><span className="cppIcon">++</span>
-                                            </div>
-                                            <div className="progress cppProgress-moved">
-                                                <div className="progress-bar cppProgress-bar"></div>                       
-                                            </div> 
-                                        </div>
-                                        <div id="Techs">
-                                            <div className="align-items-center d-flex my-3">
-                                                <span>Java Programming &nbsp;</span>
-                                                <FontAwesomeIcon icon={faJava} className="fs-4 javaIcon"/>
-                                            </div>
-                                            <div className="progress javaProgress-moved">
-                                                <div className="progress-bar javaProgress-bar"></div>                       
-                                            </div> 
-                                        </div>
-                                        <div id="Techs">
-                                            <div className="align-items-center d-flex my-3">
-                                                <span> &nbsp;</span>
-                                                <FontAwesomeIcon icon={faC} className="fs-4 htmlIcon"/>
-                                            </div>
-                                            <div className="progress htmlProgress-moved">
-                                                <div className="progress-bar htmlProgress-bar"></div>                       
-                                            </div> 
                                         </div>
                                     </div>
                                     <div className="col-4">
-                                        
+                                        <div className="container-fluid">
+                                            <div className="row">
+                                                <div className="col-12">
+                                                    <h3>RPA Tools</h3>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>UiPath &nbsp;</span>
+                                                            <img src={UiPathImage} alt="RPA-UiPath" className="col-1"/>
+                                                        </div>
+                                                        <div className="progress uiPathProgress-moved">
+                                                            <div className="progress-bar uiPathProgress-bar"></div>                       
+                                                        </div>
+                                                    </div>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>Automation Anywhere &nbsp;</span>
+                                                            <img src={AutoAnyImage} alt="RPA-Automation-Anywhere" className="col-1"/>
+                                                        </div>
+                                                        <div className="progress aAProgress-moved">
+                                                            <div className="progress-bar aAProgress-bar"></div>                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-12 py-4">
+                                                <h3>DataBase</h3>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>Oracle Database &nbsp;</span>
+                                                            <img src={OracleDBImage} alt="Oracle DB" className="col-1"/>
+                                                        </div>
+                                                        <div className="progress oracleProgress-moved">
+                                                            <div className="progress-bar oracleProgress-bar"></div>                       
+                                                        </div> 
+                                                    </div>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>MySQL Database &nbsp;</span>
+                                                            <img src={MySqlDBImage} alt="MySql DB" className="col-1"/>
+                                                        </div>
+                                                        <div className="progress mySqlProgress-moved">
+                                                            <div className="progress-bar mySqlProgress-bar"></div>                       
+                                                        </div> 
+                                                    </div>
+                                                    <div id="Techs">
+                                                        <div className="align-items-center d-flex my-3">
+                                                            <span>Mongo DB &nbsp;</span>
+                                                            <img src={MongoDBImage} alt="Mongo DB" className="col-1"/>
+                                                        </div>
+                                                        <div className="progress mongoProgress-moved">
+                                                            <div className="progress-bar mongoProgress-bar"></div>                       
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

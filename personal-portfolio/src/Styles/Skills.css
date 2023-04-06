@@ -1,0 +1,214 @@
+#softSkillSection {
+    background-color: bisque;
+}
+/* #techSkillSection {
+    background-color: whitesmoke;
+} */
+.SkillCards {
+    background-color: whitesmoke;
+    padding: 2% 1%;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.3);
+    border-radius: 0 35px;
+    margin: 2% 0;
+    transition: 700ms;
+}
+.SkillCards:hover {
+    background: linear-gradient(120deg,rgba(255, 195, 122, 0.5), rgba(255, 163, 51, 0.5));
+    border-radius: 35Px 0;
+    transition: 700ms;
+    box-shadow: 2px 2px 10px 2px rgb(255, 255, 199);
+}
+#Techs {
+    margin: 5% 0;
+    width: 75%;
+}
+.progress {
+    padding: 3px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.619);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.progress-bar {
+    height: 10px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+}
+.htmlIcon {
+    color: rgb(255,77,3);
+}
+.htmlProgress-moved .htmlProgress-bar {
+    width: 90%; 
+    background-color: rgb(255,77,3);  
+    animation: htmlProgressAnimation 6s;
+}
+.cssIcon {
+    color: rgb(33,150,243);
+}
+.cssProgress-moved .cssProgress-bar {
+    width: 80%; 
+    background-color: rgb(33,150,243);
+    animation: cssProgressAnimation 6s;
+}
+.bootIcon {
+    color: rgb(94,59,127);
+}
+.bootProgress-moved .bootProgress-bar {
+    width: 75%; 
+    background-color: rgb(94,59,127);
+    animation: bootProgressAnimation 6s;
+}
+.jsIcon {
+    color: rgb(243,217,26);
+}
+.jsProgress-moved .jsProgress-bar {
+    width: 85%; 
+    background-color: rgb(243,217,26);
+    animation: jsProgressAnimation 6s;
+}
+.reactIcon {
+    color: rgb(0,216,255);
+}
+.reactProgress-moved .reactProgress-bar {
+    width: 60%; 
+    background-color: rgb(0,216,255);
+    animation: reactProgressAnimation 6s;
+}
+.nodeIcon {
+    color: rgb(83,158,67);
+}
+.nodeProgress-moved .nodeProgress-bar {
+    width: 30%; 
+    background-color: rgb(83,158,67);
+    animation: nodeProgressAnimation 6s;
+}
+.cIcon {
+    color: rgb(40,53,147);
+}
+.cProgress-moved .cProgress-bar {
+    width: 90%; 
+    background-color: rgb(40,53,147);
+    animation: cProgressAnimation 6s;
+}
+.cppIcon {
+    color: rgb(0,66,131);
+}
+.cppProgress-moved .cppProgress-bar {
+    width: 70%; 
+    background-color: rgb(0,66,131);
+    animation: cppProgressAnimation 6s;
+}
+.javaIcon {
+    color: rgb(248,153,23);
+}
+.javaProgress-moved .javaProgress-bar {
+    width: 85%; 
+    background-color: rgb(248,153,23);
+    animation: javaProgressAnimation 6s;
+}
+.pythonIcon {
+    color: rgb(255,218,70);
+}
+.pythonProgress-moved .pythonProgress-bar {
+    width: 20%; 
+    background-color: rgb(255,218,70);
+    animation: pythonProgressAnimation 6s;
+}
+.linuxIcon {
+    color: rgba(0, 0, 0, 0.75);
+}
+.linuxProgress-moved .linuxProgress-bar {
+    width: 50%; 
+    background-color: rgba(0, 0, 0, 0.75);
+    animation: linuxProgressAnimation 6s;
+}
+.uiPathProgress-moved .uiPathProgress-bar {
+    width: 90%;
+    background-color: rgb(0,133,202);
+    animation: uiPathProgressAnimation 6s;
+}
+.aAProgress-moved .aAProgress-bar {
+    width: 50%;
+    background-color: rgb(243,131,95);
+    animation: aAProgressAnimation 6s;
+}
+.oracleProgress-moved .oracleProgress-bar {
+    width: 70%;
+    background-color: rgb(161,162,162);
+    animation: oracleProgressAnimation 6s;
+}
+.mySqlProgress-moved .mySqlProgress-bar {
+    width: 90%;
+    background-color: rgb(77,143,173);
+    animation: mySqlProgressAnimation 6s;
+}
+.mongoProgress-moved .mongoProgress-bar {
+    width: 50%;
+    background-color: rgb(67,153,52);
+    animation: mongoProgressAnimation 6s;
+}
+@keyframes htmlProgressAnimation {
+    0%   { width: 0%; background-color: rgb(255,120,22); }
+    100% { width: 90%; background-color: rgb(255,77,3); }
+}
+@keyframes cssProgressAnimation {
+    0%   { width: 0%; background-color: rgb(169,213,247); }
+    100% { width: 80%; background-color: rgb(33,150,243); }
+}
+@keyframes bootProgressAnimation {
+    0%   { width: 0%; background-color: rgb(162, 102, 219); }
+    100% { width: 75%; background-color: rgb(94,59,127); }
+}
+@keyframes jsProgressAnimation {
+    0%   { width: 0%; background-color: rgb(232,212,77); }
+    100% { width: 85%; background-color: rgb(243,217,26); }
+}
+@keyframes reactProgressAnimation {
+    0%   { width: 0%; background-color: rgb(165, 235, 253); }
+    100% { width: 60%; background-color: rgb(0,216,255); }
+}
+@keyframes nodeProgressAnimation {
+    0%   { width: 0%; background-color: rgb(171, 255, 152); }
+    100% { width: 30%; background-color: rgb(83,158,67); }
+}
+@keyframes cProgressAnimation {
+    0%   { width: 0%; background-color: rgb(92,107,192); }
+    100% { width: 90%; background-color: rgb(40,53,147); }
+}
+@keyframes cppProgressAnimation {
+    0%   { width: 0%; background-color: rgb(101,155,211); }
+    100% { width: 70%; background-color: rgb(0,66,131); }
+}
+@keyframes javaProgressAnimation {
+    0%   { width: 0%; background-color: rgb(255, 231, 197); }
+    100% { width: 85%; background-color: rgb(248,153,23); }
+}
+@keyframes pythonProgressAnimation {
+    0%   { width: 0%; background-color: rgb(255, 235, 157); }
+    100% { width: 20%; background-color: rgb(255,218,70); }
+}
+@keyframes linuxProgressAnimation {
+    0%   { width: 0%; background-color: rgba(0, 0, 0, 0.1); }
+    100% { width: 50%; background-color: rgba(0, 0, 0, 0.75); }
+}
+@keyframes uiPathProgressAnimation {
+    0%   { width: 0%; background-color: rgb(154, 221, 255); }
+    100% { width: 90%; background-color: rgb(0,133,202); }
+}
+@keyframes aAProgressAnimation {
+    0%   { width: 0%; background-color: rgb(255, 210, 195); }
+    100% { width: 50%; background-color: rgb(243,131,95); }
+}
+@keyframes oracleProgressAnimation {
+    0%   { width: 0%; background-color: rgb(222, 222, 222); }
+    100% { width: 70%; background-color: rgb(161,162,162); }
+}
+@keyframes mySqlProgressAnimation {
+    0%   { width: 0%; background-color: rgb(124, 213, 255); }
+    100% { width: 90%; background-color: rgb(77,143,173); }
+}
+@keyframes mongoProgressAnimation {
+    0%   { width: 0%; background-color: rgb(145, 233, 130); }
+    100% { width: 50%; background-color: rgb(67,153,52); }
+}
