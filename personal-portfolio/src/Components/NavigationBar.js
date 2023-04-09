@@ -21,18 +21,21 @@ export function NavigationBar ()
                     
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
+                            
+                            <li className="nav-item">
+                                <a className="nav-link" href="/Sethu-Siva#Home">HOME</a>
+                            </li>
+
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/Sethu-Siva" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     ABOUT ME
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a className="dropdown-item" href="#aboutMeSection">About</a></li>
+                                    <hr className="dropdown-divider"/>
                                     <li><a className="dropdown-item" href="#experienceSection">Experience</a></li>
                                     <li><a className="dropdown-item" href="#educationSection">Education</a></li>
                                 </ul>
-                            </li>
-
-                            <li className="nav-item">
-                                <a className="nav-link" href="/Sethu-Siva#ResumeSection">RESUME</a>
                             </li>
 
                             <li className="nav-item dropdown">

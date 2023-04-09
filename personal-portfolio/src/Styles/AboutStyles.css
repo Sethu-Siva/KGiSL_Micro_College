@@ -1,3 +1,15 @@
+.abtText {
+    text-indent: 5%;
+    text-align: justify;
+}
+#aboutMeSection {
+    background-color: bisque;
+    padding: 7% 0;
+}
+.aboutMe {
+    background-color: white;
+    border-radius: 10px;
+}
 .eduText, .expText {
     background-color: whitesmoke;
 }
@@ -21,4 +33,19 @@
 .seperator {
     height: 20px;
     background-color: whitesmoke;
+}
+.expAndEduBtns {
+    text-align: right;
+}
+.expAndEduLink {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.742);
+}
+.expAndEduLink:hover {
+    text-decoration: underline;
+    color: black;
+    font-size: 17px;
+}
+.arrowIcon {
+    color: rgb(93, 255, 255);
 }

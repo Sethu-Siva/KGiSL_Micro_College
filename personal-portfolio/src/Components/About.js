@@ -1,15 +1,51 @@
 import React from "react";
 import '../Styles/AboutStyles.css';
+import myPic from '../Media/Images/FB_IMG_1558007904321.jpg';
 import TnEdu from '../Media/Images/TN-Edu.png';
 import BUEdu from '../Media/Images/B-U_Logo.png';
 import KgCasEdu from '../Media/Images/KgCas-Logo.png';
-import PMHSS from '../Media/Images/PMHSS.png';
+import PMHSS from '../Media/Images/PMHSS.jpg';
 import Ejil from '../Media/Images/emerald-logo.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export function About()
 {
     return (
         <div id="About">
+            <div className="seperator"></div>
+            <div id="aboutMeSection">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-1 col-lg-2"></div>
+                        <div className="col-10 col-lg-8 aboutMe py-2 pe-3 pe-lg-5">
+                            <div className="container-fluid">
+                                <div className="row py-5">
+                                    <div className="col-12 col-lg-4 text-center my-0">
+                                        <img src={ myPic } alt="Sethu-Siva" className="col-8 img-thumbnail"/>
+                                    </div>
+                                    <div className="col-12 col-lg-8 mt-3 mt-lg-0">
+                                        <div className="text-center mb-2 mb-lg-4">
+                                            <h3 className="mb-3">About Myself</h3>
+                                        </div>
+                                        <div>
+                                            <p className="abtText">Completed the Full Stack Developer Certificate programme and has practical experience designing, creating, and implementing software and solutions using a variety of programming languages and technologies.</p>
+                                            <p className="abtText">In a demanding position as a Full-stack Developer, attempting to make use of my extensive development experience and practical technical knowledge.</p>
+                                            <div className="expAndEduBtns mt-2 mt-lg-4">
+                                                <span className="">Take a look at my</span><br/>
+                                                <a href="#experienceSection" className="expAndEduLink">Experience  <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
+                                                    </a><br/>
+                                                <a href="#educationSection" className="expAndEduLink">Education  <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-1 col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
             <div className="seperator"></div>
             <div id="experienceSection">
                 <div className="container-fluid">
@@ -44,7 +80,7 @@ export function About()
                             <div className="container-fluid">
                                 <div className="row educations">
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center">
-                                        <img src={BUEdu} alt="Bharathiar University Logo" className="col-6 col-lg-8 my-3 my-lg-0"/>
+                                        <img src={BUEdu} alt="Bharathiar University Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
                                     </div>
                                     <div className="col-12 col-lg-8 eduDetails">
                                         <span id="degree">MCA - Master of Computer Applications</span><br/>
@@ -67,14 +103,14 @@ export function About()
                                         <span>CGPA : 6.5</span>
                                     </div>
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center order-first order-lg-last">
-                                        <img src={KgCasEdu} alt="KGCAS Logo" className="col-6 col-lg-8 my-3 my-lg-0"/>
+                                        <img src={KgCasEdu} alt="KGCAS Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
                                     </div>
                                 </div>
                             </div>
                             <div className="container-fluid">
                                 <div className="row educations">
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center">
-                                        <img src={TnEdu} alt="Tn Govt Logo" className="col-6 col-lg-8 my-3 my-lg-0"/>
+                                        <img src={TnEdu} alt="Tn Govt Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
                                     </div>
                                     <div className="col-12 col-lg-8 eduDetails">
                                         <span id="degree">HSC - Higher Secondary School</span><br/>
@@ -97,7 +133,7 @@ export function About()
                                         <span>Scored : 431 / 500</span>
                                     </div>
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center order-first order-lg-last">
-                                        <img src={PMHSS} alt="PMHSS Logo" className="col-6 col-lg-8 rounded-circle my-3 my-lg-0"/>
+                                        <img src={PMHSS} alt="PMHSS Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
                                     </div>
                                 </div>
                             </div>
