@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/Resume.css';
-import ResumePic from '../Images/Sethuraj P-Resume.png';
-import ResumePDF from '../PDF/Sethuraj P.pdf';
+import ResumePic from '../Media/Images/Sethuraj P-Resume.png';
+import ResumePDF from '../Media/PDF Files/Sethuraj P.pdf';
 
 export function Resume()
 {

@@ -1,10 +1,10 @@
 import React from "react";
 import '../Styles/AboutStyles.css';
-import TnEdu from '../Images/TN-Edu.png';
-import BUEdu from '../Images/B-U_Logo.png';
-import KgCasEdu from '../Images/KgCas-Logo.png';
-import PMHSS from '../Images/PMHSS.png';
-import Ejil from '../Images/emerald-logo.png';
+import TnEdu from '../Media/Images/TN-Edu.png';
+import BUEdu from '../Media/Images/B-U_Logo.png';
+import KgCasEdu from '../Media/Images/KgCas-Logo.png';
+import PMHSS from '../Media/Images/PMHSS.png';
+import Ejil from '../Media/Images/emerald-logo.png';
 
 export function About()
 {

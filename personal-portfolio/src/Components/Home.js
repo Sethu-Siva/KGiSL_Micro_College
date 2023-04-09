@@ -1,6 +1,6 @@
 import React from "react";
 import '../Styles/HomePageStyles.css';
-import SethuSivaPic from '../Images/Pic_of_Me-removebg-preview.png';
+import SethuSivaPic from '../Media/Images/Pic_of_Me-removebg-preview.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 

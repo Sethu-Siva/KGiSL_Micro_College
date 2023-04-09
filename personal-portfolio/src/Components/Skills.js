@@ -1,18 +1,18 @@
 import React from "react";
 import '../Styles/Skills.css';
-import FlexImg from '../Images/flexibility.png';
-import TeamWorkImg from '../Images/teamwork.png';
-import AdapImg from '../Images/adaptable.png';
-import TimeManagImg from '../Images/time-management.png';
-import ProbSolImg from '../Images/puzzle-pieces.png';
+import FlexImg from '../Media/Images/flexibility.png';
+import TeamWorkImg from '../Media/Images/teamwork.png';
+import AdapImg from '../Media/Images/adaptable.png';
+import TimeManagImg from '../Media/Images/time-management.png';
+import ProbSolImg from '../Media/Images/puzzle-pieces.png';
+import OracleDBImage from '../Media/Images/db-oracle.png';
+import MySqlDBImage from '../Media/Images/db-mysql.png';
+import MongoDBImage from '../Media/Images/db-mongo.png';
+import UiPathImage from '../Media/Images/rpa-ui.png';
+import AutoAnyImage from '../Media/Images/automation-anywhere-logo-a-only.webp';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBootstrap, faCss3Alt, faHtml5, faJava, faJs, faLinux, faNodeJs, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
 import { faC } from "@fortawesome/free-solid-svg-icons";
-import OracleDBImage from '../Images/db-oracle.png';
-import MySqlDBImage from '../Images/db-mysql.png';
-import MongoDBImage from '../Images/db-mongo.png';
-import UiPathImage from '../Images/rpa-ui.png';
-import AutoAnyImage from '../Images/automation-anywhere-logo-a-only.webp';
 
 export function Skills()
 {
