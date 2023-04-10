@@ -1,0 +1,108 @@
+DOC Container
+--------------
+Docker images contain executable application source code as well as all the tools, libraries, and dependencies that the application code needs to run as a container. When you run the Docker image, it becomes one instance (or multiple instances) of the container.
+
+It’s possible to build a Docker image from scratch, but most developers pull them down from common repositories. 
+Each time a container is created from a Docker image, yet another new layer called the container layer is created.
+
+while docker files are read only files, containers or life ephemeral(Short time) executable content.
+users can interact with them and admin can adjest their settings and conditions using docker commands.
+
+Docker file - (Discription)
+Docker Image - (Configs)
+Docker Container  - its an live running Instance
+
+
+Docker Hub
+----------
+	It is the public repository of docker image that calls it self worlds largest live community for container images.
+	All docker hub users can share their images and also download predefined base images from the docker file systems to use as a starting point for any containerrized project.
+
+
+Docker Registry
+---------------
+	It is a scallable open source storage and distribution system for docker images.
+	The registry enables u to track image versions in repositories using tagging for identification.
+
+
+Docker Hub VS Docker Registry
+-----------------------------
+Docker Registry are used to host and distribute docker images.
+
+Docker Hub is dockers official dockers registry.
+
+
+Docker Daemon
+-------------
+
+	Its a service that creates and manages Docker images using the commands from the client.
+	Essentially Docker daemon serves as the controll center of in docker implementation.
+	The server on which Docker daemon run is called the Docker HOST.
+
+
+CI/CD - Continious Integration and Continious Delivery
+-----------------------------------------------------
+
+Continious Integration
+-----------------------
+
+Definition - A CI/CD pipeline is defined as a series of interconnected steps that include stages from Code commit, Testing, staging, DeploymentTesting, and finnaly deployment into the production service.
+
+CI - plan, code, build.
+CD - release, Deploy, Operate, Monitor.
+
+
+CI - is the process where code updates and changes are collected a developer or group of developer and merge with the original source branch.
+this merger of the code of continous is called continious integration.
+
+
+1) CI code commit
+	People 	- Developers and engineers database Admins and infrastructure team.
+	Technology	- GitHub, GitLab, SVM, Bit Bucket.
+	Process 	- Code, Commit, Static testis.
+
+2) CI Build
+	People 	- Developers and engineers
+	Technology 	- jenkinns, BamBoo CI, Circle CI, Travis CI, Maven, Asure DevOps.
+	Process 	- Build, Verification Test, Artifact Storage.
+
+3) CI Test Stages
+
+	People	- Testers, QA engineers.
+	Technology	- Selinium, Apium, JMeter, SOAP UI, Trantula.
+	Process	- Intergration Testist, Load and stress Testing.
+
+Continious Delivery
+-------------------
+
+	It is a DevOps methodology that enables development teams to deploy changes such as configs bug fixes and experiments into production safely and quickly in a sustainable manner.
+	The Continious Delivery Process requirs a collabrative ideas from different stack holders in a software delivery process such as developer operations and testing teams.
+
+	it simplifies Manual Scripting and enabling real time monitoring.
+
+CD Bake and Deploy
+
+	People 	- Infrastructure engineer, Site Reliablity engineer, Oprations engineers.
+	Technology 	- Spinnecur, Orgo CD, Tecton CD, auto piolet.
+	Process 	- Bake Deploy, Verification, Monitoring.
+
+CD Monitoring
+
+	People	- SRE, Ops Team.
+	Technology	- Naggious, Zabbixs, promethious, Elastic search, Splunk, app Dinamics, Tivoli.
+	Process	- Latency of releases, CPU utilization.
+
+CD - Continious Deployment
+
+	People	- SRE, Ops, maintanace Team
+	Technology	- Zeera, Service now, Slack, email, hipchat.
+	Process	- feedback collabration.
+
+
+
+
+
+
+
+
+

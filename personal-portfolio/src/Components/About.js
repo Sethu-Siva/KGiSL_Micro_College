@@ -55,7 +55,7 @@ export function About()
                         </div>
                         <div className="col-12 col-lg-8 expList">
                             <div className="container-fluid">
-                                <div className="row educations">
+                                <div className="row educations d-flex align-items-center">
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center">
                                         <img src={Ejil} alt="Emerald Logo" className="col-6 col-lg-8 my-3 my-lg-0"/>
                                     </div>
