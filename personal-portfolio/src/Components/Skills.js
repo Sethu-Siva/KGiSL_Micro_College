@@ -140,7 +140,7 @@ export function Skills()
     return (
         
         <div id="Skills">
-            <div className="container-fluid py-5" id="softSkillSection">
+            <div className="container-fluid py-5" id="Soft_Skills">
                 <div className="text-center">
                     <h1>Skills</h1>
                 </div>
@@ -201,7 +201,7 @@ export function Skills()
                 </div>
             </div>
             
-            <div className="container-fluid py-3" id="techSkillSection">
+            <div className="container-fluid py-3" id="Tech_Skills">
                 <div className="my-5 ps-5">
                     <h2>Technical Skills</h2>
                 </div>

@@ -16,11 +16,10 @@ function App()
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<NavigationBar/>}/>
-          <Route path='/Sethu-Siva' element={[<NavigationBar/>,<HomePage/>,<Resume/>,<About/>,<Skills/>,<Certificates/>,<Footer/>]}/>
-          <Route path='/Sethu-Siva/About' element={[<NavigationBar/>,<About/>,<Footer/>]}/>
-          <Route path='/Sethu-Siva/Skills' element={[<NavigationBar/>,<Skills/>,<Footer/>]}/>
-          <Route path='/Sethu-Siva/Certificates' element={[<NavigationBar/>,<Certificates/>,<Footer/>]}/>
+          <Route path='/' element={[<NavigationBar/>,<HomePage/>,<Resume/>,<About/>,<Skills/>,<Certificates/>,<Footer/>]}/>
+          <Route path='#About_Me' element={[<NavigationBar/>,<About/>,<Footer/>]}/>
+          <Route path='#Skills' element={[<NavigationBar/>,<Skills/>,<Footer/>]}/>
+          <Route path='#Certificates' element={[<NavigationBar/>,<Certificates/>,<Footer/>]}/>
         </Routes>
       </BrowserRouter>
     </div>

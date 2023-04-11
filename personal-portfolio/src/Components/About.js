@@ -12,7 +12,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export function About()
 {
     return (
-        <div id="About">
+        <div id="About_Me">
             <div className="seperator"></div>
             <div id="aboutMeSection">
                 <div className="container-fluid">
@@ -33,9 +33,9 @@ export function About()
                                             <p className="abtText">In a demanding position as a Full-stack Developer, attempting to make use of my extensive development experience and practical technical knowledge.</p>
                                             <div className="expAndEduBtns mt-2 mt-lg-4">
                                                 <span className="">Take a look at my</span><br/>
-                                                <a href="#experienceSection" className="expAndEduLink">Experience  <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
+                                                <a href="#Experience" className="expAndEduLink">Experience  <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                                                     </a><br/>
-                                                <a href="#educationSection" className="expAndEduLink">Education  <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/></a>
+                                                <a href="#Education" className="expAndEduLink">Education  <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/></a>
                                             </div>
                                         </div>
                                     </div>
@@ -47,7 +47,7 @@ export function About()
                 </div>
             </div>
             <div className="seperator"></div>
-            <div id="experienceSection">
+            <div id="Experience">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-lg-4 expText d-flex align-items-center ps-lg-5">
@@ -73,7 +73,7 @@ export function About()
                 </div>
             </div>
             <div className="seperator"></div>
-            <div id="educationSection">
+            <div id="Education">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-lg-8 listOfEdu order-last order-lg-first">

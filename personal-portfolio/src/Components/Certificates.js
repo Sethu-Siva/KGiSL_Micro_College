@@ -11,7 +11,10 @@ import courseraCertificate_7 from '../Media/Certificates/Sethuraj-(Coursera-Meta
 export function Certificates()
 {
     return (
-        <div id="certificatesSection">
+        <div id="Certificates">
+            <div className="text-center">
+                    <h3>Certificates</h3>
+                </div>
             <div className="certificates">
                 <div className="col-lg-12 col-12 slider">
                     <span style={{"--i":"1"}}><img src={courseraCertificate_1} alt="Coursera-Guided Project-CRUD Operations using MangoDB NoSQL"/></span>
