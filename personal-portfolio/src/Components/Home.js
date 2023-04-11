@@ -15,7 +15,7 @@ export function HomePage()
 
     return (
         <div id="Home">
-            <div className="container-fluid homeDiv">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-1 col-lg-3"></div>
                     <div className="col-10 col-lg-6">

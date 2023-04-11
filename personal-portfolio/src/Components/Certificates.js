@@ -13,21 +13,55 @@ export function Certificates()
     return (
         <div id="Certificates">
             <div className="text-center">
-                    <h3>Certificates</h3>
+                <h3 className="pt-5">Certificates</h3>
+            </div>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="d-none d-lg-flex certificatesPane">
+                        <div className="slider">
+                            <span style={{"--i":"1"}}><img src={courseraCertificate_1} alt="Coursera-Guided Project-CRUD Operations using MangoDB NoSQL"/></span>
+                            <span style={{"--i":"2"}}><img src={courseraCertificate_2} alt="Coursera-Hong Kong University-Programming with Scratch"/></span>
+                            <span style={{"--i":"3"}}><img src={courseraCertificate_3} alt="Coursera-KGiSL-Basics of Java Programming"/></span>
+                            <span style={{"--i":"4"}}><img src={courseraCertificate_4} alt="Coursera-KGiSL-CSS Style Sheets for SP"/></span>
+                            <span style={{"--i":"5"}}><img src={courseraCertificate_5} alt="Coursera-KGiSL-HTML for SP"/></span>
+                            <span style={{"--i":"6"}}><img src={courseraCertificate_6} alt="Coursera-KGiSL-Tech Foundation for SP"/></span>
+                            <span style={{"--i":"7"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
+                            <span style={{"--i":"8"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
+                            <span style={{"--i":"9"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
+                            <span style={{"--i":"10"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
+                        </div>                
+                    </div>
+                    <div className="d-flex d-lg-none">
+                        <div className="container-fluid py-3">
+                            <div className="row text-center">
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_1} className="col-11" alt="Coursera-Guided Project-CRUD Operations using MangoDB NoSQL"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_2} className="col-11" alt="Coursera-Hong Kong University-Programming with Scratch"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_3} className="col-11" alt="Coursera-KGiSL-Basics of Java Programming"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_4} className="col-11" alt="Coursera-KGiSL-CSS Style Sheets for SP"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_5} className="col-11" alt="Coursera-KGiSL-HTML for SP"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_6} className="col-11" alt="Coursera-KGiSL-Tech Foundation for SP"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_7} className="col-11" alt="Coursera-Meta-HTML&CSS-inDepth"/>
+                                </div>
+                                <div className="col-6 my-2">
+                                    <img src={courseraCertificate_7} className="col-11" alt="Coursera-Meta-HTML&CSS-inDepth"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            <div className="certificates">
-                <div className="col-lg-12 col-12 slider">
-                    <span style={{"--i":"1"}}><img src={courseraCertificate_1} alt="Coursera-Guided Project-CRUD Operations using MangoDB NoSQL"/></span>
-                    <span style={{"--i":"2"}}><img src={courseraCertificate_2} alt="Coursera-Hong Kong University-Programming with Scratch"/></span>
-                    <span style={{"--i":"3"}}><img src={courseraCertificate_3} alt="Coursera-KGiSL-Basics of Java Programming"/></span>
-                    <span style={{"--i":"4"}}><img src={courseraCertificate_4} alt="Coursera-KGiSL-CSS Style Sheets for SP"/></span>
-                    <span style={{"--i":"5"}}><img src={courseraCertificate_5} alt="Coursera-KGiSL-HTML for SP"/></span>
-                    <span style={{"--i":"6"}}><img src={courseraCertificate_6} alt="Coursera-KGiSL-Tech Foundation for SP"/></span>
-                    <span style={{"--i":"7"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                    <span style={{"--i":"8"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                    <span style={{"--i":"9"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                    <span style={{"--i":"10"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                </div>                
             </div>
         </div>
     );
