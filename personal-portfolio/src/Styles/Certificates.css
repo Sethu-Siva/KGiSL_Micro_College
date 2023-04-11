@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgba(255, 228, 196, 0.445);
 }
 .certificates {
-    height: 100vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,9 +14,9 @@
 .slider {
     position: relative;
     width: 200px;
-    height: 200px;
+    height: 100px;
     transform-style: preserve-3d;
-    animation: rotate 120s linear infinite reverse;
+    animation: rotate 90s linear infinite reverse;
 }
 @keyframes rotate {
     0% {
@@ -45,8 +46,7 @@
     transition: 1s;
 }
 span:hover img {
-    transform: translateY(-25px) scale(1.4);
-    animation-play-state: paused;
+    transform: translateY(-25px) scale(1.5);
 }
 .slider:hover {
     animation-play-state: paused;

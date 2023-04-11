@@ -13,7 +13,7 @@ export function Certificates()
     return (
         <div id="certificatesSection">
             <div className="certificates">
-                <div className="slider">
+                <div className="col-lg-12 col-12 slider">
                     <span style={{"--i":"1"}}><img src={courseraCertificate_1} alt="Coursera-Guided Project-CRUD Operations using MangoDB NoSQL"/></span>
                     <span style={{"--i":"2"}}><img src={courseraCertificate_2} alt="Coursera-Hong Kong University-Programming with Scratch"/></span>
                     <span style={{"--i":"3"}}><img src={courseraCertificate_3} alt="Coursera-KGiSL-Basics of Java Programming"/></span>
