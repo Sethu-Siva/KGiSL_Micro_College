@@ -13,7 +13,7 @@ class MinMaxinArray
             {
                 min = n[i];
             }
-      }
+        }
         return min;
     }
 
