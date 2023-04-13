@@ -8,6 +8,7 @@ import { About } from './Components/About';
 import { Resume } from './Components/Resume';
 import { Skills } from './Components/Skills';
 import { Certificates } from './Components/Certificates';
+import { Projects } from './Components/Projects';
 
 
 function App()
@@ -16,7 +17,7 @@ function App()
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={[<NavigationBar/>,<HomePage/>,<Resume/>,<About/>,<Skills/>,<Certificates/>,<Footer/>]}/>
+          <Route path='/' element={[<NavigationBar/>,<HomePage/>,<Resume/>,<About/>,<Skills/>,<Projects/>,<Certificates/>,<Footer/>]}/>
           <Route path='#About_Me' element={[<NavigationBar/>,<About/>,<Footer/>]}/>
           <Route path='#Skills' element={[<NavigationBar/>,<Skills/>,<Footer/>]}/>
           <Route path='#Certificates' element={[<NavigationBar/>,<Certificates/>,<Footer/>]}/>
