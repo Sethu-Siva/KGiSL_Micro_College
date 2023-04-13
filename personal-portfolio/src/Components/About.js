@@ -80,7 +80,7 @@ export function About()
                             <div className="container-fluid">
                                 <div className="row educations">
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center">
-                                        <img src={BUEdu} alt="Bharathiar University Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
+                                        <img src={BUEdu} alt="Bharathiar University Logo" className="col-6 col-lg-12 my-3 my-lg-0 img-thumbnail"/>
                                     </div>
                                     <div className="col-12 col-lg-8 eduDetails">
                                         <span id="degree">MCA - Master of Computer Applications</span><br/>
@@ -103,14 +103,14 @@ export function About()
                                         <span>CGPA : 6.5</span>
                                     </div>
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center order-first order-lg-last">
-                                        <img src={KgCasEdu} alt="KGCAS Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
+                                        <img src={KgCasEdu} alt="KGCAS Logo" className="col-6 col-lg-12 my-3 my-lg-0 img-thumbnail"/>
                                     </div>
                                 </div>
                             </div>
                             <div className="container-fluid">
                                 <div className="row educations">
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center">
-                                        <img src={TnEdu} alt="Tn Govt Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
+                                        <img src={TnEdu} alt="Tn Govt Logo" className="col-6 col-lg-12 my-3 my-lg-0 img-thumbnail"/>
                                     </div>
                                     <div className="col-12 col-lg-8 eduDetails">
                                         <span id="degree">HSC - Higher Secondary School</span><br/>
@@ -133,7 +133,7 @@ export function About()
                                         <span>Scored : 431 / 500</span>
                                     </div>
                                     <div className="col-12 col-lg-4 d-lg-flex d-inline align-items-center text-center order-first order-lg-last">
-                                        <img src={PMHSS} alt="PMHSS Logo" className="col-6 col-lg-12 my-3 my-lg-0"/>
+                                        <img src={PMHSS} alt="PMHSS Logo" className="col-6 col-lg-12 my-3 my-lg-0 img-thumbnail"/>
                                     </div>
                                 </div>
                             </div>

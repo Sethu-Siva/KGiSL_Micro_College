@@ -202,7 +202,7 @@ export function Skills()
             </div>
             
             <div className="container-fluid py-3" id="Tech_Skills">
-                <div className="my-5 ps-5">
+                <div className="my-5 ps-3 ps-lg-5">
                     <h2>Technical Skills</h2>
                 </div>
                 <div className="container-fluid">
@@ -211,7 +211,7 @@ export function Skills()
                         <div className="col-12 col-lg-10">
                             <div className="container-fluid">
                                 <div className="row">
-                                    <div className="col-4">
+                                    <div className="col-12 col-lg-4">
                                         <h3>Web Development</h3>
                                         <div id="Techs">
                                             <div className="align-items-center d-flex my-3">
@@ -268,7 +268,7 @@ export function Skills()
                                             </div> 
                                         </div>
                                     </div>
-                                    <div className="col-4">
+                                    <div className="col-12 col-lg-4">
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="col-12">
@@ -325,7 +325,7 @@ export function Skills()
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-4">
+                                    <div className="col-12 col-lg-4">
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="col-12">
