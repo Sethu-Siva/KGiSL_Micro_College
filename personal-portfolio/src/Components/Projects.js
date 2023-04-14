@@ -19,9 +19,9 @@ export function Projects()
                                             <h5 class="card-title">UiPath</h5>
                                             <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
                                         </div>
-                                
-                                        <div class="card-body">
-                                            <a href="#sdcsd" class="card-link">See Projects</a>
+
+                                        <div class="card-body bg-light text-center">
+                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
                                         </div>
                                     </div>
                                 </div>
@@ -32,9 +32,9 @@ export function Projects()
                                             <h5 class="card-title">UiPath</h5>
                                             <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
                                         </div>
-                                
-                                        <div class="card-body">
-                                            <a href="#sdcsd" class="card-link">See Projects</a>
+
+                                        <div class="card-body bg-light text-center">
+                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
                                         </div>
                                     </div>
                                 </div>
@@ -45,9 +45,9 @@ export function Projects()
                                             <h5 class="card-title">UiPath</h5>
                                             <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
                                         </div>
-                                
-                                        <div class="card-body">
-                                            <a href="#sdcsd" class="card-link">See Projects</a>
+
+                                        <div class="card-body bg-light text-center">
+                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
                                         </div>
                                     </div>
                                 </div>
@@ -58,9 +58,9 @@ export function Projects()
                                             <h5 class="card-title">UiPath</h5>
                                             <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
                                         </div>
-                                
-                                        <div class="card-body">
-                                            <a href="#sdcsd" class="card-link">See Projects</a>
+
+                                        <div class="card-body bg-light text-center">
+                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
                                         </div>
                                     </div>
                                 </div>
