@@ -1,12 +1,13 @@
 import React from "react";
 import '../Styles/Certificates.css';
-import courseraCertificate_1 from '../Media/Certificates/Sethuraj-(Coursera-Guided Project-CRUD Operations using MangoDB NoSQL)_page-0001.jpg';
-import courseraCertificate_2 from '../Media/Certificates/Sethuraj-(Coursera-Hong Kong University-Programming with Scratch)_page-0001.jpg';
-import courseraCertificate_3 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-Basics of Java Programming)_page-0001.jpg';
-import courseraCertificate_4 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-CSS Style Sheets for SP)_page-0001.jpg';
-import courseraCertificate_5 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-HTML for SP)_page-0001.jpg';
-import courseraCertificate_6 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-Tech Foundation for SP)_page-0001.jpg';
-import courseraCertificate_7 from '../Media/Certificates/Sethuraj-(Coursera-Meta-HTML&CSS-inDepth)_page-0001.jpg';
+import courseraCertificate_1 from '../Media/Certificates/Sethuraj-(Coursera-Guided Project-CRUD Operations using MangoDB NoSQL)-page-001.jpg';
+import courseraCertificate_2 from '../Media/Certificates/Sethuraj-(Coursera-Hong Kong University-Programming with Scratch)-page-001.jpg';
+import courseraCertificate_3 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-Basics of Java Programming)-page-001.jpg';
+import courseraCertificate_4 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-CSS Style Sheets for SP)-page-001.jpg';
+import courseraCertificate_5 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-HTML for SP)-page-001.jpg';
+import courseraCertificate_6 from '../Media/Certificates/Sethuraj-(Coursera-KGiSL-Tech Foundation for SP)-page-001.jpg';
+import courseraCertificate_7 from '../Media/Certificates/Sethuraj-(Coursera-Meta-HTML&CSS-inDepth)-page-001.jpg';
+import courseraCertificate_8 from '../Media/Certificates/Sethuraj-(Coursera-Meta-Introduction to Front End Development)-page-001.jpg';
 
 export function Certificates()
 {
@@ -26,9 +27,9 @@ export function Certificates()
                             <span style={{"--i":"5"}}><img src={courseraCertificate_5} alt="Coursera-KGiSL-HTML for SP"/></span>
                             <span style={{"--i":"6"}}><img src={courseraCertificate_6} alt="Coursera-KGiSL-Tech Foundation for SP"/></span>
                             <span style={{"--i":"7"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                            <span style={{"--i":"8"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                            <span style={{"--i":"9"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
-                            <span style={{"--i":"10"}}><img src={courseraCertificate_7} alt="Coursera-Meta-HTML&CSS-inDepth"/></span>
+                            <span style={{"--i":"8"}}><img src={courseraCertificate_8} alt="Coursera-Meta-Introduction to Front End Development"/></span>
+                            <span style={{"--i":"9"}}><img src={courseraCertificate_8} alt="Coursera-Meta-Introduction to Front End Development"/></span>
+                            <span style={{"--i":"10"}}><img src={courseraCertificate_8} alt="Coursera-Meta-Introduction to Front End Development"/></span>
                         </div>                
                     </div>
                     <div className="d-flex d-lg-none">
@@ -56,7 +57,7 @@ export function Certificates()
                                     <img src={courseraCertificate_7} className="col-11" alt="Coursera-Meta-HTML&CSS-inDepth"/>
                                 </div>
                                 <div className="col-6 my-2">
-                                    <img src={courseraCertificate_7} className="col-11" alt="Coursera-Meta-HTML&CSS-inDepth"/>
+                                    <img src={courseraCertificate_8} className="col-11" alt="Coursera-Meta-Introduction to Front End Development"/>
                                 </div>
                             </div>
                         </div>

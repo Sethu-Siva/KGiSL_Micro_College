@@ -1,71 +1,22 @@
 import React from "react";
 import '../Styles/Projects.css';
-import UiPathImage from '../Media/Images/UiPath_Project_Pic.png';
+import projectImage from '../Media/Images/Project sample.png';
 
 export function Projects()
 {
     return (
         <div id="Projects">
             <div className="container-fluid">
+                <div className="text-center">
+                    <h2 id="proTitle">Projects</h2>
+                </div>
                 <div className="row">
                     <div className="col-1 col-lg-2"></div>
-                    <div className="col-10 col-lg-8">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col-1 col-lg-6 my-3">
-                                    <div class="card">
-                                        <img class="card-img-top" src={ UiPathImage } alt="Card cap"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">UiPath</h5>
-                                            <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
-                                        </div>
-
-                                        <div class="card-body bg-light text-center">
-                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-1 col-lg-6 my-3">
-                                    <div class="card">
-                                        <img class="card-img-top" src={ UiPathImage } alt="Card cap"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">UiPath</h5>
-                                            <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
-                                        </div>
-
-                                        <div class="card-body bg-light text-center">
-                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-1 col-lg-6 my-3">
-                                    <div class="card">
-                                        <img class="card-img-top" src={ UiPathImage } alt="Card cap"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">UiPath</h5>
-                                            <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
-                                        </div>
-
-                                        <div class="card-body bg-light text-center">
-                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-1 col-lg-6 my-3">
-                                    <div class="card">
-                                        <img class="card-img-top" src={ UiPathImage } alt="Card cap"/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">UiPath</h5>
-                                            <p class="card-text">UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks.</p>
-                                        </div>
-
-                                        <div class="card-body bg-light text-center">
-                                            <a href="#sdcsd" class="btn card-link">See Projects</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="col-10 col-lg-8 text-center">
+                        <h3>React Js</h3>
+                        <a href="https://react-sample-projects-sethu-siva.netlify.app" rel="noreferrer" target="_blank">
+                            <img src={ projectImage } alt="" className="col-10 col-6"/>
+                        </a>
                     </div>
                     <div className="col-1 col-lg-2"></div>
                 </div>
