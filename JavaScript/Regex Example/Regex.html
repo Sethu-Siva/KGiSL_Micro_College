@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Example</title>
+</head>
+<body>
+    <form>
+        <label>User Name : </label>
+        <input type="text" id="uname" />
+        <label>Phone No : </label>
+        <input type="text" id="uname" />
+    </form>
+    <script>
+        function checkPattern()
+        {
+            var textBox = document.getElementById("textBox").value;
+            var span = document.getElementById("info");
+
+            var pattern = new RegExp(/^[A-z0-9]{9}[\w_]{1}$/);
+
+            if ( textBox.match(pattern) )
+            {
+                span.innerText = "True";
+                span.style.color = "Green";
+            }
+            else
+            {
+                span.innerText = "False";
+                span.style.color = "Red";
+            }
+        }
+    </script>
+</body>
+</html>
