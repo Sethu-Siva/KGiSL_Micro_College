@@ -1,0 +1,29 @@
+.navbar {
+    background-color: transparent;
+}
+.logBtn {
+    border: 1px solid white;
+    background-color: inherit;
+    color: white;
+    border-radius: 5px;
+}
+.regBtn {
+    border: 1px solid rgb(97, 210, 255);
+    background-color: rgb(97, 210, 255);
+    color: white;
+    border-radius: 5px;
+}
+.regBtn:hover {
+    background-color: transparent !important;
+    border: 1px solid white;
+}
+.nav-link, .navbar-brand {
+    color: white;
+    border-radius: 5px;
+}
+.navFirstLinks:hover, .nav-link:hover {
+    border-radius: 5px;
+    border: 1px solid inherit;
+    background-color: rgb(97, 210, 255);
+    color: white;
+}

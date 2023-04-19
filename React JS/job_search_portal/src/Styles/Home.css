@@ -1,0 +1,40 @@
+#HomePage {
+    background-image: url('../Media/Images/portal-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15.8% 0;
+    text-align: center;
+}
+#titleText {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(97, 210, 255);
+}
+.inputBoxes {
+    padding: 1%;
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245, 0.782);
+}
+#jobTitleInputBox, #locationSearchInputBox {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: inherit;
+    padding: 2%;
+}
+.locationInput {
+    border-left: 1px solid rgb(71, 71, 71);
+}
+.searchBtn {
+    padding: 1% 0;
+}
+#searchBtn {
+    padding: 5% 0;
+    border-radius: 5px;
+    border: 1px solid rgb(97, 210, 255);
+    background-color: rgb(97, 210, 255);
+    color: white;
+}
+#filters {
+    margin-top: 3%;
+}
