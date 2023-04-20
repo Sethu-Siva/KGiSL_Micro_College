@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const database = require('mysql2');
 
 const add = express();
+
 add.use(cors());
 add.use(bodyParser.json());
 add.use(express.json());
-
 add.use(express.static('public'));
 
 let conn = database.createConnection(
@@ -75,4 +75,4 @@ let port = 5000;
 
 add.listen(port , () => {
     console.log(`Server running in ${port} Port`);
-})
+});
