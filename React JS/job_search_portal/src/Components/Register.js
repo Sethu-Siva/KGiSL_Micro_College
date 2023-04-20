@@ -4,32 +4,36 @@ import Reg_Pic from '../Media/Images/RegPagePic.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight, faEnvelope, faLock, faPhone, faUnlock, faUser } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export function Register() {
 
-    function getValues()
+    async function getValues()
     {
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var phone = document.getElementById("phone").value;
-        var pwd = document.getElementById("pwd").value;
+        var password = document.getElementById("pwd").value;
 
-        var obj = {
-            "name" : name,
-            "email" : email,
-            "phone" : phone,
-            "password" : pwd
+        await axios.post('http://localhost:5000/addUser',{name,email,phone,password})
+
+            .then(function (response)
+            {
+                if(response.data.status === 'Error')
+                {
+                    alert("Error");
+                    window.location.reload();
+                }
+                else if ( response.data.status === 'Success' )
+                {
+                    alert("SuccessFully Inserted...!");
+                    window.location.href = '/';
+                }
+            })
+            .catch(function (error)
+            {
+                alert(error);
+            });
         }
-
-        axios.post('/',obj)
-        .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-    }
 
     return (
         <div>
@@ -63,7 +67,7 @@ export function Register() {
 
                                     <div className="inputField col-12 col-lg-10">
                                         <FontAwesomeIcon icon={faLock}/>
-                                        <input type="password" name="pwd" id="pwd" className="inputBox" placeholder="Password" required/>
+                                        <input type="password" name="password" id="pwd" className="inputBox" placeholder="Password" required/>
                                     </div>
 
                                     <div className="inputField col-12 col-lg-10">
@@ -74,7 +78,7 @@ export function Register() {
                                     <div className="ps-4">
                                         <input type="checkbox" className="mt-4"/>&nbsp;&nbsp;
                                         <span>I agree all statements in <a href='/TermsAndConditions'>T&C</a></span><br/>
-                                        <button type="button" className="btn btn-info col-4 mt-4 sub-btn" onClick={getValues}><Link to="/">Sign Up</Link></button>
+                                        <button type="button" className="btn btn-info col-4 mt-4 sub-btn" onClick={getValues}>Sign Up</button>
                                         <p className="mt-4">Already Registered ? <a href="/Login">Sign In Here &nbsp;
                                             <FontAwesomeIcon icon={faArrowCircleRight}/>
                                         </a></p>

@@ -7,6 +7,7 @@ import { Home } from './Components/Home';
 import { Footer } from './Components/Footer';
 import { Login } from './Components/Login';
 import { Register } from './Components/Register';
+import { ShowDatas } from './Components/ShowDatas';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={[<Navbar/>,<Home/>,<Footer/>]}/>
         <Route path='/Login' element={[<Navbar/>,<Login/>,<Footer/>]}/>
         <Route path='/Register' element={[<Navbar/>,<Register/>,<Footer/>]}/>
+        <Route path='/showDatas' element={<ShowDatas/>}/>
       </Routes>
     </BrowserRouter>
   );

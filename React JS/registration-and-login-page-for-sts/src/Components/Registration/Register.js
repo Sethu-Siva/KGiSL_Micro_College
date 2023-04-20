@@ -23,10 +23,12 @@ export function Register() {
         }
 
         axios.post('http://localhost:8080/kgisl/insert',obj)
-        .then(function (response) {
+        .then(function (response)
+        {
             console.log(response);
-          })
-          .catch(function (error) {
+        })
+          .catch(function (error)
+          {
             console.log(error);
           });
     }
