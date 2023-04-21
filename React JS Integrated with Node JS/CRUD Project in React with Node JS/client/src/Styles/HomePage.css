@@ -11,5 +11,14 @@
     border: 1px solid rgba(0, 0, 0, 0.433);
     padding: 0 1%;
     border-radius: 25px;
-    max-width: 30%;
+    max-width: 100%;
+    margin-left: 10%;
+}
+.addCustomer {
+    border-radius: 50px;
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    margin-top: 5%;
 }

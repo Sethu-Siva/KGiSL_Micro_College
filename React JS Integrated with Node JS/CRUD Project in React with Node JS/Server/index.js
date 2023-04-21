@@ -30,10 +30,50 @@ conn.connect((error) => {
     }
 });
 
+app.get("/getAllCustDetails", (request,response) => {
 
+    let sqlQuery = 'select * from customer_details';
 
+    conn.query(sqlQuery,(error,result) => {
+        
+        if( error )
+        {
+            response.send(error);
+        }
+        else
+        {
+            response.send(result);
+        }
+    })
+});
 
+app.post("/insertCustomer", (request,response) => {
 
+    let {cust_name,address,city,pincode,country} = request.body;
+
+    let sqlQuery = 'insert into customer_details (cust_name,address,city,pincode,country) values (?,?,?,?,?)';
+
+    conn.query(sqlQuery,[cust_name,address,city,pincode,country],(error,result) => {
+
+        if( error )
+        {
+            let status = {
+                "status" : "Error"
+            }
+            response.send(status);
+            
+            console.log(error);
+            
+        }
+        else
+        {
+            let status = {
+                "status" : "Success"
+            }
+            response.send(status);
+        }
+    })
+});
 
 
 
