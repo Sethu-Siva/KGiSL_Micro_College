@@ -1,0 +1,15 @@
+#HomePage {
+    padding: 5% 0;
+}
+#searchInput {
+    margin-left: 5%;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+.searchBox {
+    border: 1px solid rgba(0, 0, 0, 0.433);
+    padding: 0 1%;
+    border-radius: 25px;
+    max-width: 30%;
+}
