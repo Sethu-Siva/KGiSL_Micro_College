@@ -19,9 +19,9 @@ export function Home()
         })
     },[]);
 
-    const deteleCust = async ( cust_id ) => {
+    const deleteCust = ( cust_id ) => {
 
-        await axios.delete("http://localhost:7200/deleteCust",{cust_id})
+        axios.post("http://localhost:7200/deleteCust",{ cust_id })
         .then((response) => {
 
             if ( response.data.status === 'Error' )
@@ -58,11 +58,12 @@ export function Home()
                             </div>
                         </div>
                         <div id="customerDetailsTable">
-                            <table>
+                            <table id="HomeTable">
                                 <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>ID</th>
                                         <th>Address</th>
                                         <th>City</th>
                                         <th>Pin Code</th>
@@ -74,8 +75,9 @@ export function Home()
                                     {
                                         custDetails.map((value,index) => (
                                             <tr>
-                                                <td>{ value.cust_id }</td>
+                                                <td>{ index + 1 }</td>
                                                 <td>{ value.cust_name }</td>
+                                                <td>{ value.cust_id }</td>
                                                 <td>{ value.address }</td>
                                                 <td>{ value.city }</td>
                                                 <td>{ value.pincode }</td>
@@ -89,7 +91,7 @@ export function Home()
                                                         <FontAwesomeIcon icon={ faPen } className="btn" id="editIcon"/>
                                                     </Link>
                                                     
-                                                    <FontAwesomeIcon icon={ faTrashCan } className="btn" id="deleIcon" onClick={ () => { deteleCust(value.cust_id) } }/>
+                                                    <FontAwesomeIcon icon={ faTrashCan } className="btn" id="deleIcon" onClick={ () => { deleteCust(value.cust_id) } }/>
                                                 </td>
                                             </tr>
                                         ))

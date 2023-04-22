@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 export function ShowDetails()
 {
-
     const { cust_id } = useParams();
 
     const [ custID,setCustID ] = useState(0);
@@ -32,7 +31,7 @@ export function ShowDetails()
         <div id="customerPage">
             <table>
                 <tr>
-                    <th>Customer ID : </th>
+                    <th>ID : </th>
                     <td>{ custID }</td>
                 </tr>
 

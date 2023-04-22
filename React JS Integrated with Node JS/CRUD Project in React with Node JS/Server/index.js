@@ -96,11 +96,9 @@ app.get("/getCustDetail/:cust_id" ,(request,response) => {
 });
 
 
-app.delete("/deleteCust", (request,response) => {
+app.post("/deleteCust", (request,response) => {
 
-    
-
-    console.log(cust_id);
+    let cust_id = request.body.cust_id;
 
     let sqlQuery = 'delete from customer_details where cust_id = ?';
 

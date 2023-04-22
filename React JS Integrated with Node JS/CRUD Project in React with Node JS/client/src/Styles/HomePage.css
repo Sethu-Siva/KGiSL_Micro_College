@@ -18,7 +18,7 @@
     border-radius: 50px;
     border: 1px solid black;
 }
-table {
+#HomeTable {
     width: 100%;
     margin-top: 5%;
 }
@@ -34,19 +34,19 @@ table {
     color: red;
     border: none;
 }
-th {
+#HomeTable th {
     border-bottom: 2px solid black;
     padding-bottom: 1%;
 }
-tr:nth-child(odd) {
+#HomeTable tr:nth-child(odd) {
     background-color: rgba(182, 244, 244, 0.5);
 }
-tr:nth-child(even) {
+#HomeTable tr:nth-child(even) {
     background-color: rgba(182, 244, 244, 0.1);
 }
-th {
+#HomeTable th {
     background-color: white !important;
 }
-th, td {
+#HomeTable th, #HomeTable td {
     padding: 1%;
 }
