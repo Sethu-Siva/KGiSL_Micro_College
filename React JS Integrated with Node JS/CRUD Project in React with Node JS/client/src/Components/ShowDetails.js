@@ -12,7 +12,6 @@ export function ShowDetails()
     const [ pinCode,setPinCode ] = useState(0);
     const [ country,setCountry ] = useState('');
 
-
     useEffect( () => {
         fetch("http://localhost:7200/getCustDetail/" + cust_id)
         .then((response) => response.json())
