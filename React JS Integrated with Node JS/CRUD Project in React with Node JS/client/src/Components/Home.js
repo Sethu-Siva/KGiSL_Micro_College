@@ -3,6 +3,7 @@ import '../Styles/HomePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faMagnifyingGlass, faPen, faTrashCan, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export function Home()
 {
@@ -12,9 +13,30 @@ export function Home()
     useEffect( () => {
         fetch("http://localhost:7200/getAllCustDetails")
         .then((response) => response.json())
-        .then((result) => setCustDetails(result));
+        .then((result) => setCustDetails(result))
+        .catch((error) => {
+            alert("API Cannot Accessable...!\n" + error);
+        })
     },[]);
 
+    const deteleCust = async ( cust_id ) => {
+
+        await axios.delete("http://localhost:7200/deleteCust",{cust_id})
+        .then((response) => {
+
+            if ( response.data.status === 'Error' )
+            {
+                alert("Error..! Can't Delete data.");
+                window.location.reload();
+            }
+            else if ( response.data.status === 'Success' )
+            {
+                alert("Customer Deleted SuccessFully...!");
+                window.location.reload();
+            }
+        })
+
+    }
 
     return(
         <div id="HomePage">
@@ -59,9 +81,15 @@ export function Home()
                                                 <td>{ value.pincode }</td>
                                                 <td>{ value.country }</td>
                                                 <td>
-                                                    <Link to='/showDetails'><FontAwesomeIcon icon={ faEye } className="btn"/></Link>
-                                                    <Link to='/editDetails'><FontAwesomeIcon icon={ faPen } className="btn"/></Link>
-                                                    <Link to='/deleDetails'><FontAwesomeIcon icon={ faTrashCan } className="btn"/></Link>
+                                                    <Link to={ "/showDetails/" + value.cust_id }>
+                                                        <FontAwesomeIcon icon={ faEye } className="btn" id="viewIcon"/>
+                                                    </Link>
+
+                                                    <Link to={ "/editDetails/" + value.cust_id }>
+                                                        <FontAwesomeIcon icon={ faPen } className="btn" id="editIcon"/>
+                                                    </Link>
+                                                    
+                                                    <FontAwesomeIcon icon={ faTrashCan } className="btn" id="deleIcon" onClick={ () => { deteleCust(value.cust_id) } }/>
                                                 </td>
                                             </tr>
                                         ))

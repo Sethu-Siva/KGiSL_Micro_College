@@ -20,7 +20,8 @@ let conn = dataBase.createConnection(
 );
 
 conn.connect((error) => {
-    if(error)
+    
+    if( error )
     {
         console.log(error);
     }
@@ -49,7 +50,7 @@ app.get("/getAllCustDetails", (request,response) => {
 
 app.post("/insertCustomer", (request,response) => {
 
-    let {cust_name,address,city,pincode,country} = request.body;
+    let { cust_name,address,city,pincode,country } = request.body;
 
     let sqlQuery = 'insert into customer_details (cust_name,address,city,pincode,country) values (?,?,?,?,?)';
 
@@ -75,8 +76,52 @@ app.post("/insertCustomer", (request,response) => {
     })
 });
 
+app.get("/getCustDetail/:cust_id" ,(request,response) => {
+
+    let cust_id = request.params.cust_id;
+
+    let sqlQuery = 'select * from customer_details where cust_id = ?';
+
+    conn.query(sqlQuery,[cust_id], (error,result) => {
+
+        if ( error )
+        {
+            response.send(error);
+        }
+        else
+        {
+            response.send(result);
+        }
+    })
+});
 
 
+app.delete("/deleteCust", (request,response) => {
+
+    
+
+    console.log(cust_id);
+
+    let sqlQuery = 'delete from customer_details where cust_id = ?';
+
+    conn.query(sqlQuery,[cust_id], (error,result) => {
+
+        if ( error )
+        {
+            let status = {
+                "status" : "Error"
+            }
+            response.send(status);
+        }
+        else
+        {
+            let status = {
+                "status" : "Success"
+            }
+            response.send(status);
+        }
+    })
+});
 
 let port = 7200;
 

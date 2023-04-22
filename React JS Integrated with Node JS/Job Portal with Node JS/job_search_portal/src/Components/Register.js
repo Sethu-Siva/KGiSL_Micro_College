@@ -7,6 +7,25 @@ import axios from "axios";
 
 export function Register() {
 
+
+    function validate()
+    {
+        var name = document.getElementById("name").value;
+        var ptn = new RegExp(/^[A-z ]{5,15}$/);
+
+        var nameValid = document.getElementById("nameValid");
+        nameValid.style.color = "red";
+
+        if ( ptn.test(name) )
+        {
+            nameValid.innerText = "";            
+        }
+        else
+        {
+            nameValid.innerText = "No numerics and special chars & min 5 letters";
+        }
+    }
+
     async function getValues()
     {
         var name = document.getElementById("name").value;
@@ -52,27 +71,33 @@ export function Register() {
                                 <form>
                                     <div className="inputField col-12 col-lg-10">
                                         <FontAwesomeIcon icon={faUser}/>
-                                        <input type="text" name="name" id="name" className="inputBox" placeholder="Your Name" required/>
+                                        <input type="text" name="name" id="name" className="inputBox" placeholder="Your Name" required onKeyUp={validate}/>
                                     </div>
+                                    
+                                    <span id="nameValid"></span>
 
                                     <div className="inputField col-12 col-lg-10">
                                         <FontAwesomeIcon icon={faEnvelope}/>
                                         <input type="email" name="email" id="email" className="inputBox" placeholder="Email" required/>
+                                        <span id="emailValid"></span>
                                     </div>
 
                                     <div className="inputField col-12 col-lg-10">
                                         <FontAwesomeIcon icon={faPhone}/>
                                         <input type="tel" name="phone" id="phone" className="inputBox" placeholder="Phone" required/><br/>
+                                        <span id="phoneValid"></span>
                                     </div>
 
                                     <div className="inputField col-12 col-lg-10">
                                         <FontAwesomeIcon icon={faLock}/>
                                         <input type="password" name="password" id="pwd" className="inputBox" placeholder="Password" required/>
+                                        <span id="passValid"></span>
                                     </div>
 
                                     <div className="inputField col-12 col-lg-10">
                                         <FontAwesomeIcon icon={faUnlock}/>
                                         <input type="password" name="cpwd" id="cpwd" className="inputBox" placeholder="Confirm Password" required/>
+                                        <span id="passValid"></span>
                                     </div>
 
                                     <div className="ps-4">
