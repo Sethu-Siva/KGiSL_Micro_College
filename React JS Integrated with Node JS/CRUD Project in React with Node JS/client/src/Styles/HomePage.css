@@ -45,8 +45,11 @@
     background-color: rgba(182, 244, 244, 0.1);
 }
 #HomeTable th {
-    background-color: white !important;
+    background-color: rgba(75, 231, 255, 0.5) !important;;
 }
-#HomeTable th, #HomeTable td {
+#HomeTable th {
+    padding: 2% 1%;
+}
+#HomeTable td {
     padding: 1%;
 }
