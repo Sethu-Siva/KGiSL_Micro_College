@@ -23,6 +23,7 @@ export function ShowDetails()
             setPinCode(result[0].pincode);
             setCountry(result[0].country);
         },[])
+        .catch((error) => {alert("API Connection Error\n" + error)})
     });
 
     
@@ -30,33 +31,33 @@ export function ShowDetails()
         <div id="customerPage">
             <table>
                 <tr>
-                    <th>ID : </th>
-                    <td>{ custID }</td>
+                    <th>ID</th>
+                    <td>: { custID }</td>
                 </tr>
 
                 <tr>
-                    <th>Name : </th>
-                    <td>{ custName }</td>
+                    <th>Name</th>
+                    <td>: { custName }</td>
                 </tr>
 
                 <tr>
-                    <th>Address : </th>
-                    <td>{ address }</td>
+                    <th>Address</th>
+                    <td>: { address }</td>
                 </tr>
 
                 <tr>
-                    <th>City : </th>
-                    <td>{ city }</td>
+                    <th>City</th>
+                    <td>: { city }</td>
                 </tr>
 
                 <tr>
-                    <th>Pincode : </th>
-                    <td>{ pinCode }</td>
+                    <th>Pincode</th>
+                    <td>: { pinCode }</td>
                 </tr>
 
                 <tr>
                     <th>Country</th>
-                    <td>{ country }</td>
+                    <td>: { country }</td>
                 </tr>
             </table>
         </div>

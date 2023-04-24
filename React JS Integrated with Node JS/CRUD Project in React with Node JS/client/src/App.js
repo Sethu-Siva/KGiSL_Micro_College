@@ -5,6 +5,7 @@ import { Home } from './Components/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AddCustomer } from './Components/AddCustomer';
 import { ShowDetails } from './Components/ShowDetails';
+import { UpdateCustomer } from './Components/UpdateCustomer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/AddCustomer' element={<AddCustomer/>}/>
         <Route path='/showDetails/:cust_id' element={<ShowDetails/>}/>
+        <Route path='/editDetails/:cust_id' element={<UpdateCustomer/>}/>
       </Routes>
     </BrowserRouter>
     </>

@@ -13,16 +13,15 @@ export function Register() {
         var name = document.getElementById("name").value;
         var ptn = new RegExp(/^[A-z ]{5,15}$/);
 
-        var nameValid = document.getElementById("nameValid");
-        nameValid.style.color = "red";
+        var nameValidText = document.getElementById("tooltiptextForNameValid");
 
         if ( ptn.test(name) )
         {
-            nameValid.innerText = "";            
+            nameValidText.innerText = "";
         }
         else
         {
-            nameValid.innerText = "No numerics and special chars & min 5 letters";
+            nameValidText.innerText = "No numerics and special chars & min 5 letters";
         }
     }
 
@@ -69,9 +68,10 @@ export function Register() {
                                     <h1>Sign Up</h1>
                                 </div>
                                 <form>
-                                    <div className="inputField col-12 col-lg-10">
+                                    <div className="inputField col-12 col-lg-10" id="tooltipForNameValid">
                                         <FontAwesomeIcon icon={faUser}/>
-                                        <input type="text" name="name" id="name" className="inputBox" placeholder="Your Name" required onKeyUp={validate}/>
+                                        <input type="text" name="name" id="name" className="inputBox" placeholder="Your Name" required onKeyUp={validate}/> 
+                                        <span id="tooltiptextForNameValid"></span>
                                     </div>
                                     
                                     <span id="nameValid"></span>

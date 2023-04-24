@@ -121,6 +121,29 @@ app.post("/deleteCust", (request,response) => {
     })
 });
 
+app.put("/update/:cust_id",(request,response) => {
+
+    let { cust_name,address,city,pincode,country } = request.body;
+
+    let cust_id = request.params.cust_id;
+
+    let sqlQuery = 'update customer_details set cust_name = ?, address = ?, city = ?, pincode = ?, country = ? where cust_id = ?';
+
+    conn.query(sqlQuery,[cust_name,address,city,pincode,country,cust_id], (error,result) => {
+
+        if ( error )
+        {
+            let status = { "status" : "Error" };
+            response.send(status);
+        }
+        else
+        {
+            let status = { "status" : "Success" };
+            response.send(status);
+        }
+    })
+});
+
 let port = 7200;
 
 app.listen(port, () => {

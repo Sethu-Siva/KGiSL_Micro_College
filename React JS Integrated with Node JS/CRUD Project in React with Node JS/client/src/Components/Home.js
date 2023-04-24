@@ -61,9 +61,9 @@ export function Home()
                             <table id="HomeTable">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Name</th>
-                                        <th>ID</th>
+                                        <th>S.No</th>
+                                        <th>Customer Name</th>
+                                        <th>Customer ID</th>
                                         <th>Address</th>
                                         <th>City</th>
                                         <th>Pin Code</th>
